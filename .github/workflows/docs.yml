@@ -1,0 +1,40 @@
+name: Docs
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Setup user
+        run: |
+          git config --global user.email actions@users.noreply.github.com
+          git config --global user.name "Action"
+
+      - name: Build docs
+        run: |
+          cd docs
+          yarn install
+          yarn docs:build
+          cd .vitepress/dist
+          git init
+          git add -A
+          git commit -m 'deploy'
+
+      - name: Deploy docs
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'docs'
+          force: true
+          directory: './docs/.vitepress/dist'
