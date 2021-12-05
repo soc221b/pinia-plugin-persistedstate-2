@@ -10,14 +10,6 @@
 
 > This package works for Vue 2 & 3 by the power of [Vue Demi](https://github.com/vueuse/vue-demi)!
 
-## Examples
-
-[Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[Nuxt.js (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxtjs-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
 ## Getting Started
 
 ### Installation
@@ -37,42 +29,20 @@ $ npm i pinia-plugin-persistedstate-2 # yarn add pinia-plugin-persistedstate-2
 ### Usage
 
 ```ts
-import { ref } from 'vue' // import { ref } from '@vue/composition-api'
-import { createPinia, defineStore } from 'pinia'
+import { createPinia } from 'pinia'
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 const pinia = createPinia()
-pinia.use(
-  createPersistedStatePlugin({
-    // plugin options goes here
-  }),
-)
-
-const useCounterStore = defineStore(
-  'counter-store',
-  () => {
-    return {
-      count: ref(0),
-    }
-  },
-  {
-    persistedState: {
-      // store options goes here
-    },
-  },
-)
-// const counterStore = defineStore('counter-store', {
-//   state() {
-//     return { count: 0 }
-//   },
-//   persistedState: {
-//     // store options goes here
-//   },
-// })
-
-const counterStore = useCounterStore()
-counterStore.count++ // fires window.localStorage.setItem('counter-store', JSON.stringify({ count: 0 }))
+pinia.use(createPersistedStatePlugin())
 ```
+
+### Examples
+
+[Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
+[Nuxt.js (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxtjs-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
+[Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 ## SSR
 
@@ -110,11 +80,7 @@ import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 export default function ({ $pinia }) {
   if (process.client) {
-    $pinia.use(
-      createPersistedStatePlugin({
-        // plugin options goes here
-      }),
-    )
+    $pinia.use(createPersistedStatePlugin())
   }
 }
 ```
@@ -138,7 +104,6 @@ import cookie from 'cookie'
 export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
   $pinia.use(
     createPersistedStatePlugin({
-      // plugin options goes here
       storage: {
         getItem: (key) => {
           // See https://nuxtjs.org/guide/plugins/#using-process-flags
@@ -181,9 +146,35 @@ You could pass common options to `createPersistedStatePlugin(options)` and `defi
 
 > Extends [Common Options](#Common-Options).
 
+```ts
+createPersistedStatePlugin({
+  // plugin options goes here
+})
+```
+
 ### Store Options
 
 > Extends [Common Options](#Common-Options).
+
+```ts
+defineStore(
+  'counter-store',
+  () => {
+    const currentValue = ref(0)
+    const increment = () => currentValue.value++
+
+    return {
+      currentValue,
+      increment,
+    }
+  },
+  {
+    persistedState: {
+      // store options goes here
+    },
+  },
+)
+```
 
 - `key?: string`: Defaults to `store.$id`. The key to store the persisted state under.
 
