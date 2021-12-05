@@ -9,7 +9,7 @@
   "module": "dist/index.es.prod.js",
   "unpkg": "dist/index.iife.prod.js",
   "jsdelivr": "dist/index.iife.prod.js",
-  "types": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iendeavor/pinia-plugin-persistedstate-2.git"
