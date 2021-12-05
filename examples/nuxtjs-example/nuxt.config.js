@@ -18,7 +18,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/pinia-plugin-persistedstate-2.js'],
+  plugins: ['@/plugins/persistedstate.universal.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

@@ -74,7 +74,7 @@ counterStore.count++ // fires window.localStorage.setItem('counter-store', JSON.
 
 ### Nuxt.js
 
-Follow [Pinia - Nuxt.js installation steps](https://pinia.esm.dev/ssr/nuxt.html#installation) and create the plugin below to plugins config in your nuxt.config.js file.
+Follow [Pinia - Nuxt.js installation steps](https://pinia.esm.dev/ssr/nuxt.html#installation).
 
 ```js
 // nuxt.config.js
@@ -86,13 +86,22 @@ export default {
     '@nuxtjs/composition-api/module',
     '@pinia/nuxt',
   ],
+```
 
-  plugins: ['@/plugins/pinia-plugin-persistedstate-2.js'],
+### With localStorage (client-only)
+
+Create the plugin below to plugins config in your nuxt.config.js file.
+
+```js
+// nuxt.config.js
+export default {
+  // ... other options
+  plugins: ['@/plugins/persistedstate.client.js'],
 }
 ```
 
 ```ts
-// plugins/pinia-plugin-persistedstate-2.js
+// plugins/persistedstate.client.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 export default function ({ $pinia }) {
@@ -103,6 +112,46 @@ export default function ({ $pinia }) {
       }),
     )
   }
+}
+```
+
+### With cookies (universal)
+
+```js
+// nuxt.config.js
+export default {
+  // ... other options
+  plugins: ['@/plugins/persistedstate.universal.js'],
+}
+```
+
+```ts
+// plugins/persistedstate.universal.js
+import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
+import * as Cookies from 'js-cookie'
+import cookie from 'cookie'
+
+export default function ({ $pinia }) {
+  $pinia.use(
+    createPersistedStatePlugin({
+      // plugin options goes here
+      storage: {
+        getItem: (key) => {
+          // See https://nuxtjs.org/guide/plugins/#using-process-flags
+          if (process.server) {
+            const parsedCookies = cookie.parse(req.headers.cookie)
+            return parsedCookies[key]
+          } else {
+            return Cookies.get(key)
+          }
+        },
+        // Please see https://github.com/js-cookie/js-cookie#json, on how to handle JSON.
+        setItem: (key, value) =>
+          Cookies.set(key, value, { expires: 365, secure: false }),
+        removeItem: (key) => Cookies.remove(key),
+      },
+    }),
+  )
 }
 ```
 
