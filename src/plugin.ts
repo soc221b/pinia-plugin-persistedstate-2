@@ -17,7 +17,14 @@ function getOption<K extends keyof CommonOptions>(
 export const createPersistedStatePlugin = (
   options?: PluginOptions,
 ): PiniaPlugin => {
-  const defaultStorage = window && window.localStorage
+  const defaultStorage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'> =
+    typeof window === 'object'
+      ? window.localStorage
+      : {
+          getItem: () => null,
+          setItem: () => {},
+          removeItem: () => {},
+        }
   const defaultAssertStorage = (
     storage: Required<CommonOptions>['storage'],
   ) => {
