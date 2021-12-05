@@ -1,8 +1,8 @@
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
-import * as Cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 import cookie from 'cookie'
 
-export default function ({ $pinia, req }) {
+export default function ({ $pinia, ssrContext }) {
   $pinia.use(
     createPersistedStatePlugin({
       // plugin options goes here
@@ -10,7 +10,7 @@ export default function ({ $pinia, req }) {
         getItem: (key) => {
           // See https://nuxtjs.org/guide/plugins/#using-process-flags
           if (process.server) {
-            const parsedCookies = cookie.parse(req.headers.cookie)
+            const parsedCookies = cookie.parse(ssrContext.req.headers.cookie)
             return parsedCookies[key]
           } else {
             return Cookies.get(key)

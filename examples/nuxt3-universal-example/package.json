@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt3": "latest"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.1.6",
+    "cookie": "^0.4.1",
+    "js-cookie": "^3.0.1",
+    "pinia": "^2.0.6",
+    "pinia-plugin-persistedstate-2": "^0.1.2"
+  }
+}
