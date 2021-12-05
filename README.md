@@ -38,7 +38,11 @@ import { createPinia, defineStore } from 'pinia'
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 const pinia = createPinia()
-pinia.use(createPersistedStatePlugin())
+pinia.use(
+  createPersistedStatePlugin({
+    // plugin options goes here
+  }),
+)
 
 const useCounterStore = defineStore(
   'counter-store',
@@ -47,13 +51,19 @@ const useCounterStore = defineStore(
       count: ref(0),
     }
   },
-  { persistedState: { storage: window.localStorage } },
+  {
+    persistedState: {
+      // store options goes here
+    },
+  },
 )
 // const counterStore = defineStore('counter-store', {
 //   state() {
 //     return { count: 0 }
 //   },
-//   persistedState: { storage: window.localStorage },
+//   persistedState: {
+//     // options goes here
+//   },
 // })
 
 const counterStore = useCounterStore()
@@ -78,9 +88,13 @@ You could pass common options to `createPersistedStatePlugin(options)` and `defi
 
 - `filter: (mutation, state): boolean`: A function that will be called to filter any mutations which will trigger setState on storage eventually.
 
+### Plugin Options
+
+> Extends [Common Options](#Common-Options).
+
 ### Store Options
 
-> Support all of common options.
+> Extends [Common Options](#Common-Options).
 
 - `key?: string`: Defaults to `store.$id`. The key to store the persisted state under.
 
