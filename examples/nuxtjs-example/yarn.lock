@@ -5560,10 +5560,10 @@ pify@^5.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-5.0.0.tgz#1f5eca3f5e87ebec28cc6d54a0e4aaf00acc127f"
   integrity sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==
 
-pinia-plugin-persistedstate-2@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate-2/-/pinia-plugin-persistedstate-2-0.1.1.tgz#2b399233ba07c60fb226e430d2c41d25e916d387"
-  integrity sha512-gjdP7TssCtfPhOQTI85xOSYKFLH+jkZPDNlQhQyRBa2lpWjm6ACDP70v5Mq0U7zBbL37IB7oKkGEV6EsIR9hLQ==
+pinia-plugin-persistedstate-2@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate-2/-/pinia-plugin-persistedstate-2-0.1.2.tgz#b238bf12e5e0095af2e111079a1b9f0b6158846e"
+  integrity sha512-wC/J6d3WbEchpR3QbewSR0kP8u/FivOZW4Uipu8MVwBugqp30jura/PiSKMlRoi1qVKmw5/aLTYCfs5OgcqWUA==
   dependencies:
     shvl "^2.0.3"
     vue-demi "0.11.4"

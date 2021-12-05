@@ -2,7 +2,7 @@ import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 import * as Cookies from 'js-cookie'
 import cookie from 'cookie'
 
-export default function ({ $pinia }) {
+export default function ({ $pinia, req }) {
   $pinia.use(
     createPersistedStatePlugin({
       // plugin options goes here
