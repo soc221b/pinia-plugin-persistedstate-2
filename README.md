@@ -70,6 +70,42 @@ const counterStore = useCounterStore()
 counterStore.count++ // fires window.localStorage.setItem('counter-store', JSON.stringify({ count: 0 }))
 ```
 
+## SSR
+
+### Nuxt.js
+
+Follow [Pinia - Nuxt.js installation steps](https://pinia.esm.dev/ssr/nuxt.html#installation) and create the plugin below to plugins config in your nuxt.config.js file.
+
+```js
+// nuxt.config.js
+export default {
+  // ... other options
+  buildModules: [
+    // Nuxt 2 only:
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
+    '@pinia/nuxt',
+  ],
+
+  plugins: ['@/plugins/pinia-plugin-persistedstate-2.js'],
+}
+```
+
+```ts
+// plugins/pinia-plugin-persistedstate-2.js
+import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
+
+export default function ({ $pinia }) {
+  if (process.client) {
+    $pinia.use(
+      createPersistedStatePlugin({
+        // plugin options goes here
+      }),
+    )
+  }
+}
+```
+
 ## API
 
 ### Common Options
