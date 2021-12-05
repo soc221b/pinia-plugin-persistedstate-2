@@ -26,6 +26,8 @@ $ npm i pinia-plugin-persistedstate-2 # yarn add pinia-plugin-persistedstate-2
 <script src="https://unpkg.com/pinia-plugin-persistedstate-2"></script>
 ```
 
+You can find the library on `window.PiniaPluginPersistedstate_2`.
+
 ### Usage
 
 ```ts
