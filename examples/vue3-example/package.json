@@ -1,5 +1,5 @@
 {
-  "name": "counter-example",
+  "name": "vue3-example",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
