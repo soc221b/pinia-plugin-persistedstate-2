@@ -35,10 +35,10 @@ $ npm i pinia-plugin-persistedstate-2 # yarn add pinia-plugin-persistedstate-2
 ```ts
 import { ref } from 'vue' // import { ref } from '@vue/composition-api'
 import { createPinia, defineStore } from 'pinia'
-import { createPersistPlugin } from 'pinia-plugin-persistedstate-2'
+import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 const pinia = createPinia()
-pinia.use(createPersistPlugin())
+pinia.use(createPersistedStatePlugin())
 
 const useCounterStore = defineStore(
   'counter-store',
@@ -47,13 +47,13 @@ const useCounterStore = defineStore(
       count: ref(0),
     }
   },
-  { persist: { storage: window.localStorage } },
+  { persistedState: { storage: window.localStorage } },
 )
 // const counterStore = defineStore('counter-store', {
 //   state() {
 //     return { count: 0 }
 //   },
-//   persist: { storage: window.localStorage },
+//   persistedState: { storage: window.localStorage },
 // })
 
 const counterStore = useCounterStore()
@@ -64,7 +64,7 @@ counterStore.count++ // fires window.localStorage.setItem('counter-store', JSON.
 
 ### Common Options
 
-You could pass common options to `createPersistPlugin(options)` and `defineStore('store', {}, { persist: options })`
+You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
 
 - `storage?: Storage`: Defaults to `localStorage`. Where to store persisted state.
 

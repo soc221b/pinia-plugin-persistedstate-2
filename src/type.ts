@@ -1,6 +1,4 @@
-import { PiniaPlugin, StateTree, SubscriptionCallback } from 'pinia'
-
-export type PersistStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
+import { StateTree, SubscriptionCallback } from 'pinia'
 
 /**
  * @description
@@ -14,9 +12,9 @@ export type PersistStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
  * `store2` will persist to and rehydrate from `sessionStorage`:
  *
  * ```
- * const plugin = createPersistPlugin({ storage: localStorage })
+ * const plugin = createPersistedStatePlugin({ storage: localStorage })
  * const store1 = defineStore('store-1', () => {})
- * const store2 = defineStore('store-2', () => {}, { persist: { storage: sessionStorage } })
+ * const store2 = defineStore('store-2', () => {}, { persistedState: { storage: sessionStorage } })
  * ```
  */
 export interface CommonOptions {
@@ -25,12 +23,14 @@ export interface CommonOptions {
    *
    * @default localStorage
    */
-  storage?: PersistStorage
+  storage?: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
 
   /**
    * To ensure storage is available.
    */
-  assertStorage?: (storage: PersistStorage) => void | never
+  assertStorage?: (
+    storage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>,
+  ) => void | never
 
   /**
    * When rehydrating, overwrite initial state (patch otherwise).
@@ -90,10 +90,8 @@ export type StoreOptions = CommonOptions & {
   excludePaths?: string[]
 }
 
-export type PersistPlugin = PiniaPlugin
-
 declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
-    persist?: StoreOptions
+    persistedState?: StoreOptions
   }
 }

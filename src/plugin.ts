@@ -1,6 +1,6 @@
-import { PiniaPluginContext } from 'pinia'
+import { PiniaPlugin, PiniaPluginContext } from 'pinia'
 import * as shvl from 'shvl'
-import { CommonOptions, PersistPlugin } from '.'
+import { CommonOptions } from '.'
 import { PluginOptions } from './type'
 
 function getOption<K extends keyof CommonOptions>(
@@ -13,7 +13,10 @@ function getOption<K extends keyof CommonOptions>(
     pluginOptions[key] ??
     fallback) as Required<CommonOptions>[K]
 }
-export const createPersistPlugin = (options?: PluginOptions): PersistPlugin => {
+
+export const createPersistedStatePlugin = (
+  options?: PluginOptions,
+): PiniaPlugin => {
   const defaultStorage = window && window.localStorage
   const defaultAssertStorage = (
     storage: Required<CommonOptions>['storage'],
@@ -30,9 +33,9 @@ export const createPersistPlugin = (options?: PluginOptions): PersistPlugin => {
     )
   }
 
-  function persistPlugin(context: PiniaPluginContext) {
+  function plugin(context: PiniaPluginContext) {
     // normalize
-    const options = context.options?.persist ?? {}
+    const options = context.options?.persistedState ?? {}
     const key = options.key ?? context.store.$id
     const overwrite = getOption(pluginOptions, options, 'overwrite', false)
     const storage = getOption(pluginOptions, options, 'storage', defaultStorage)
@@ -95,5 +98,5 @@ export const createPersistPlugin = (options?: PluginOptions): PersistPlugin => {
     })
   }
 
-  return persistPlugin
+  return plugin
 }

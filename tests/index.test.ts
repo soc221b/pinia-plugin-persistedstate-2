@@ -1,12 +1,12 @@
 import { ref, nextTick } from 'vue-demi'
 import { createPinia, defineStore, Pinia } from 'pinia'
 import { mount } from '@vue/test-utils'
-import { createPersistPlugin, PersistStorage } from '../src'
+import { createPersistedStatePlugin } from '../src'
 
 const getItem = jest.fn()
 const setItem = jest.fn()
 const removeItem = jest.fn()
-const storage: PersistStorage = {
+const storage = {
   getItem,
   setItem,
   removeItem,
@@ -17,7 +17,7 @@ beforeEach(() => {
   getItem.mockImplementation(() => null)
 
   pinia = createPinia().use(
-    createPersistPlugin({
+    createPersistedStatePlugin({
       storage,
     }),
   )
@@ -37,7 +37,7 @@ const useCounterStore = defineStore('counter-store', () => {
 })
 
 it('can be created with default options', () => {
-  expect(() => createPinia().use(createPersistPlugin())).not.toThrow()
+  expect(() => createPinia().use(createPersistedStatePlugin())).not.toThrow()
 })
 
 it('assert storage when initializing', () => {
@@ -49,7 +49,7 @@ it('assert storage when initializing', () => {
         foo: ref(0),
       }
     },
-    { persist: { assertStorage } },
+    { persistedState: { assertStorage } },
   )
 
   useStore()
@@ -120,7 +120,7 @@ describe('hydrate', () => {
           count: ref(0),
         }
       },
-      { persist: { deserialization: spyDeserialization } },
+      { persistedState: { deserialization: spyDeserialization } },
     )()
 
     expect(spyGetItem).toBeCalled()
@@ -173,7 +173,7 @@ describe('hydrate', () => {
           }),
         }
       },
-      { persist: { overwrite: true } },
+      { persistedState: { overwrite: true } },
     )()
 
     expect(spyGetItem).toBeCalled()
@@ -219,7 +219,7 @@ describe('persist', () => {
           }),
         }
       },
-      { persist: { includePaths: ['foo', 'nested.baz'] } },
+      { persistedState: { includePaths: ['foo', 'nested.baz'] } },
     )()
 
     store.$state = {
@@ -256,7 +256,7 @@ describe('persist', () => {
           }),
         }
       },
-      { persist: { excludePaths: ['bar', 'nested.qux'] } },
+      { persistedState: { excludePaths: ['bar', 'nested.qux'] } },
     )()
 
     store.$state = {
@@ -293,7 +293,7 @@ describe('persist', () => {
           }),
         }
       },
-      { persist: { includePaths: [] } },
+      { persistedState: { includePaths: [] } },
     )()
 
     store.$state = {
@@ -327,7 +327,7 @@ describe('persist', () => {
           }),
         }
       },
-      { persist: { excludePaths: [] } },
+      { persistedState: { excludePaths: [] } },
     )()
 
     store.$state = {
@@ -369,7 +369,7 @@ describe('persist', () => {
           },
         }
       },
-      { persist: { excludePaths: [] } },
+      { persistedState: { excludePaths: [] } },
     )()
 
     store.$state = {
@@ -401,7 +401,7 @@ describe('persist', () => {
           count: ref(0),
         }
       },
-      { persist: { serialization: spySerialization } },
+      { persistedState: { serialization: spySerialization } },
     )()
     setItem.mockClear()
 
@@ -430,7 +430,7 @@ describe('persist', () => {
         }
       },
       {
-        persist: {
+        persistedState: {
           filter: (mutation) => {
             return mutation.type !== 'direct'
           },
@@ -463,7 +463,7 @@ describe('persist', () => {
           foo: ref(0),
         }
       },
-      { persist: { key: customKey } },
+      { persistedState: { key: customKey } },
     )()
 
     store.$state = {

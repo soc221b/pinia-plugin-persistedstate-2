@@ -4,11 +4,11 @@ const pinia = createPinia()
 setActivePinia(pinia)
 
 defineStore('store', {
-  persist: {},
+  persistedState: {},
 })
 
 defineStore('setup-store', () => {}, {
-  persist: {},
+  persistedState: {},
 })
 
 it('', () => {})
