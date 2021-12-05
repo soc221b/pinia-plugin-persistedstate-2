@@ -3,3 +3,4 @@ node_modules
 coverage
 CHANGELOG.md
 __snapshots__
+.nuxt
