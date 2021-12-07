@@ -16,8 +16,15 @@
 
 #### NPM
 
-```shell
-$ npm i pinia-plugin-persistedstate-2 # yarn add pinia-plugin-persistedstate-2
+```sh
+# npm
+npm i pinia-plugin-persistedstate-2
+
+# yarn
+yarn add pinia-plugin-persistedstate-2
+
+# pnpm
+pnpm add pinia-plugin-persistedstate-2
 ```
 
 #### CDN
