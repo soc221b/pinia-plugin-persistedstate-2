@@ -14,7 +14,7 @@
 
 ### Installation
 
-#### NPM
+#### Package Manager
 
 ```sh
 # npm
