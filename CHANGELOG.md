@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.2...v0.1.3) (2021-12-10)
+
+
+### Features
+
+* allow to disable persisting stores ([34a0a06](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/34a0a06dfc41c3eeced675ba8f495d07d422c824))
+
 ### [0.1.2](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.1...v0.1.2) (2021-12-05)
 
 
