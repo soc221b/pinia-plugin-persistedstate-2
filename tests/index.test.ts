@@ -473,4 +473,38 @@ describe('persist', () => {
 
     expect(setItem).lastCalledWith(customKey, JSON.stringify({ foo: 1 }))
   })
+
+  it('should not persist when set persist to false', async () => {
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          foo: ref(0),
+        }
+      },
+      { persistedState: { persist: false } },
+    )()
+    setItem.mockClear()
+
+    store.$state = {
+      foo: 1,
+    }
+    await nextTick()
+
+    expect(setItem).not.toBeCalled()
+  })
+
+  it('should not rehydrate when set persist to false', async () => {
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          foo: ref(0),
+        }
+      },
+      { persistedState: { persist: false } },
+    )()
+
+    expect(getItem).not.toBeCalled()
+  })
 })

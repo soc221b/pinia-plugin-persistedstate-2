@@ -43,6 +43,8 @@ export const createPersistedStatePlugin = (
   function plugin(context: PiniaPluginContext) {
     // normalize
     const options = context.options?.persistedState ?? {}
+    if (options.persist === false) return
+
     const key = options.key ?? context.store.$id
     const overwrite = getOption(pluginOptions, options, 'overwrite', false)
     const storage = getOption(pluginOptions, options, 'storage', defaultStorage)

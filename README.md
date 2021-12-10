@@ -187,6 +187,8 @@ defineStore(
 )
 ```
 
+- `persist?: boolean`: Defaults to `true`. Whether to persist store.
+
 - `key?: string`: Defaults to `store.$id`. The key to store the persisted state under.
 
 - `includePath?: string[]`: An array of any paths to partially persist the state.
