@@ -70,6 +70,7 @@ export default {
     '@nuxtjs/composition-api/module',
     '@pinia/nuxt',
   ],
+}
 ```
 
 ### With localStorage (client-only)
