@@ -36,6 +36,8 @@ jobs:
 
       - run: make build
 
+      - run: make check-size
+
   test:
     runs-on: ubuntu-latest
 

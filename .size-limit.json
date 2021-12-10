@@ -1,0 +1,6 @@
+[
+  {
+    "path": "dist/index.es.prod.js",
+    "limit": "1 KB"
+  }
+]

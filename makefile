@@ -33,3 +33,6 @@ test-examples:
 clean-examples:
 	node scripts/walk examples rm -rf node_modules
 	node scripts/walk examples rm -rf dist
+
+check-size:
+	npx size-limit
