@@ -140,7 +140,7 @@
     "@vue/compiler-dom" "3.2.24"
     "@vue/shared" "3.2.24"
 
-"@vue/devtools-api@^6.0.0-beta.18", "@vue/devtools-api@^6.0.0-beta.20.1":
+"@vue/devtools-api@^6.0.0-beta.20.1":
   version "6.0.0-beta.20.1"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.20.1.tgz#5b499647e929c35baf2a66a399578f9aa4601142"
   integrity sha512-R2rfiRY+kZugzWh9ZyITaovx+jpU4vgivAEAiz80kvh3yviiTU3CBuGuyWpSwGz9/C7TkSWVM/FtQRGlZ16n8Q==
@@ -561,9 +561,10 @@ picocolors@^1.0.0:
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
   integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
 
-pinia-plugin-persistedstate-2@../../pinia-plugin-persistedstate-2-v0.1.4-alpha.7.tgz:
-  version "0.1.4-alpha.7"
-  resolved "../../pinia-plugin-persistedstate-2-v0.1.4-alpha.7.tgz#e1d19eeea402a9100e1813e38108aa646b76a889"
+pinia-plugin-persistedstate-2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate-2/-/pinia-plugin-persistedstate-2-0.1.4.tgz#4d0ef244b6a3420fc540e782ce042ae6d9431d52"
+  integrity sha512-sskPHUj998jibE1K+G7TZuNrPFKDUSBXcMA7S+oW1VOQWojgwMkptdyXUL0ncbvnD/O76p0GW2sToePp5VOeZw==
   dependencies:
     shvl "^2.0.3"
     vue-demi "0.11.4"
@@ -917,13 +918,6 @@ vue-demi@0.11.4:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
   integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
-
-vue-router@^4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
-  integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.18"
 
 vue-tsc@^0.28.10:
   version "0.28.10"

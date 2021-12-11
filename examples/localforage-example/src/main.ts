@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { router } from './router'
-import { plugin as store } from './stores'
+import { plugin as storePlugin } from './stores'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(storePlugin).mount('#app')

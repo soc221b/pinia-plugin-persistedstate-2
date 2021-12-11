@@ -9,9 +9,8 @@
   "dependencies": {
     "localforage": "^1.10.0",
     "pinia": "^2.0.6",
-    "pinia-plugin-persistedstate-2": "../../pinia-plugin-persistedstate-2-v0.1.4-alpha.7.tgz",
-    "vue": "^3.2.23",
-    "vue-router": "^4.0.12"
+    "pinia-plugin-persistedstate-2": "^0.1.4",
+    "vue": "^3.2.23"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.10.2",
