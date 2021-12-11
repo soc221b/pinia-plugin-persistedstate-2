@@ -1,4 +1,4 @@
-import { ref, nextTick } from 'vue-demi'
+import { ref, nextTick } from 'vue'
 import { createPinia, defineStore, Pinia } from 'pinia'
 import { mount } from '@vue/test-utils'
 import { createPersistedStatePlugin } from '../src'
