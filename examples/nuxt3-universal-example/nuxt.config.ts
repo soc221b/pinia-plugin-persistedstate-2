@@ -4,5 +4,5 @@ import { defineNuxtConfig } from 'nuxt3'
 export default defineNuxtConfig({
   buildModules: ['@pinia/nuxt'],
 
-  plugins: ['@/plugins/persistedstate.universal.ts'],
+  plugins: ['@/plugins/persistedstate.ts'],
 })

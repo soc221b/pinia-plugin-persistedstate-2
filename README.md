@@ -83,12 +83,12 @@ Create the plugin below to plugins config in your nuxt.config.js file.
 // nuxt.config.js
 export default {
   // ... other options
-  plugins: ['@/plugins/persistedstate.client.js'],
+  plugins: ['@/plugins/persistedstate.js'],
 }
 ```
 
 ```ts
-// plugins/persistedstate.client.js
+// plugins/persistedstate.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 export default function ({ $pinia }) {
@@ -104,12 +104,12 @@ export default function ({ $pinia }) {
 // nuxt.config.js
 export default {
   // ... other options
-  plugins: ['@/plugins/persistedstate.universal.js'],
+  plugins: ['@/plugins/persistedstate.js'],
 }
 ```
 
 ```ts
-// plugins/persistedstate.universal.js
+// plugins/persistedstate.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 import Cookies from 'js-cookie'
 import cookie from 'cookie'
