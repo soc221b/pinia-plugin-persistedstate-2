@@ -104,7 +104,7 @@ describe('hydrate', () => {
     spyWarn.mockRestore()
   })
 
-  it('applies deserialization when hydrating', () => {
+  it('applies parse when hydrating', () => {
     const spyGetItem = jest
       .spyOn(storage, 'getItem')
       .mockImplementation(() => JSON.stringify({ count: 1 }))
@@ -120,7 +120,7 @@ describe('hydrate', () => {
           count: ref(0),
         }
       },
-      { persistedState: { deserialization: spyDeserialization } },
+      { persistedState: { parse: spyDeserialization } },
     )()
 
     expect(spyGetItem).toBeCalled()
@@ -428,7 +428,7 @@ describe('persist', () => {
     spyWarn.mockRestore()
   })
 
-  it('applies serialization when persisting', async () => {
+  it('applies stringify when persisting', async () => {
     const spySerialization = jest.fn().mockImplementation(() =>
       JSON.stringify({
         count: 2,
@@ -443,7 +443,7 @@ describe('persist', () => {
           count: ref(0),
         }
       },
-      { persistedState: { serialization: spySerialization } },
+      { persistedState: { stringify: spySerialization } },
     )()
     setItem.mockClear()
 

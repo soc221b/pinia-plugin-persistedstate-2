@@ -60,18 +60,13 @@ export const createPersistedStatePlugin = (
     const overwrite = getOption(pluginOptions, options, 'overwrite', false)
     const storage = getOption(pluginOptions, options, 'storage', defaultStorage)
     const filter = getOption(pluginOptions, options, 'filter', () => true)
-    const serialization = getOption(
+    const stringify = getOption(
       pluginOptions,
       options,
-      'serialization',
+      'stringify',
       JSON.stringify,
     )
-    const deserialization = getOption(
-      pluginOptions,
-      options,
-      'deserialization',
-      JSON.parse,
-    )
+    const parse = getOption(pluginOptions, options, 'parse', JSON.parse)
 
     if (__DEV__ || __TEST__) {
       ;(options.assertStorage ?? defaultAssertStorage)(storage)
@@ -81,7 +76,7 @@ export const createPersistedStatePlugin = (
     try {
       const patch = (value: string | null) => {
         if (value !== null) {
-          const state = deserialization(value)
+          const state = parse(value)
 
           if (overwrite) {
             context.store.$state = state
@@ -120,13 +115,13 @@ export const createPersistedStatePlugin = (
         }, {})
       }
       if (Array.isArray(options.excludePaths)) {
-        state = deserialization(serialization(state))
+        state = parse(stringify(state))
         options.excludePaths.forEach((path) => {
           return shvl.set(state, path, undefined)
         }, {})
       }
 
-      const value = serialization(state)
+      const value = stringify(state)
       const result = storage.setItem(key, value)
       if (result instanceof Promise) {
         ++pendingCount

@@ -149,9 +149,9 @@ For more details, see [type.ts](./src/type.ts).
 
 - `overwrite?: boolean`: Defaults to `false`. Whether to overwrite initial state when rehydrating. When this flat is true use `store.$state = persistedState`, `store.$patch(persistedState)` otherwise.
 
-- `serialization?: (value: any): string`: Defaults to `JSON.stringify`.
+- `stringify?: (value: any): string`: Defaults to `JSON.stringify`.
 
-- `deserialization?: (value: string): any`: Defaults to `JSON.parse`.
+- `parse?: (value: string): any`: Defaults to `JSON.parse`.
 
 - `filter: (mutation, state): boolean`: A function that will be called to filter any mutations which will trigger setState on storage eventually.
 

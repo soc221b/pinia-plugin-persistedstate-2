@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["pinia", "shvl", "deserialization", "vue-demi"],
+  "cSpell.words": ["pinia", "shvl", "vue-demi"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true
 }

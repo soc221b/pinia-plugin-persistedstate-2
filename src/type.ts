@@ -54,14 +54,14 @@ export interface CommonOptions {
    *
    * @default JSON.stringify
    */
-  serialization?: (value: any) => string
+  stringify?: (value: any) => string
 
   /**
    * This method will be called after `storage.getItem`
    *
    * @default JSON.parse
    */
-  deserialization?: (value: string) => any
+  parse?: (value: string) => any
 
   /**
    * A function that will be called to filter any mutations which will trigger setState on storage eventually.
