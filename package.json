@@ -29,7 +29,9 @@
     "pinia",
     "plugin",
     "persist",
-    "rehydrate"
+    "rehydrate",
+    "async",
+    "localforage"
   ],
   "scripts": {
     "postinstall": "husky install",
