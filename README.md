@@ -139,6 +139,8 @@ export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
 
 ## API
 
+For more details, see [type.ts](./src/type.ts).
+
 ### Common Options
 
 You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
