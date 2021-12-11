@@ -9,8 +9,6 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-> This package works for Vue 2 & 3 by the power of [Vue Demi](https://github.com/vueuse/vue-demi)!
-
 ## Getting Started
 
 ### Installation
