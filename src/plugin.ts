@@ -38,11 +38,6 @@ export const createPersistedStatePlugin = (
   }
 
   const pluginOptions = options ?? ({} as PluginOptions)
-  if (__DEV__ || __TEST__) {
-    ;(pluginOptions.assertStorage ?? defaultAssertStorage)(
-      pluginOptions.storage ?? defaultStorage,
-    )
-  }
 
   function plugin(context: PiniaPluginContext) {
     // initialize custom properties
