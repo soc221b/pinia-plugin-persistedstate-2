@@ -4,3 +4,4 @@ coverage
 CHANGELOG.md
 __snapshots__
 .nuxt
+.output
