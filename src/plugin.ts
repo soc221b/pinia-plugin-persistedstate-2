@@ -1,6 +1,6 @@
 import { PiniaPlugin, PiniaPluginContext } from 'pinia'
 import * as shvl from 'shvl'
-import { CommonOptions } from '.'
+import { CommonOptions, IStorage } from '.'
 import { PluginOptions } from './type'
 
 function getOption<K extends keyof CommonOptions>(
@@ -17,7 +17,7 @@ function getOption<K extends keyof CommonOptions>(
 export const createPersistedStatePlugin = (
   options?: PluginOptions,
 ): PiniaPlugin => {
-  const defaultStorage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'> =
+  const defaultStorage: IStorage =
     typeof window === 'object'
       ? window.localStorage
       : {
@@ -29,8 +29,12 @@ export const createPersistedStatePlugin = (
     storage: Required<CommonOptions>['storage'],
   ) => {
     const uniqueKey = '@@'
-    storage.setItem(uniqueKey, '1')
-    storage.removeItem(uniqueKey)
+    const result = storage.setItem(uniqueKey, '1')
+    if (result instanceof Promise) {
+      result.then(() => storage.removeItem(uniqueKey))
+    } else {
+      storage.removeItem(uniqueKey)
+    }
   }
 
   const pluginOptions = options ?? ({} as PluginOptions)
@@ -41,6 +45,18 @@ export const createPersistedStatePlugin = (
   }
 
   function plugin(context: PiniaPluginContext) {
+    // initialize custom properties
+    let resolveIsReady = () => {}
+    const isReadyPromise = new Promise<void>((resolve) => {
+      resolveIsReady = resolve
+    })
+
+    let pendingCount = 0
+    context.store.$persistedState = {
+      isReady: () => isReadyPromise,
+      pending: false,
+    }
+
     // normalize
     const options = context.options?.persistedState ?? {}
     if (options.persist === false) return
@@ -68,19 +84,31 @@ export const createPersistedStatePlugin = (
 
     // hydrate
     try {
-      const value = storage.getItem(key)
+      const patch = (value: string | null) => {
+        if (value !== null) {
+          const state = deserialization(value)
 
-      if (value !== null) {
-        const state = deserialization(value)
-
-        if (overwrite) {
-          context.store.$state = state
-        } else {
-          context.store.$patch(state)
+          if (overwrite) {
+            context.store.$state = state
+          } else {
+            context.store.$patch(state)
+          }
         }
+      }
+
+      let value: any = storage.getItem(key)
+      if (value instanceof Promise) {
+        value.then((value) => {
+          patch(value)
+          resolveIsReady()
+        })
+      } else {
+        patch(value)
+        resolveIsReady()
       }
     } catch (error) {
       if (__DEV__ || __TEST__) console.warn(error)
+      resolveIsReady()
     }
 
     // persist
@@ -103,7 +131,17 @@ export const createPersistedStatePlugin = (
       }
 
       const value = serialization(state)
-      storage.setItem(key, value)
+      const result = storage.setItem(key, value)
+      if (result instanceof Promise) {
+        ++pendingCount
+        context.store.$persistedState.pending = pendingCount !== 0
+        result
+          .catch(() => {})
+          .finally(() => {
+            --pendingCount
+            context.store.$persistedState.pending = pendingCount !== 0
+          })
+      }
     })
   }
 

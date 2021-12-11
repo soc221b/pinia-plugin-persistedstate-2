@@ -50,6 +50,8 @@ pinia.use(createPersistedStatePlugin())
 
 [Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
+[localForage (asynchronous storage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/localforage-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
 [Nuxt.js (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxtjs-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 [Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
@@ -141,9 +143,9 @@ export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
 
 You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
 
-- `storage?: Storage`: Defaults to `localStorage`. Where to store persisted state.
+- `storage?: IStorage`: Defaults to `localStorage`. Where to store persisted state.
 
-- `assertStorage?: (storage: Storage) => void | never`: Perform a Write-Delete operation by default. To ensure `storage` is available.
+- `assertStorage?: (storage: IStorage) => void | never`: Perform a Write-Delete operation by default. To ensure `storage` is available.
 
 - `overwrite?: boolean`: Defaults to `false`. Whether to overwrite initial state when rehydrating. When this flat is true use `store.$state = persistedState`, `store.$patch(persistedState)` otherwise.
 
@@ -194,6 +196,12 @@ defineStore(
 - `includePath?: string[]`: An array of any paths to partially persist the state.
 
 - `excludePath?: string[]`
+
+### Store Properties
+
+- `store.$persistedState.isReady: () => Promise<void>`: Whether store is hydrated
+
+- `store.$persistedState.pending: boolean`: Whether store is persisting
 
 ## Contributing
 

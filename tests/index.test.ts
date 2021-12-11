@@ -508,3 +508,63 @@ describe('persist', () => {
     expect(getItem).not.toBeCalled()
   })
 })
+
+describe('asynchronous storage', () => {
+  beforeEach(() => {
+    const savedState: Record<string, string> = {
+      'counter-store': JSON.stringify({
+        count: 42,
+      }),
+    }
+    getItem.mockImplementation(async (key) => {
+      return savedState[key]
+    })
+    setItem.mockImplementation(async (key, value) => {
+      savedState[key] = value
+    })
+    removeItem.mockImplementation(async (key) => {
+      delete savedState[key]
+    })
+
+    pinia = createPinia().use(
+      createPersistedStatePlugin({
+        storage,
+      }),
+    )
+    mount({ template: 'none' }, { global: { plugins: [pinia] } })
+  })
+
+  it('should add $persistedState properties to store', async () => {
+    const counterStore = useCounterStore()
+
+    expect(counterStore.$persistedState).toBeInstanceOf(Object)
+    expect(counterStore.$persistedState.isReady()).toBeInstanceOf(Promise)
+    expect(typeof counterStore.$persistedState.pending).toBe('boolean')
+  })
+
+  test('$persistedState.isReady should be resolved after hydrating state', async () => {
+    const counterStore = useCounterStore()
+    expect(counterStore.count).toBe(0)
+
+    await counterStore.$persistedState.isReady()
+
+    expect(counterStore.count).toBe(42)
+  })
+
+  test('$persistedState.pending should be true while persisting state', async () => {
+    const counterStore = useCounterStore()
+
+    await counterStore.$persistedState.isReady()
+    setItem.mockClear()
+
+    counterStore.count++
+    expect(counterStore.$persistedState.pending).toBe(true)
+
+    await new Promise((resolve) => setTimeout(resolve))
+    expect(setItem).toBeCalledWith(
+      'counter-store',
+      JSON.stringify({ count: 43 }),
+    )
+    expect(counterStore.$persistedState.pending).toBe(false)
+  })
+})

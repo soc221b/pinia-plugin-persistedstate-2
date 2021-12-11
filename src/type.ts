@@ -1,5 +1,11 @@
 import { StateTree, SubscriptionCallback } from 'pinia'
 
+export interface IStorage {
+  getItem: (key: string) => string | null | Promise<string | null>
+  setItem: (key: string, value: string) => void | Promise<void>
+  removeItem: (key: string) => void | Promise<void>
+}
+
 /**
  * @description
  * PluginOptions and StoreOptions shares CommonOptions interface,
@@ -23,14 +29,12 @@ export interface CommonOptions {
    *
    * @default localStorage
    */
-  storage?: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
+  storage?: IStorage
 
   /**
    * To ensure storage is available.
    */
-  assertStorage?: (
-    storage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>,
-  ) => void | never
+  assertStorage?: (storage: IStorage) => void | never
 
   /**
    * When rehydrating, overwrite initial state (patch otherwise).
@@ -99,5 +103,24 @@ export type StoreOptions = CommonOptions & {
 declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
     persistedState?: StoreOptions
+  }
+
+  export interface PiniaCustomProperties<
+    Id extends string = string,
+    S extends StateTree = StateTree,
+    G /* extends GettersTree<S> */ = _GettersTree<S>,
+    A /* extends ActionsTree */ = _ActionsTree,
+  > {
+    $persistedState: {
+      /**
+       * Whether store is hydrated
+       */
+      isReady: () => Promise<void>
+
+      /**
+       * Whether store is persisting
+       */
+      pending: boolean
+    }
   }
 }
