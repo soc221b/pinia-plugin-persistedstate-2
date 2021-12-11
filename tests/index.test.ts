@@ -278,6 +278,48 @@ describe('persist', () => {
     spyWarn.mockRestore()
   })
 
+  it('persist partial state when given both of includePaths and excludePaths', async () => {
+    const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
+
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          foo: ref(0),
+          bar: ref(0),
+          nested: ref({
+            baz: 0,
+            qux: 0,
+          }),
+        }
+      },
+      {
+        persistedState: {
+          includePaths: ['foo', 'nested'],
+          excludePaths: ['bar', 'nested.qux'],
+        },
+      },
+    )()
+
+    store.$state = {
+      foo: 1,
+      bar: 1,
+      nested: {
+        baz: 1,
+        qux: 1,
+      },
+    }
+    await nextTick()
+
+    expect(setItem).lastCalledWith(
+      'store',
+      JSON.stringify({ foo: 1, nested: { baz: 1 } }),
+    )
+    expect(spyWarn).not.toBeCalled()
+
+    spyWarn.mockRestore()
+  })
+
   it('not persist state when given includePaths is empty', async () => {
     const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
 

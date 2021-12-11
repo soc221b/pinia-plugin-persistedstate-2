@@ -118,7 +118,8 @@ export const createPersistedStatePlugin = (
             shvl.get(state as Record<string, unknown>, path),
           )
         }, {})
-      } else if (Array.isArray(options.excludePaths)) {
+      }
+      if (Array.isArray(options.excludePaths)) {
         state = deserialization(serialization(state))
         options.excludePaths.forEach((path) => {
           return shvl.set(state, path, undefined)
