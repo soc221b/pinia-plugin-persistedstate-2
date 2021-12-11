@@ -167,7 +167,7 @@ createPersistedStatePlugin({
 
 ### Store Options
 
-> Extends [Common Options](#Common-Options).
+> Extends [Common Options](#Common-Options). Defaults to [Plugin Options](#Plugin-Options).
 
 ```ts
 defineStore(
