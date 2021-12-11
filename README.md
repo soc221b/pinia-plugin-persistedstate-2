@@ -143,8 +143,6 @@ For more details, see [type.ts](./src/type.ts).
 
 ### Common Options
 
-You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
-
 - `persist?: boolean`: Defaults to `true`. Whether to persist store.
 
 - `storage?: IStorage`: Defaults to `localStorage`. Where to store persisted state.
@@ -161,7 +159,7 @@ You could pass common options to `createPersistedStatePlugin(options)` and `defi
 
 ### Plugin Options
 
-> Extends [Common Options](#Common-Options).
+> Supports all [common options](#Common-Options). These options are the default values for each store, you can set the most commonly used options in the _plugin options_, and override/extend it in the _store options_.
 
 ```ts
 createPersistedStatePlugin({
@@ -171,7 +169,7 @@ createPersistedStatePlugin({
 
 ### Store Options
 
-> Extends [Common Options](#Common-Options). Defaults to [Plugin Options](#Plugin-Options).
+> Supports all [common options](#Common-Options).
 
 ```ts
 defineStore(
