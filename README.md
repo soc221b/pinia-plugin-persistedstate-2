@@ -145,6 +145,8 @@ For more details, see [type.ts](./src/type.ts).
 
 You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
 
+- `persist?: boolean`: Defaults to `true`. Whether to persist store.
+
 - `storage?: IStorage`: Defaults to `localStorage`. Where to store persisted state.
 
 - `assertStorage?: (storage: IStorage) => void | never`: Perform a Write-Delete operation by default. To ensure `storage` is available.
@@ -190,8 +192,6 @@ defineStore(
   },
 )
 ```
-
-- `persist?: boolean`: Defaults to `true`. Whether to persist store.
 
 - `key?: string`: Defaults to `store.$id`. The key to store the persisted state under.
 

@@ -54,7 +54,7 @@ export const createPersistedStatePlugin = (
 
     // normalize
     const options = context.options?.persistedState ?? {}
-    if (options.persist === false) return
+    if (getOption(pluginOptions, options, 'persist', true) === false) return
 
     const key = options.key ?? context.store.$id
     const overwrite = getOption(pluginOptions, options, 'overwrite', false)

@@ -25,6 +25,12 @@ export interface IStorage {
  */
 export interface CommonOptions {
   /**
+   * Whether to persist store
+   * @default true
+   */
+  persist?: boolean
+
+  /**
    * Where to store persisted state.
    *
    * @default localStorage
@@ -71,12 +77,6 @@ export interface CommonOptions {
 export type PluginOptions = CommonOptions
 
 export type StoreOptions = CommonOptions & {
-  /**
-   * Whether to persist store
-   * @default true
-   */
-  persist?: boolean
-
   /**
    * The key to store the persisted state under.
    *
