@@ -4,4 +4,4 @@ dist
 dist-ssr
 *.local
 coverage
-yarn-error.log
+.pnpm-debug.log

@@ -1,4 +1,9 @@
-import { PiniaPlugin, PiniaPluginContext } from 'pinia'
+import {
+  PiniaPlugin,
+  PiniaPluginContext,
+  StateTree,
+  SubscriptionCallbackMutation,
+} from 'pinia'
 import * as shvl from 'shvl'
 import { CommonOptions, IStorage } from '.'
 import { PluginOptions } from './type'
@@ -102,38 +107,47 @@ export const createPersistedStatePlugin = (
     }
 
     // persist
-    context.store.$subscribe((mutation, state) => {
-      if (filter(mutation, state) === false) return
+    context.store.$subscribe(
+      (
+        mutation: SubscriptionCallbackMutation<StateTree>,
+        state: {
+          [x: string]: any
+          [x: number]: any
+          [x: symbol]: any
+        },
+      ) => {
+        if (filter(mutation, state) === false) return
 
-      if (Array.isArray(options.includePaths)) {
-        state = options.includePaths.reduce((partialState, path) => {
-          return shvl.set(
-            partialState,
-            path,
-            shvl.get(state as Record<string, unknown>, path),
-          )
-        }, {})
-      }
-      if (Array.isArray(options.excludePaths)) {
-        state = parse(stringify(state))
-        options.excludePaths.forEach((path) => {
-          return shvl.set(state, path, undefined)
-        }, {})
-      }
+        if (Array.isArray(options.includePaths)) {
+          state = options.includePaths.reduce((partialState, path) => {
+            return shvl.set(
+              partialState,
+              path,
+              shvl.get(state as Record<string, unknown>, path),
+            )
+          }, {})
+        }
+        if (Array.isArray(options.excludePaths)) {
+          state = parse(stringify(state))
+          options.excludePaths.forEach((path) => {
+            return shvl.set(state, path, undefined)
+          }, {})
+        }
 
-      const value = stringify(state)
-      const result = storage.setItem(key, value)
-      if (result instanceof Promise) {
-        ++pendingCount
-        context.store.$persistedState.pending = pendingCount !== 0
-        result
-          .catch(() => {})
-          .finally(() => {
-            --pendingCount
-            context.store.$persistedState.pending = pendingCount !== 0
-          })
-      }
-    })
+        const value = stringify(state)
+        const result = storage.setItem(key, value)
+        if (result instanceof Promise) {
+          ++pendingCount
+          context.store.$persistedState.pending = pendingCount !== 0
+          result
+            .catch(() => {})
+            .finally(() => {
+              --pendingCount
+              context.store.$persistedState.pending = pendingCount !== 0
+            })
+        }
+      },
+    )
   }
 
   return plugin

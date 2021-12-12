@@ -5,4 +5,4 @@
 ## Project Setup
 
 1. Fork and clone the repo
-2. Run `yarn install` to install dependencies.
+2. Run `pnpm install` to install dependencies.
