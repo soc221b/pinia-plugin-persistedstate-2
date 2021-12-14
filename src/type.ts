@@ -1,8 +1,8 @@
 import { StateTree, SubscriptionCallback } from 'pinia'
 
 export interface IStorage {
-  getItem: (key: string) => string | null | Promise<string | null>
-  setItem: (key: string, value: string) => void | Promise<void>
+  getItem: (key: string) => any | Promise<any>
+  setItem: (key: string, value: any) => void | Promise<void>
   removeItem: (key: string) => void | Promise<void>
 }
 
@@ -50,18 +50,18 @@ export interface CommonOptions {
   overwrite?: boolean
 
   /**
-   * This method will be called before `storage.setItem`
+   * This method will be called right before `storage.setItem`
    *
    * @default JSON.stringify
    */
-  stringify?: (value: any) => string
+  serialize?: (value: any) => any
 
   /**
-   * This method will be called after `storage.getItem`
+   * This method will be called right after `storage.getItem`
    *
    * @default JSON.parse
    */
-  parse?: (value: string) => any
+  deserialize?: (value: any) => any
 
   /**
    * A function that will be called to filter any mutations which will trigger setState on storage eventually.
