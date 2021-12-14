@@ -14,8 +14,13 @@ jobs:
         with:
           node-version: 14
 
-      - run: yarn install
-      - run: yarn prettier --check .
+      - name: Use pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.22.2
+
+      - run: pnpm install
+      - run: pnpm prettier --check .
 
   build:
     runs-on: ubuntu-latest
@@ -32,9 +37,16 @@ jobs:
         with:
           node-version: 14
 
-      - run: yarn install
+      - name: Use pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.22.2
+
+      - run: pnpm install
 
       - run: make build
+
+      - run: make check-size
 
   test:
     runs-on: ubuntu-latest
@@ -51,7 +63,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: yarn install
+      - name: Use pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.22.2
+
+      - run: pnpm install
 
       - run: make test
         env:

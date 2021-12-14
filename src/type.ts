@@ -1,5 +1,11 @@
 import { StateTree, SubscriptionCallback } from 'pinia'
 
+export interface IStorage {
+  getItem: (key: string) => any | Promise<any>
+  setItem: (key: string, value: any) => void | Promise<void>
+  removeItem: (key: string) => void | Promise<void>
+}
+
 /**
  * @description
  * PluginOptions and StoreOptions shares CommonOptions interface,
@@ -19,18 +25,22 @@ import { StateTree, SubscriptionCallback } from 'pinia'
  */
 export interface CommonOptions {
   /**
+   * Whether to persist store
+   * @default true
+   */
+  persist?: boolean
+
+  /**
    * Where to store persisted state.
    *
    * @default localStorage
    */
-  storage?: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
+  storage?: IStorage
 
   /**
    * To ensure storage is available.
    */
-  assertStorage?: (
-    storage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>,
-  ) => void | never
+  assertStorage?: (storage: IStorage) => void | never
 
   /**
    * When rehydrating, overwrite initial state (patch otherwise).
@@ -40,18 +50,18 @@ export interface CommonOptions {
   overwrite?: boolean
 
   /**
-   * This method will be called before `storage.setItem`
+   * This method will be called right before `storage.setItem`
    *
    * @default JSON.stringify
    */
-  serialization?: (value: any) => string
+  serialize?: (value: any) => any
 
   /**
-   * This method will be called after `storage.getItem`
+   * This method will be called right after `storage.getItem`
    *
    * @default JSON.parse
    */
-  deserialization?: (value: string) => any
+  deserialize?: (value: any) => any
 
   /**
    * A function that will be called to filter any mutations which will trigger setState on storage eventually.
@@ -93,5 +103,24 @@ export type StoreOptions = CommonOptions & {
 declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
     persistedState?: StoreOptions
+  }
+
+  export interface PiniaCustomProperties<
+    Id extends string = string,
+    S extends StateTree = StateTree,
+    G /* extends GettersTree<S> */ = _GettersTree<S>,
+    A /* extends ActionsTree */ = _ActionsTree,
+  > {
+    $persistedState: {
+      /**
+       * Whether store is hydrated
+       */
+      isReady: () => Promise<void>
+
+      /**
+       * Whether store is persisting
+       */
+      pending: boolean
+    }
   }
 }

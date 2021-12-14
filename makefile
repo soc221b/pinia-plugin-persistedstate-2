@@ -1,17 +1,17 @@
 lint:
-	yarn prettier --write .
+	pnpm prettier --write .
 
 install:
-	yarn install
+	pnpm install
 
 build:
-	yarn rollup -c rollup.config.js
+	pnpm rollup -c rollup.config.js
 
 test:
-	yarn jest --coverage
+	pnpm jest --coverage
 
 test-watch:
-	yarn jest --watch
+	pnpm jest --watch
 
 clean:
 	rm -rf /node_modules
@@ -19,17 +19,20 @@ clean:
 
 release:
 	make build
-	yarn standard-version
+	pnpm standard-version
 
 install-examples:
-	node scripts/walk examples yarn install
+	node scripts/walk examples pnpm install
 
 build-examples:
-	node scripts/walk examples yarn build
+	node scripts/walk examples pnpm build
 
 test-examples:
-	yarn jest --coverage ./examples
+	pnpm jest --coverage ./examples
 
 clean-examples:
 	node scripts/walk examples rm -rf node_modules
 	node scripts/walk examples rm -rf dist
+
+check-size:
+	npx size-limit

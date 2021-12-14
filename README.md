@@ -2,22 +2,28 @@
 
 [![CI](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/pinia-plugin-persistedstate-2.svg)](https://www.npmjs.com/package/pinia-plugin-persistedstate-2)
+[![Bundle size](https://badgen.net/bundlephobia/minzip/pinia-plugin-persistedstate-2)](https://bundlephobia.com/result?p=pinia-plugin-persistedstate-2)
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Prettier](https://img.shields.io/badge/Code_Style-Prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-> This package works for Vue 2 & 3 by the power of [Vue Demi](https://github.com/vueuse/vue-demi)!
-
 ## Getting Started
 
 ### Installation
 
-#### NPM
+#### Package Manager
 
-```shell
-$ npm i pinia-plugin-persistedstate-2 # yarn add pinia-plugin-persistedstate-2
+```sh
+# npm
+npm i pinia-plugin-persistedstate-2
+
+# yarn
+yarn add pinia-plugin-persistedstate-2
+
+# pnpm
+pnpm add pinia-plugin-persistedstate-2
 ```
 
 #### CDN
@@ -42,6 +48,8 @@ pinia.use(createPersistedStatePlugin())
 
 [Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
+[localForage (asynchronous storage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/localforage-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
 [Nuxt.js (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxtjs-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 [Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
@@ -62,6 +70,7 @@ export default {
     '@nuxtjs/composition-api/module',
     '@pinia/nuxt',
   ],
+}
 ```
 
 ### With localStorage (client-only)
@@ -72,12 +81,12 @@ Create the plugin below to plugins config in your nuxt.config.js file.
 // nuxt.config.js
 export default {
   // ... other options
-  plugins: ['@/plugins/persistedstate.client.js'],
+  plugins: ['@/plugins/persistedstate.js'],
 }
 ```
 
 ```ts
-// plugins/persistedstate.client.js
+// plugins/persistedstate.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 export default function ({ $pinia }) {
@@ -93,12 +102,12 @@ export default function ({ $pinia }) {
 // nuxt.config.js
 export default {
   // ... other options
-  plugins: ['@/plugins/persistedstate.universal.js'],
+  plugins: ['@/plugins/persistedstate.js'],
 }
 ```
 
 ```ts
-// plugins/persistedstate.universal.js
+// plugins/persistedstate.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 import Cookies from 'js-cookie'
 import cookie from 'cookie'
@@ -128,25 +137,35 @@ export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
 
 ## API
 
+For more details, see [type.ts](./src/type.ts).
+
 ### Common Options
 
-You could pass common options to `createPersistedStatePlugin(options)` and `defineStore('store', {}, { persistedState: options })`
+- `persist?: boolean`: Defaults to `true`. Whether to persist store.
 
-- `storage?: Storage`: Defaults to `localStorage`. Where to store persisted state.
+- `storage?: IStorage`: Defaults to `localStorage`. Where to store persisted state.
 
-- `assertStorage?: (storage: Storage) => void | never`: Perform a Write-Delete operation by default. To ensure `storage` is available.
+- `assertStorage?: (storage: IStorage) => void | never`: Perform a Write-Delete operation by default. To ensure `storage` is available.
 
 - `overwrite?: boolean`: Defaults to `false`. Whether to overwrite initial state when rehydrating. When this flat is true use `store.$state = persistedState`, `store.$patch(persistedState)` otherwise.
 
-- `serialization?: (value: any): string`: Defaults to `JSON.stringify`.
+- `serialize?: (value: any): any`: Defaults to `JSON.stringify`. This method will be called right before `storage.setItem`.
 
-- `deserialization?: (value: string): any`: Defaults to `JSON.parse`.
+- `deserialize?: (value: any): any`: Defaults to `JSON.parse`. This method will be called right after `storage.getItem`.
 
 - `filter: (mutation, state): boolean`: A function that will be called to filter any mutations which will trigger setState on storage eventually.
 
+#### IStorage
+
+- `getItem: (key: string) => any | Promise<any>`: Any value other than `undefined` or `null` will be rehydrated.
+
+- `setItem: (key: string, value: any) => void | Promise<void>`
+
+- `removeItem: (key: string) => void | Promise<void>`
+
 ### Plugin Options
 
-> Extends [Common Options](#Common-Options).
+> Supports all [common options](#Common-Options). These options are the default values for each store, you can set the most commonly used options in the _plugin options_, and override/extend it in the _store options_.
 
 ```ts
 createPersistedStatePlugin({
@@ -156,7 +175,7 @@ createPersistedStatePlugin({
 
 ### Store Options
 
-> Extends [Common Options](#Common-Options).
+> Supports all [common options](#Common-Options).
 
 ```ts
 defineStore(
@@ -183,6 +202,12 @@ defineStore(
 - `includePath?: string[]`: An array of any paths to partially persist the state.
 
 - `excludePath?: string[]`
+
+### Store Properties
+
+- `store.$persistedState.isReady: () => Promise<void>`: Whether store is hydrated
+
+- `store.$persistedState.pending: boolean`: Whether store is persisting
 
 ## Contributing
 
