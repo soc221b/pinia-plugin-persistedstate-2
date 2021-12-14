@@ -15,6 +15,30 @@ pnpm add @capacitor/cli -D
 pnpm build && npx cap sync && npx cap open ios
 ```
 
-## Configure
+## How it worked
 
-[see file](/examples/ionic-capacitor-storage/src/stores/index.ts)
+set plugin custom `storage` option :
+
+```ts
+createPersistedStatePlugin({
+  storage: {
+    getItem: (key) => Storage.get({ key }).then(({ value }) => value),
+    removeItem: (key) => Storage.remove({ key }),
+    setItem: (key, value) => Storage.set({ key, value }),
+  },
+})
+```
+
+is need prefix
+
+```ts
+const p = (_) => 'you_prefix-' + _
+
+createPersistedStatePlugin({
+  storage: {
+    getItem: (key) => Storage.get({ key: p(key) }).then(({ value }) => value),
+    removeItem: (key) => Storage.remove({ key: p(key) }),
+    setItem: (key, value) => Storage.set({ key: p(key), value }),
+  },
+})
+```
