@@ -4,7 +4,7 @@
   "sideEffects": false,
   "engines": {
     "pnpm": ">=6.22.2",
-    "node": "^12.13.0 || ^14.15.0"
+    "node": "^12.13.0 || ^14.15.0 || >=16.5.0"
   },
   "description": "Persist and rehydrate your Pinia state between page reloads",
   "main": "dist/index.cjs.prod.js",

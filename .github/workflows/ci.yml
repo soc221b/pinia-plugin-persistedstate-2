@@ -6,13 +6,17 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [16.x]
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: ${{ matrix.node-version }}
 
       - name: Use pnpm
         uses: pnpm/action-setup@v2.0.1
@@ -27,15 +31,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: ${{ matrix.node-version }}
 
       - name: Use pnpm
         uses: pnpm/action-setup@v2.0.1
@@ -53,7 +57,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [12.x, 14.x, 16.x]
 
     steps:
       - uses: actions/checkout@v2
