@@ -1,0 +1,4 @@
+{
+  // https://v3.nuxtjs.org/getting-started/bridge#update-tsconfigjson
+  "extends": "./.nuxt/tsconfig.json"
+}
