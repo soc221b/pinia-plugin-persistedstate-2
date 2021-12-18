@@ -7,6 +7,7 @@ import {
 import * as shvl from 'shvl'
 import { CommonOptions, IStorage } from '.'
 import { PluginOptions } from './type'
+import { identity } from './util'
 
 function getOption<K extends keyof CommonOptions>(
   pluginOptions: CommonOptions,
@@ -77,6 +78,7 @@ export const createPersistedStatePlugin = (
       'deserialize',
       JSON.parse,
     )
+    const migrate = options.migrate ?? identity
 
     if (__DEV__ || __TEST__) {
       ;(options.assertStorage ?? defaultAssertStorage)(storage)
@@ -84,27 +86,33 @@ export const createPersistedStatePlugin = (
 
     // hydrate
     try {
-      const patch = (value: any) => {
+      const patchOrOverwrite = (state: any) => {
+        if (overwrite) {
+          context.store.$state = state
+        } else {
+          context.store.$patch(state)
+        }
+        resolveIsReady()
+      }
+
+      const parse = (value: any) => {
         if (value != null) {
           const state = deserialize(value)
+          const migrateState = migrate(state)
 
-          if (overwrite) {
-            context.store.$state = state
+          if (migrateState instanceof Promise) {
+            migrateState.then(patchOrOverwrite)
           } else {
-            context.store.$patch(state)
+            patchOrOverwrite(migrateState)
           }
         }
       }
 
       let value = storage.getItem(key)
       if (value instanceof Promise) {
-        value.then((value) => {
-          patch(value)
-          resolveIsReady()
-        })
+        value.then(parse)
       } else {
-        patch(value)
-        resolveIsReady()
+        parse(value)
       }
     } catch (error) {
       if (__DEV__ || __TEST__) console.warn(error)

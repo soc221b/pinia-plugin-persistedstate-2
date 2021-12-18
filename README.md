@@ -203,6 +203,8 @@ defineStore(
 
 - `excludePath?: string[]`
 
+- `migrate?: (value: any) => any | Promise<any>`: The `migrate` function enables versioning store. This will be called after `deserialize` but before actually overwriting/patching the store.
+
 ### Store Properties
 
 - `store.$persistedState.isReady: () => Promise<void>`: Whether store is hydrated

@@ -184,6 +184,43 @@ describe('hydrate', () => {
     spyGetItem.mockRestore()
     spyWarn.mockRestore()
   })
+
+  it('migrate during rehydrate step', async () => {
+    const spyGetItem = jest
+      .spyOn(storage, 'getItem')
+      .mockImplementation(() => JSON.stringify({ oldKey: 1 }))
+
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          newKey: ref(0),
+        }
+      },
+      {
+        persistedState: {
+          overwrite: true,
+          migrate: async (state) => {
+            await Promise.resolve()
+            if (typeof state.oldKey === 'number') {
+              return {
+                newKey: state.oldKey,
+              }
+            }
+
+            return state
+          },
+        },
+      },
+    )()
+    await store.$persistedState.isReady()
+
+    expect(spyGetItem).toBeCalled()
+    expect((store as any).oldKey).toBe(undefined)
+    expect(store.newKey).toBe(1)
+
+    spyGetItem.mockRestore()
+  })
 })
 
 describe('persist', () => {

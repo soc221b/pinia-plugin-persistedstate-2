@@ -98,6 +98,13 @@ export type StoreOptions = CommonOptions & {
    * @default undefined
    */
   excludePaths?: string[]
+
+  /**
+   * The `migrate` function enables versioning store. This will be called after `deserialize` but before actually overwriting/patching the store.
+   *
+   * @default {value => value}
+   */
+  migrate?: (value: any) => any | Promise<any>
 }
 
 declare module 'pinia' {
