@@ -2,6 +2,7 @@ import {
   PiniaPlugin,
   PiniaPluginContext,
   StateTree,
+  Store,
   SubscriptionCallbackMutation,
 } from 'pinia'
 import * as shvl from 'shvl'
@@ -9,19 +10,19 @@ import { CommonOptions, IStorage } from '.'
 import { PluginOptions } from './type'
 import { identity } from './util'
 
-function getOption<K extends keyof CommonOptions>(
-  pluginOptions: CommonOptions,
-  options: CommonOptions,
+function getOption<K extends keyof CommonOptions<StateTree, Store>>(
+  pluginOptions: CommonOptions<StateTree, Store>,
+  options: CommonOptions<StateTree, Store>,
   key: K,
-  fallback: CommonOptions[K],
+  fallback: CommonOptions<StateTree, Store>[K],
 ) {
-  return (options[key] ??
-    pluginOptions[key] ??
-    fallback) as Required<CommonOptions>[K]
+  return (options[key] ?? pluginOptions[key] ?? fallback) as Required<
+    CommonOptions<StateTree, Store>
+  >[K]
 }
 
-export const createPersistedStatePlugin = (
-  options?: PluginOptions,
+export const createPersistedStatePlugin = <S extends StateTree, Store>(
+  options?: PluginOptions<S, Store>,
 ): PiniaPlugin => {
   const defaultStorage: IStorage =
     typeof window === 'object'
@@ -32,7 +33,7 @@ export const createPersistedStatePlugin = (
           removeItem: () => {},
         }
   const defaultAssertStorage = (
-    storage: Required<CommonOptions>['storage'],
+    storage: Required<CommonOptions<S, Store>>['storage'],
   ) => {
     const uniqueKey = '@@'
     const result = storage.setItem(uniqueKey, '1')
@@ -43,7 +44,7 @@ export const createPersistedStatePlugin = (
     }
   }
 
-  const pluginOptions = options ?? ({} as PluginOptions)
+  const pluginOptions = options ?? ({} as PluginOptions<S, Store>)
 
   function plugin(context: PiniaPluginContext) {
     // initialize custom properties

@@ -228,7 +228,7 @@ For more details, see [type.ts](./src/type.ts).
 
 - `overwrite?: boolean`: Defaults to `false`. Whether to overwrite initial state when rehydrating. When this flat is true use `store.$state = persistedState`, `store.$patch(persistedState)` otherwise.
 
-- `serialize?: (value: any): any`: Defaults to `JSON.stringify`. This method will be called right before `storage.setItem`.
+- `serialize?: (state: S): any`: Defaults to `JSON.stringify`. This method will be called right before `storage.setItem`.
 
 - `deserialize?: (value: any): any`: Defaults to `JSON.parse`. This method will be called right after `storage.getItem`.
 

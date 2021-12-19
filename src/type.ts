@@ -23,7 +23,7 @@ export interface IStorage {
  * const store2 = defineStore('store-2', () => {}, { persistedState: { storage: sessionStorage } })
  * ```
  */
-export interface CommonOptions {
+export interface CommonOptions<S extends StateTree, Store> {
   /**
    * Whether to persist store
    * @default true
@@ -54,7 +54,7 @@ export interface CommonOptions {
    *
    * @default JSON.stringify
    */
-  serialize?: (value: any) => any
+  serialize?: (state: S) => any
 
   /**
    * This method will be called right after `storage.getItem`
@@ -68,15 +68,15 @@ export interface CommonOptions {
    *
    * @default () => true
    */
-  filter?: <S extends StateTree>(
+  filter?: (
     mutation: Parameters<SubscriptionCallback<S>>['0'],
     state: Parameters<SubscriptionCallback<S>>['1'],
   ) => boolean
 }
 
-export type PluginOptions = CommonOptions
+export type PluginOptions<S, Store> = CommonOptions<S, Store>
 
-export type StoreOptions = CommonOptions & {
+export type StoreOptions<S, Store> = CommonOptions<S, Store> & {
   /**
    * The key to store the persisted state under.
    *
@@ -109,7 +109,7 @@ export type StoreOptions = CommonOptions & {
 
 declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
-    persistedState?: StoreOptions
+    persistedState?: StoreOptions<S, Store>
   }
 
   export interface PiniaCustomProperties<
