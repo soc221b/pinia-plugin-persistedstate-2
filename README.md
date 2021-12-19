@@ -1,5 +1,7 @@
 # pinia-plugin-persistedstate-2
 
+Persist and rehydrate your Pinia state between page reloads.
+
 [![CI](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/pinia-plugin-persistedstate-2.svg)](https://www.npmjs.com/package/pinia-plugin-persistedstate-2)
 [![Bundle size](https://badgen.net/bundlephobia/minzip/pinia-plugin-persistedstate-2)](https://bundlephobia.com/result?p=pinia-plugin-persistedstate-2)
@@ -53,6 +55,83 @@ pinia.use(createPersistedStatePlugin())
 [Nuxt.js (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxtjs-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 [Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
+## Storage
+
+The default storage is `localStorage`, but you can also use other storage, e.g., using [lcoalForage](https://www.npmjs.com/package/localforage):
+
+```ts
+// ...
+import localforage from 'localforage'
+
+// ...
+pinia.use(
+  createPersistedStatePlugin({
+    storage: {
+      getItem: async (key) => {
+        return localforage.getItem(key)
+      },
+      setItem: async (key, value) => {
+        return localforage.setItem(key, value)
+      },
+      removeItem: async (key) => {
+        return localforage.removeItem(key)
+      },
+    },
+  }),
+)
+```
+
+## Serialization and Deserialization
+
+Serialization and deserialization allow you to customize the state that gets persisted and rehydrated.
+
+For example, if your state has circular references, you may need to use [json-stringify-safe](https://www.npmjs.com/package/json-stringify-safe) to prevent circular references from being thrown:
+
+```ts
+// ...
+import stringify from 'json-stringify-safe'
+
+// ...
+pinia.use(
+  createPersistedStatePlugin({
+    serialize: (value) => stringify(value),
+  }),
+)
+```
+
+## Migrations
+
+During updates, we may change structure of stores due to refactoring or other reasons.
+
+To support this feature, this plugin provides the `migrate` function, which will be called after `deserialize` but before actually overwriting/patching the store:
+
+```ts
+// ...
+const store = defineStore(
+  'store',
+  () => {
+    return {
+      // oldKey: ref(0),
+      newKey: ref(0),
+    }
+  },
+  {
+    persistedState: {
+      overwrite: true,
+      migrate: (state) => {
+        if (typeof state.oldKey === 'number') {
+          return {
+            newKey: state.oldKey,
+          }
+        }
+
+        return state
+      },
+    },
+  },
+)()
+```
 
 ## SSR
 
