@@ -105,6 +105,8 @@ export const createPersistedStatePlugin = (
           } else {
             patchOrOverwrite(migrateState)
           }
+        } else {
+          resolveIsReady()
         }
       }
 

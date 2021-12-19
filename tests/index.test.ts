@@ -630,6 +630,16 @@ describe('asynchronous storage', () => {
     expect(counterStore.count).toBe(42)
   })
 
+  test('$persistedState.isReady should be resolved after hydrating state (when there is no persisted state)', async () => {
+    getItem.mockImplementation(() => null)
+    const counterStore = useCounterStore()
+    expect(counterStore.count).toBe(0)
+
+    await counterStore.$persistedState.isReady()
+
+    expect(counterStore.count).toBe(0)
+  })
+
   test('$persistedState.pending should be true while persisting state', async () => {
     const counterStore = useCounterStore()
 
