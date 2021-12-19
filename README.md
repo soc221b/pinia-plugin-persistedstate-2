@@ -284,6 +284,8 @@ defineStore(
 
 - `migrate?: (value: any) => any | Promise<any>`: The `migrate` function enables versioning store. This will be called after `deserialize` but before actually overwriting/patching the store.
 
+- `beforeHydrate?: (oldState: S) => void`: This function gives you the opportunity to perform some tasks before actually overwriting/patching the store, such as cleaning up the old state.
+
 ### Store Properties
 
 - `store.$persistedState.isReady: () => Promise<void>`: Whether store is hydrated

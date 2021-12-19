@@ -221,6 +221,35 @@ describe('hydrate', () => {
 
     spyGetItem.mockRestore()
   })
+
+  it('calls beforeHydrate during rehydrate step', async () => {
+    getItem.mockImplementation(() => JSON.stringify({ count: 42 }))
+    const cleanUp = jest.fn()
+    const store = defineStore(
+      'store',
+      () => {
+        const count = ref(0)
+        return {
+          count,
+        }
+      },
+      {
+        persistedState: {
+          beforeHydrate: (oldState) => {
+            cleanUp(JSON.stringify(oldState))
+          },
+        },
+      },
+    )()
+
+    expect(cleanUp).toBeCalledTimes(1)
+    expect(cleanUp).toBeCalledWith(JSON.stringify({ count: 0 }))
+
+    await store.$persistedState.isReady()
+    expect(store.count).toBe(42)
+
+    cleanUp.mockRestore()
+  })
 })
 
 describe('persist', () => {

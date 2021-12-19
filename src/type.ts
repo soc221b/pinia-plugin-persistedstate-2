@@ -105,6 +105,13 @@ export type StoreOptions<S, Store> = CommonOptions<S, Store> & {
    * @default {value => value}
    */
   migrate?: (value: any) => any | Promise<any>
+
+  /**
+   * This function gives you the opportunity to perform some tasks before actually overwriting/patching the store, such as cleaning up the old state.
+   *
+   * @default {value => value}
+   */
+  beforeHydrate?: (oldState: S) => void
 }
 
 declare module 'pinia' {

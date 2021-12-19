@@ -8,7 +8,7 @@ import {
 import * as shvl from 'shvl'
 import { CommonOptions, IStorage } from '.'
 import { PluginOptions } from './type'
-import { identity } from './util'
+import { identity, noop } from './util'
 
 function getOption<K extends keyof CommonOptions<StateTree, Store>>(
   pluginOptions: CommonOptions<StateTree, Store>,
@@ -88,6 +88,7 @@ export const createPersistedStatePlugin = <S extends StateTree, Store>(
     // hydrate
     try {
       const patchOrOverwrite = (state: any) => {
+        ;(options.beforeHydrate ?? noop)(context.store.$state)
         if (overwrite) {
           context.store.$state = state
         } else {
