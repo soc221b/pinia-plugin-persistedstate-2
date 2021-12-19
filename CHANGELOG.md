@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.2...v0.2.3) (2021-12-19)
+
+
+### Bug Fixes
+
+* forgot to resolve when there is no persisted state ([1ac0f7c](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/1ac0f7c55cc25fea6c03b07dcbb68f778c95f0bc))
+
 ### [0.2.2](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.1...v0.2.2) (2021-12-18)
 
 
