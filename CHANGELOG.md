@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.3...v0.2.4) (2021-12-21)
+
+
+### Features
+
+* add beforeHydrate hook ([c1bc1ae](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/c1bc1ae3118d6c5040a608bb35853807e3fbd7ad))
+
+
+### Bug Fixes
+
+* losing type information ([9b2326e](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/9b2326ec25ef6a5c774baedb42d44b7d7d651bbb))
+
 ### [0.2.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.2...v0.2.3) (2021-12-19)
 
 
