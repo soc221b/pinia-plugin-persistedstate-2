@@ -21,18 +21,5 @@ release:
 	make build
 	pnpm standard-version
 
-install-examples:
-	node scripts/walk examples pnpm install
-
-build-examples:
-	node scripts/walk examples pnpm build
-
-test-examples:
-	pnpm jest --coverage ./examples
-
-clean-examples:
-	node scripts/walk examples rm -rf node_modules
-	node scripts/walk examples rm -rf dist
-
 check-size:
 	npx size-limit
