@@ -22,4 +22,4 @@ release:
 	pnpm standard-version
 
 check-size:
-	npx size-limit
+	pnpm size-limit
