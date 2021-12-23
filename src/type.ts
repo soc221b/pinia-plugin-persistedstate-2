@@ -23,7 +23,7 @@ export interface IStorage {
  * const store2 = defineStore('store-2', () => {}, { persistedState: { storage: sessionStorage } })
  * ```
  */
-export interface CommonOptions<S extends StateTree, Store> {
+export interface CommonOptions<S extends StateTree = StateTree> {
   /**
    * Whether to persist store
    * @default true
@@ -41,6 +41,13 @@ export interface CommonOptions<S extends StateTree, Store> {
    * To ensure storage is available.
    */
   assertStorage?: (storage: IStorage) => void | never
+
+  /**
+   * A function for merging state when rehydrating state.
+   *
+   * @default (state, savedState) => savedState
+   */
+  merge?: (state: S, savedState: S) => S
 
   /**
    * When rehydrating, overwrite initial state (patch otherwise).
@@ -74,9 +81,9 @@ export interface CommonOptions<S extends StateTree, Store> {
   ) => boolean
 }
 
-export type PluginOptions<S, Store> = CommonOptions<S, Store>
+export type PluginOptions<S> = CommonOptions<S>
 
-export type StoreOptions<S, Store> = CommonOptions<S, Store> & {
+export type StoreOptions<S> = CommonOptions<S> & {
   /**
    * The key to store the persisted state under.
    *
@@ -116,7 +123,7 @@ export type StoreOptions<S, Store> = CommonOptions<S, Store> & {
 
 declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
-    persistedState?: StoreOptions<S, Store>
+    persistedState?: StoreOptions<S>
   }
 
   export interface PiniaCustomProperties<

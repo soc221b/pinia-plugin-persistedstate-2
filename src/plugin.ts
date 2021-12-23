@@ -24,10 +24,10 @@ function getOption<T, K extends keyof T>(
   ) as Required<T>[K]
 }
 
-export function createPersistedStatePlugin<S extends StateTree, Store>(
-  options?: PluginOptions<S, Store>,
+export function createPersistedStatePlugin<S extends StateTree = StateTree>(
+  options?: PluginOptions<S>,
 ): PiniaPlugin {
-  const pluginOptions = options || ({} as PluginOptions<S, Store>)
+  const pluginOptions = options || ({} as PluginOptions<StateTree>)
 
   function plugin(context: PiniaPluginContext) {
     // normalize
@@ -86,11 +86,19 @@ export function createPersistedStatePlugin<S extends StateTree, Store>(
       options,
       {},
     )
+    const merge = getOption(
+      function (state, savedState) {
+        return savedState
+      },
+      'merge',
+      options,
+      {},
+    )
 
     if (__DEV__ || __TEST__) {
       if (options.assertStorage === void 0) {
         options.assertStorage = function (
-          storage: Required<CommonOptions<S, Store>>['storage'],
+          storage: Required<CommonOptions<S>>['storage'],
         ) {
           const uniqueKey = '@@'
           const result = storage.setItem(uniqueKey, '1')
@@ -123,10 +131,11 @@ export function createPersistedStatePlugin<S extends StateTree, Store>(
 
     function patchOrOverwrite(state: any) {
       ;(options.beforeHydrate || function () {})(context.store.$state)
+      const merged = merge(context.store.$state, state)
       if (overwrite) {
-        context.store.$state = state
+        context.store.$state = merged
       } else {
-        context.store.$patch(state)
+        context.store.$patch(merged)
       }
       resolveIsReady()
     }

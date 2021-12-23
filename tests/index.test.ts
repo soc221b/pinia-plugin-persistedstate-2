@@ -250,6 +250,34 @@ describe('hydrate', () => {
 
     cleanUp.mockRestore()
   })
+
+  it('calls merge when rehydrating', async () => {
+    const spyGetItem = jest
+      .spyOn(storage, 'getItem')
+      .mockImplementation(() => JSON.stringify({ values: ['bar'] }))
+
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          values: ref(['foo']),
+        }
+      },
+      {
+        persistedState: {
+          merge: (state, savedState) => {
+            return { values: [...state.values, ...savedState.values] }
+          },
+        },
+      },
+    )()
+    await store.$persistedState.isReady()
+
+    expect(spyGetItem).toBeCalled()
+    expect(store.values).toEqual(['foo', 'bar'])
+
+    spyGetItem.mockRestore()
+  })
 })
 
 describe('persist', () => {
