@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.4...v0.2.5) (2021-12-23)
+
+
+### Features
+
+* add merge option ([fb3c3bd](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/fb3c3bde3da868e82e52f726cebb3121f39cc723))
+
 ### [0.2.4](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.3...v0.2.4) (2021-12-21)
 
 
