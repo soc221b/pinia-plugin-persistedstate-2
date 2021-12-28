@@ -21,6 +21,8 @@ if (process.env.DEVELOPMENT) formats.splice(2)
 
 const configs = []
 formats.forEach((format) => {
+  const isIifeOrCjs = format === 'iife' || format === 'cjs'
+
   const config = {
     input,
     plugins: [
@@ -43,11 +45,13 @@ formats.forEach((format) => {
     ...config,
     plugins: [
       ...config.plugins,
-      replace({
-        __DEV__: true,
-        __TEST__: true,
-        'process.env.NODE_ENV': "'development'",
-      }),
+      ...(isIifeOrCjs
+        ? [
+            replace({
+              'process.env.NODE_ENV': "'development'",
+            }),
+          ]
+        : []),
     ],
     output: {
       ...config.output,
@@ -59,11 +63,13 @@ formats.forEach((format) => {
     ...config,
     plugins: [
       ...config.plugins,
-      replace({
-        __DEV__: false,
-        __TEST__: false,
-        'process.env.NODE_ENV': "'production'",
-      }),
+      ...(isIifeOrCjs
+        ? [
+            replace({
+              'process.env.NODE_ENV': "'production'",
+            }),
+          ]
+        : []),
       terser(),
     ],
     output: {

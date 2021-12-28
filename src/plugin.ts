@@ -95,7 +95,10 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       {},
     )
 
-    if (__DEV__ || __TEST__) {
+    if (
+      process.env.NODE_ENV === 'development' ||
+      process.env.NODE_ENV === 'test'
+    ) {
       if (options.assertStorage === void 0) {
         options.assertStorage = function (
           storage: Required<CommonOptions<S>>['storage'],
@@ -163,7 +166,11 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
         parse(value)
       }
     } catch (error) {
-      if (__DEV__ || __TEST__) console.warn(error)
+      if (
+        process.env.NODE_ENV === 'development' ||
+        process.env.NODE_ENV === 'test'
+      )
+        console.warn(error)
       resolveIsReady!()
     }
 
