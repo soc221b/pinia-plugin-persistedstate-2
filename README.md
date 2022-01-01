@@ -2,6 +2,8 @@
 
 Persist and rehydrate your Pinia state between page reloads.
 
+This project use [SemVer](https://semver.org/) for versioning. For the versions available, see the tags on this repository.
+
 [![CI](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/pinia-plugin-persistedstate-2.svg)](https://www.npmjs.com/package/pinia-plugin-persistedstate-2)
 [![Bundle size](https://badgen.net/bundlephobia/minzip/pinia-plugin-persistedstate-2)](https://bundlephobia.com/result?p=pinia-plugin-persistedstate-2)
@@ -11,7 +13,13 @@ Persist and rehydrate your Pinia state between page reloads.
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-## Getting Started
+## ✨ Features
+
+- 🎨 Configurable globally and in every store.
+- 💪 Type Safe
+- 📦 Extremely small
+
+## 🚀 Getting Started
 
 ### Installation
 
@@ -38,6 +46,8 @@ You can find the library on `window.PiniaPluginPersistedstate_2`.
 
 ### Usage
 
+All you need to do is add the plugin to pinia:
+
 ```ts
 import { createPinia } from 'pinia'
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
@@ -56,7 +66,9 @@ pinia.use(createPersistedStatePlugin())
 
 [Nuxt3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
-## Storage
+More examples can be found in [examples](./examples).
+
+#### Storage
 
 The default storage is `localStorage`, but you can also use other storage, e.g., using [lcoalForage](https://www.npmjs.com/package/localforage):
 
@@ -82,7 +94,7 @@ pinia.use(
 )
 ```
 
-## Serialization and Deserialization
+#### Serialization and Deserialization
 
 Serialization and deserialization allow you to customize the state that gets persisted and rehydrated.
 
@@ -100,7 +112,7 @@ pinia.use(
 )
 ```
 
-## Migrations
+#### Migrations
 
 During updates, we may change structure of stores due to refactoring or other reasons.
 
@@ -133,9 +145,9 @@ const store = defineStore(
 )()
 ```
 
-## SSR
+#### SSR
 
-### Nuxt.js
+##### Nuxt.js
 
 Follow [Pinia - Nuxt.js installation steps](https://pinia.esm.dev/ssr/nuxt.html#installation).
 
@@ -152,7 +164,7 @@ export default {
 }
 ```
 
-### With localStorage (client-only)
+##### With localStorage (client-only)
 
 Create the plugin below to plugins config in your nuxt.config.js file.
 
@@ -175,7 +187,7 @@ export default function ({ $pinia }) {
 }
 ```
 
-### With cookies (universal)
+##### With cookies (universal)
 
 ```js
 // nuxt.config.js
@@ -214,7 +226,7 @@ export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
 }
 ```
 
-## API
+## 📖 API
 
 For more details, see [type.ts](./src/type.ts).
 
@@ -294,15 +306,11 @@ defineStore(
 
 - `store.$persistedState.pending: boolean`: Whether store is persisting
 
-## Contributing
+## 🤝 Contributing
 
 Please read [CONTRIBUTING.md](/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull
 requests to us.
 
-## Versioning
-
-This project use [SemVer](https://semver.org/) for versioning. For the versions available, see the tags on this repository.
-
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
