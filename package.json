@@ -1,6 +1,6 @@
 {
   "name": "pinia-plugin-persistedstate-2",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "sideEffects": false,
   "engines": {
     "pnpm": ">=6.22.2",
