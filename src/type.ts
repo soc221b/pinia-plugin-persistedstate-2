@@ -94,22 +94,22 @@ export type StoreOptions<S> = CommonOptions<S> & {
   /**
    * An array of any paths to partially persist the state.
    *
-   * Use dot-notation `['foo', 'nested.bar']` for nested fields.
+   * Use dot-notation `['key', 'nested.key', ['special.key']]` for nested fields.
    *
    * @default undefined
    *
    */
-  includePaths?: string[]
+  includePaths?: (string | string[])[]
 
   /**
    * Opposite to `includePaths`, An array of any paths to exclude.
    *
-   * Use dot-notation `['foo', 'nested.bar']` for nested fields.
+   * Use dot-notation `['key', 'nested.key', ['special.key']]` for nested fields.
    *
    * Warning: Due to deep copying, `excludePaths` may cause performance issues, if possible, please use `includePaths` instead.
    * @default undefined
    */
-  excludePaths?: string[]
+  excludePaths?: (string | string[])[]
 
   /**
    * The `migrate` function enables versioning store. This will be called after `deserialize` but before actually overwriting/patching the store.

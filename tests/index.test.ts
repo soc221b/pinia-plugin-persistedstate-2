@@ -335,6 +335,39 @@ describe('persist', () => {
     spyWarn.mockRestore()
   })
 
+  it('persist partial state when given includePaths 2', async () => {
+    const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
+
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          foo: ref(0),
+          bar: ref(0),
+          'nested.baz': ref(0),
+          'nested.qux': ref(0),
+        }
+      },
+      { persistedState: { includePaths: ['foo', ['nested.baz']] } },
+    )()
+
+    store.$state = {
+      foo: 1,
+      bar: 1,
+      'nested.baz': 1,
+      'nested.qux': 1,
+    }
+    await nextTick()
+
+    expect(setItem).lastCalledWith(
+      'store',
+      JSON.stringify({ foo: 1, 'nested.baz': 1 }),
+    )
+    expect(spyWarn).not.toBeCalled()
+
+    spyWarn.mockRestore()
+  })
+
   it('persist partial state when given excludePaths', async () => {
     const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
 
@@ -366,6 +399,39 @@ describe('persist', () => {
     expect(setItem).lastCalledWith(
       'store',
       JSON.stringify({ foo: 1, nested: { baz: 1 } }),
+    )
+    expect(spyWarn).not.toBeCalled()
+
+    spyWarn.mockRestore()
+  })
+
+  it('persist partial state when given excludePaths 2', async () => {
+    const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
+
+    const store = defineStore(
+      'store',
+      () => {
+        return {
+          foo: ref(0),
+          bar: ref(0),
+          'nested.baz': ref(0),
+          'nested.qux': ref(0),
+        }
+      },
+      { persistedState: { excludePaths: ['bar', ['nested.qux']] } },
+    )()
+
+    store.$state = {
+      foo: 1,
+      bar: 1,
+      'nested.baz': 1,
+      'nested.qux': 1,
+    }
+    await nextTick()
+
+    expect(setItem).lastCalledWith(
+      'store',
+      JSON.stringify({ foo: 1, 'nested.baz': 1 }),
     )
     expect(spyWarn).not.toBeCalled()
 
