@@ -25,7 +25,7 @@ export interface IStorage {
  */
 export interface CommonOptions<S extends StateTree = StateTree> {
   /**
-   * Whether to persist store
+   * Whether to persist store.
    * @default true
    */
   persist?: boolean
@@ -57,14 +57,14 @@ export interface CommonOptions<S extends StateTree = StateTree> {
   overwrite?: boolean
 
   /**
-   * This method will be called right before `storage.setItem`
+   * This method will be called right before `storage.setItem`.
    *
    * @default JSON.stringify
    */
   serialize?: (state: S) => any
 
   /**
-   * This method will be called right after `storage.getItem`
+   * This method will be called right after `storage.getItem`.
    *
    * @default JSON.parse
    */
@@ -92,7 +92,7 @@ export type StoreOptions<S> = CommonOptions<S> & {
   key?: string
 
   /**
-   * An array of any paths to partially persist the state
+   * An array of any paths to partially persist the state.
    *
    * Use dot-notation `['foo', 'nested.bar']` for nested fields.
    *
@@ -102,6 +102,11 @@ export type StoreOptions<S> = CommonOptions<S> & {
   includePaths?: string[]
 
   /**
+   * Opposite to `includePaths`, An array of any paths to exclude.
+   *
+   * Use dot-notation `['foo', 'nested.bar']` for nested fields.
+   *
+   * Warning: Due to deep copying, `excludePaths` may cause performance issues, if possible, please use `includePaths` instead.
    * @default undefined
    */
   excludePaths?: string[]
