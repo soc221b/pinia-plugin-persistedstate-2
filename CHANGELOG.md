@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.8) (2022-01-05)
+
+
+### Bug Fixes
+
+* failed to load esm module ([1e51b3a](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/1e51b3a7f0c4e1a643a16f691e2a9c2740baa00b))
+* object keys may contain `.`(dot) ([385be7a](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
+
 ### [0.2.7](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.7) (2022-01-02)
 
 
