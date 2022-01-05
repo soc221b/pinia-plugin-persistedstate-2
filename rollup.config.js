@@ -22,6 +22,8 @@ if (process.env.DEVELOPMENT) formats.splice(2)
 const configs = []
 formats.forEach((format) => {
   const isIifeOrCjs = format === 'iife' || format === 'cjs'
+  const isEsm = format === 'es'
+  const ext = isEsm ? 'mjs' : 'js'
 
   const config = {
     input,
@@ -55,7 +57,7 @@ formats.forEach((format) => {
     ],
     output: {
       ...config.output,
-      file: resolvePackage(`dist/${output}.${format}.js`),
+      file: resolvePackage(`dist/${output}.${format}.${ext}`),
     },
   })
 
@@ -74,7 +76,9 @@ formats.forEach((format) => {
     ],
     output: {
       ...config.output,
-      file: resolvePackage(`dist/${output}.${format}.${productionSuffix}.js`),
+      file: resolvePackage(
+        `dist/${output}.${format}.${productionSuffix}.${ext}`,
+      ),
     },
   })
 })

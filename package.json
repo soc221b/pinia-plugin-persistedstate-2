@@ -8,7 +8,7 @@
   },
   "description": "Persist and rehydrate your Pinia state between page reloads",
   "main": "dist/index.cjs.prod.js",
-  "module": "dist/index.es.prod.js",
+  "module": "dist/index.es.prod.mjs",
   "unpkg": "dist/index.iife.prod.js",
   "jsdelivr": "dist/index.iife.prod.js",
   "types": "dist/index.d.ts",
