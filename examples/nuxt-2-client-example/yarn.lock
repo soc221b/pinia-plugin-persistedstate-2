@@ -1305,10 +1305,10 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
-"@pinia/nuxt@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.1.6.tgz#680c5963a26a375a0ce7fa8315f7ea395d80f0de"
-  integrity sha512-w7bM6h0scVtYBVEtXnLzAESfs2WI9GwVbhST1lhojrb173mnKGxii/ufJS5ZLR5LXPwNaF3HTyoYhtu+ZykWZg==
+"@pinia/nuxt@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.1.8.tgz#457a87b0f39ae47a1306e08ab7d4d390b30b48c9"
+  integrity sha512-+M1GH/4XQdooOulPL7aYzli6UE1R5rWJtgcPhx2/97yYRLhKZvuIT33OauUCjYZ+tQVs8lyKfzt6S2agqzcmWg==
   dependencies:
     vue-demi "*"
 
@@ -1501,10 +1501,10 @@
   dependencies:
     tslib "^2.3.1"
 
-"@vue/devtools-api@^6.0.0-beta.20.1":
-  version "6.0.0-beta.20.1"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.20.1.tgz#5b499647e929c35baf2a66a399578f9aa4601142"
-  integrity sha512-R2rfiRY+kZugzWh9ZyITaovx+jpU4vgivAEAiz80kvh3yviiTU3CBuGuyWpSwGz9/C7TkSWVM/FtQRGlZ16n8Q==
+"@vue/devtools-api@^6.0.0-beta.21":
+  version "6.0.0-beta.21.1"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.21.1.tgz#f1410f53c42aa67fa3b01ca7bdba891f69d7bc97"
+  integrity sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==
 
 "@vue/ref-transform@^3.2.23":
   version "3.2.23"
@@ -5550,20 +5550,19 @@ pify@^5.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-5.0.0.tgz#1f5eca3f5e87ebec28cc6d54a0e4aaf00acc127f"
   integrity sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==
 
-pinia-plugin-persistedstate-2@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate-2/-/pinia-plugin-persistedstate-2-0.1.2.tgz#b238bf12e5e0095af2e111079a1b9f0b6158846e"
-  integrity sha512-wC/J6d3WbEchpR3QbewSR0kP8u/FivOZW4Uipu8MVwBugqp30jura/PiSKMlRoi1qVKmw5/aLTYCfs5OgcqWUA==
+pinia-plugin-persistedstate-2@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate-2/-/pinia-plugin-persistedstate-2-0.2.8.tgz#0a09e9b2004e31d405027bdb53a1d34137fedf3e"
+  integrity sha512-e0tH5qNJ/s5dmjN1yr4W90MOtZ6dhi0XsLHB2gsDwALHp3Nhz8/QSL4bm5bd6N8usqVj2Mrr7xasX/uQ8SdrEw==
   dependencies:
     shvl "^2.0.3"
-    vue-demi "0.11.4"
 
-pinia@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.6.tgz#db7ebccd459ef8020d0c528d85be7930e0f4edd0"
-  integrity sha512-01mP4+KapIcTNSYLhQESy6GW0N8vY5wX3UqOwkC87e7DPjEusNJ8bENrKqdvZaRHbB2rDMOONeAbwMa3+n1/rw==
+pinia@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.9.tgz#7d7767c46e3810fff046c289453242a68fc23492"
+  integrity sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==
   dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.20.1"
+    "@vue/devtools-api" "^6.0.0-beta.21"
     vue-demi "*"
 
 pkg-dir@^3.0.0:
@@ -7690,11 +7689,6 @@ vue-demi@*:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
   integrity sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==
-
-vue-demi@0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
-  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

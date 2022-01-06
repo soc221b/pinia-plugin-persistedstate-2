@@ -6,13 +6,13 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest"
+    "nuxt3": "^3.0.0-27356801.e9128f3"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.1.6",
+    "@pinia/nuxt": "^0.1.8",
     "cookie": "^0.4.1",
     "js-cookie": "^3.0.1",
-    "pinia": "^2.0.6",
-    "pinia-plugin-persistedstate-2": "^0.1.2"
+    "pinia": "^2.0.9",
+    "pinia-plugin-persistedstate-2": "^0.2.8"
   }
 }

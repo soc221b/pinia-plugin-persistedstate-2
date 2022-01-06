@@ -9,7 +9,7 @@
   "dependencies": {
     "localforage": "^1.10.0",
     "pinia": "^2.0.6",
-    "pinia-plugin-persistedstate-2": "^0.2.0",
+    "pinia-plugin-persistedstate-2": "^0.2.8",
     "vue": "^3.2.23"
   },
   "devDependencies": {

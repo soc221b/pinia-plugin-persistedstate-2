@@ -13,8 +13,8 @@
     "@capacitor/storage": "^1.2.3",
     "@ionic/vue": "^6.0.0",
     "@ionic/vue-router": "^6.0.0",
-    "pinia": "^2.0.6",
-    "pinia-plugin-persistedstate-2": "^0.1.1",
+    "pinia": "^2.0.9",
+    "pinia-plugin-persistedstate-2": "^0.2.8",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },

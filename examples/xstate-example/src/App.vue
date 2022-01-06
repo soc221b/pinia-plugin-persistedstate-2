@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
 import { useWater } from './stores/water'
 
 const fsm = useWater()

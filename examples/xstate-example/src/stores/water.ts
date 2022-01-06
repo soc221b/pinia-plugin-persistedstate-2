@@ -11,7 +11,8 @@ export const useWater = defineStore(
     const store = {
       machine,
       state: computed(() => machine.value.state.value),
-      send: computed(() => machine.value.send),
+      send: (...args: Parameters<typeof machine.value.send>) =>
+        machine.value.send(...args),
     }
 
     return store
