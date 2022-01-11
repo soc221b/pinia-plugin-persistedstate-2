@@ -1,0 +1,30 @@
+{
+  "name": "vite-ssr-example",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "node node_modules/vite-ssr/cli.js --port 3000 --force",
+    "build": "rm -rf dist && node node_modules/vite-ssr/cli.js build",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "@types/cookie": "^0.4.1",
+    "@types/js-cookie": "^3.0.1",
+    "@vueuse/head": "^0.7.4",
+    "cookie": "^0.4.1",
+    "express": "^4.17.2",
+    "js-cookie": "^3.0.1",
+    "pinia": "^2.0.9",
+    "pinia-plugin-persistedstate-2": "^0.2.8",
+    "vite-ssr": "^0.15.0",
+    "vue": "3",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/compiler-sfc": "^3.2.26",
+    "@vue/server-renderer": "^3.2.26",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
+}
