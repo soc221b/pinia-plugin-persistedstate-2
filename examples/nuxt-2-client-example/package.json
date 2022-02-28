@@ -1,20 +1,17 @@
 {
-  "name": "nuxtjs-example",
-  "version": "1.0.0",
+  "name": "nuxt-2-client-example",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "^0.31.0",
+    "@nuxtjs/composition-api": "^0.32.0",
     "@pinia/nuxt": "^0.1.8",
-    "core-js": "^3.15.1",
+    "core-js": "^3.21.1",
     "nuxt": "^2.15.8",
-    "pinia": "^2.0.9",
-    "pinia-plugin-persistedstate-2": "^0.2.8"
-  },
-  "devDependencies": {}
+    "pinia": "^2.0.11",
+    "pinia-plugin-persistedstate-2": "^1.0.0"
+  }
 }

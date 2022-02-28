@@ -4,19 +4,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@xstate/vue": "^0.8.1",
-    "pinia": "^2.0.9",
-    "pinia-plugin-persistedstate-2": "^0.2.8",
-    "vue": "^3.2.26",
-    "xstate": "^4.27.0"
+    "@xstate/vue": "^0.8.2",
+    "pinia": "^2.0.11",
+    "pinia-plugin-persistedstate-2": "^1.0.0",
+    "vue": "^3.2.31",
+    "xstate": "^4.30.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.10.2",
-    "typescript": "^4.5.4",
-    "vite": "^2.7.10",
+    "typescript": "^4.5.5",
+    "vite": "^2.8.4",
     "vue-tsc": "^0.3.0"
   }
 }
