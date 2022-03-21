@@ -14,7 +14,7 @@ specifiers:
   change-case: ^4.1.2
   husky: ^7.0.2
   jest: ^27
-  pinia: ^2.0.11
+  pinia: ^2.0.12
   pinst: ^2.1.6
   prettier: ^2.3.2
   rimraf: ^3.0.2
@@ -46,7 +46,7 @@ devDependencies:
   change-case: 4.1.2
   husky: 7.0.4
   jest: 27.4.4
-  pinia: 2.0.11_typescript@4.5.3+vue@3.2.24
+  pinia: 2.0.12_typescript@4.5.3+vue@3.2.24
   pinst: 2.1.6
   prettier: 2.5.1
   rimraf: 3.0.2
@@ -1836,8 +1836,8 @@ packages:
       '@vue/shared': 3.2.24
     dev: true
 
-  /@vue/devtools-api/6.0.12:
-    resolution: {integrity: sha512-iO/4FIezHKXhiDBdKySCvJVh8/mZPxHpiQrTy+PXVqJZgpTPTdHy4q8GXulaY+UKEagdkBb0onxNQZ0LNiqVhw==}
+  /@vue/devtools-api/6.1.3:
+    resolution: {integrity: sha512-79InfO2xHv+WHIrH1bHXQUiQD/wMls9qBk6WVwGCbdwP7/3zINtvqPNMtmSHXsIKjvUAHc8L0ouOj6ZQQRmcXg==}
     dev: true
 
   /@vue/reactivity/3.2.24:
@@ -3314,7 +3314,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.15.2
+      uglify-js: 3.15.3
     dev: true
 
   /hard-rejection/2.1.0:
@@ -4700,8 +4700,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinia/2.0.11_typescript@4.5.3+vue@3.2.24:
-    resolution: {integrity: sha512-JzcmnMqu28PNWOjDgEDK6fTrIzX8eQZKPPKvu/fpHdpXARUj1xeVdFi3YFIMOWswqaBd589cpmAMdSSTryI9iw==}
+  /pinia/2.0.12_typescript@4.5.3+vue@3.2.24:
+    resolution: {integrity: sha512-tUeuYGFrLU5irmGyRAIxp35q1OTcZ8sKpGT4XkPeVcG35W4R6cfXDbCGexzmVqH5lTQJJTXXbNGutIu9yS5yew==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -4712,7 +4712,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@vue/devtools-api': 6.0.12
+      '@vue/devtools-api': 6.1.3
       typescript: 4.5.3
       vue: 3.2.24
       vue-demi: 0.12.1_vue@3.2.24
@@ -5541,8 +5541,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.15.2:
-    resolution: {integrity: sha512-peeoTk3hSwYdoc9nrdiEJk+gx1ALCtTjdYuKSXMTDqq7n1W7dHPqWDdSi+BPL0ni2YMeHD7hKUSdbj3TZauY2A==}
+  /uglify-js/3.15.3:
+    resolution: {integrity: sha512-6iCVm2omGJbsu3JWac+p6kUiOpg3wFO2f8lIXjfEb8RrmLjzog1wTPMmwKB7swfzzqxj9YM+sGUM++u1qN4qJg==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
