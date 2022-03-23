@@ -71,7 +71,7 @@ More examples can be found in [examples](./examples).
 
 #### Storage
 
-The default storage is `localStorage`, but you can also use other storage, e.g., using [lcoalForage](https://www.npmjs.com/package/localforage):
+The default storage is `localStorage`, but you can also use other storage, e.g., using [localForage](https://www.npmjs.com/package/localforage):
 
 ```ts
 // ...
