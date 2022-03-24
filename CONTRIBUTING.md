@@ -6,3 +6,5 @@
 
 1. Fork and clone the repo
 2. Run `pnpm install` to install dependencies.
+3. Run `pnpm run test` to run tests in watch mode.
+4. Run `pnpm run lint:fix` to fix linting errors.
