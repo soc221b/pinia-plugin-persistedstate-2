@@ -34,9 +34,16 @@
     "localforage"
   ],
   "scripts": {
+    "build": "rollup -c",
+    "check-size": "size-limit",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write .",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "release": "pnpm run build && pnpm exec standard-version",
+    "test": "jest --watch",
+    "test:run": "jest"
   },
   "dependencies": {
     "shvl": "^2.0.3"

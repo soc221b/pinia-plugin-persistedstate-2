@@ -24,7 +24,7 @@ jobs:
           version: 6.22.2
 
       - run: pnpm install
-      - run: pnpm prettier --check .
+      - run: pnpm run lint
 
   build:
     runs-on: ubuntu-latest
@@ -48,9 +48,9 @@ jobs:
 
       - run: pnpm install
 
-      - run: make build
+      - run: pnpm run build
 
-      - run: make check-size
+      - run: pnpm run check-size
 
   test:
     runs-on: ubuntu-latest
@@ -74,7 +74,7 @@ jobs:
 
       - run: pnpm install
 
-      - run: make test
+      - run: pnpm run test:run -- --coverage
         env:
           CI: true
 
