@@ -3,7 +3,6 @@
 ## Installation
 
 ```sh
-yarn add pinia
 yarn add pinia-plugin-persistedstate-2
 ```
 
@@ -18,7 +17,8 @@ import { createPinia } from 'pinia'
 
 export const plugin: Plugin = (app) => {
   const pinia = createPinia()
-+ pinia.use(createPersistedStatePlugin())
++ const installPersistedStatePlugin = createPersistedStatePlugin()
++ pinia.use((context) => installPersistedStatePlugin(context))
 
   app.use(pinia)
 }
