@@ -1,0 +1,29 @@
+{
+  "name": "vue-2-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "preview": "serve -s dist"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.4.9",
+    "core-js": "^3.8.3",
+    "pinia": "^2.0.12",
+    "pinia-plugin-persistedstate-2": "^1.0.0",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "serve": "^13.0.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

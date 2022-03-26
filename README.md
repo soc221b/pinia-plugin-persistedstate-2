@@ -59,6 +59,8 @@ pinia.use((context) => installPersistedStatePlugin(context))
 
 ### Examples
 
+[Vue 2](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue-2-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+
 [Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
 
 [localForage (asynchronous storage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/localforage-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
