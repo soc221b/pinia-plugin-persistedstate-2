@@ -1,9 +1,5 @@
 {
   "name": "quasar-example",
-  "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
-  "author": "Ernest <iendeavor.github.io@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "quasar dev",
