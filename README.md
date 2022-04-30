@@ -167,7 +167,7 @@ export default {
 }
 ```
 
-##### With localStorage (client-only)
+##### With localStorage (client-only) (nuxt@2 example)
 
 Create the plugin below to plugins config in your nuxt.config.js file.
 
@@ -190,15 +190,7 @@ export default function ({ $pinia }) {
 }
 ```
 
-##### With cookies (universal)
-
-```js
-// nuxt.config.js
-export default {
-  // ... other options
-  plugins: ['@/plugins/persistedstate.js'],
-}
-```
+##### With cookies (universal) (nuxt@3 example)
 
 ```ts
 // plugins/persistedstate.js
@@ -206,7 +198,7 @@ import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 import Cookies from 'js-cookie'
 import cookie from 'cookie'
 
-export default function ({ $pinia, ssrContext /* Nuxt 3 example */ }) {
+export default function ({ $pinia, ssrContext }) {
   $pinia.use(
     createPersistedStatePlugin({
       storage: {
