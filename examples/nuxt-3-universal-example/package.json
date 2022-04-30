@@ -7,7 +7,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "^3.0.0-27430570.4cfad4d"
+    "nuxt": "^3.0.0-rc.1"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.1.8",
