@@ -709,6 +709,35 @@ describe('persist', () => {
 
     expect(getItem).not.toBeCalled()
   })
+
+  it('should reset persisted state when calling $reset', async () => {
+    const spyWarn = jest.spyOn(console, 'warn').mockImplementation()
+
+    const useCounterStore = defineStore('counter-store', {
+      state() {
+        return {
+          count: 0,
+        }
+      },
+    })
+    const counterStore = useCounterStore()
+    counterStore.count = 1
+    await nextTick()
+    expect(setItem).lastCalledWith(
+      'counter-store',
+      JSON.stringify({ count: 1 }),
+    )
+
+    counterStore.$reset()
+
+    expect(setItem).lastCalledWith(
+      'counter-store',
+      JSON.stringify({ count: 0 }),
+    )
+    expect(spyWarn).not.toBeCalled()
+
+    spyWarn.mockRestore()
+  })
 })
 
 describe('asynchronous storage', () => {
