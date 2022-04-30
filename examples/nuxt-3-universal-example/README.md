@@ -38,16 +38,3 @@ export default function ({ $pinia, ssrContext }) {
   )
 }
 ```
-
-```diff
-// nuxt.config.ts
-export default {
-  buildModules: [
-    '@pinia/nuxt',
-  ],
-
-  plugins: [
-+   '@/plugins/persistedstate.universal.ts',
-  ],
-}
-```
