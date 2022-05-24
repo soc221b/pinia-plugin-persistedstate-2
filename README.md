@@ -287,9 +287,9 @@ defineStore(
 
 - `key?: string`: Defaults to `store.$id`. The key to store the persisted state under.
 
-- `includePath?: (string | string[])[]`: An array of any paths to partially persist the state. Use dot-notation `['key', 'nested.key', ['special.key']]` for nested fields.
+- `includePaths?: (string | string[])[]`: An array of any paths to partially persist the state. Use dot-notation `['key', 'nested.key', ['special.key']]` for nested fields.
 
-- `excludePath?: (string | string[])[]`: Opposite to `includePaths`, An array of any paths to exclude. Due to deep copying, `excludePaths` may cause performance issues, if possible, please use `includePaths` instead.
+- `excludePaths?: (string | string[])[]`: Opposite to `includePaths`, An array of any paths to exclude. Due to deep copying, `excludePaths` may cause performance issues, if possible, please use `includePaths` instead.
 
 - `migrate?: (value: any) => any | Promise<any>`: The `migrate` function enables versioning store. This will be called after `deserialize` but before actually overwriting/patching the store.
 
