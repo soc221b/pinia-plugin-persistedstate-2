@@ -1,6 +1,6 @@
 {
   "name": "pinia-plugin-persistedstate-2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "sideEffects": false,
   "engines": {
     "node": "^12.13.0 || ^14.15.0 || >=16.5.0"

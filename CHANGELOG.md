@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v1.0.0...v1.0.1) (2022-07-20)
+
+
+### Bug Fixes
+
+* support custom NODE_ENV ([28b811b](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/28b811b75c51d071db8b4450b3c3557fc0c028f3)), closes [#26](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/26)
+
 ## [1.0.0](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.8...v1.0.0) (2022-02-14)
 
 ### [0.2.8](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.8) (2022-01-05)
