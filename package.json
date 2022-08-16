@@ -61,7 +61,7 @@
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.12",
-    "@vue/test-utils": "^2.0.0-rc.17",
+    "@vue/test-utils": "^2.0.2",
     "change-case": "^4.1.2",
     "husky": "^7.0.4",
     "jest": "^27.4.4",
