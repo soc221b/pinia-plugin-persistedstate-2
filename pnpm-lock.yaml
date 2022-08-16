@@ -14,7 +14,7 @@ specifiers:
   change-case: ^4.1.2
   husky: ^7.0.2
   jest: ^27
-  pinia: ^2.0.13
+  pinia: ^2.0.18
   pinst: ^2.1.6
   prettier: ^2.3.2
   rimraf: ^3.0.2
@@ -46,7 +46,7 @@ devDependencies:
   change-case: 4.1.2
   husky: 7.0.4
   jest: 27.4.4
-  pinia: 2.0.13_l2yvkpcs2s7vgvakaydseguvpq
+  pinia: 2.0.18_l2yvkpcs2s7vgvakaydseguvpq
   pinst: 2.1.6
   prettier: 2.5.1
   rimraf: 3.0.2
@@ -1901,8 +1901,8 @@ packages:
       '@vue/shared': 3.2.37
     dev: true
 
-  /@vue/devtools-api/6.1.4:
-    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
+  /@vue/devtools-api/6.2.1:
+    resolution: {integrity: sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==}
     dev: true
 
   /@vue/reactivity-transform/3.2.37:
@@ -4793,8 +4793,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinia/2.0.13_l2yvkpcs2s7vgvakaydseguvpq:
-    resolution: {integrity: sha512-B7rSqm1xNpwcPMnqns8/gVBfbbi7lWTByzS6aPZ4JOXSJD4Y531rZHDCoYWBwLyHY/8hWnXljgiXp6rRyrofcw==}
+  /pinia/2.0.18_l2yvkpcs2s7vgvakaydseguvpq:
+    resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -4805,7 +4805,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@vue/devtools-api': 6.1.4
+      '@vue/devtools-api': 6.2.1
       typescript: 4.5.3
       vue: 3.2.37
       vue-demi: 0.12.1_vue@3.2.37

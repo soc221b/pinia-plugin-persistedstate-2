@@ -49,7 +49,7 @@
     "shvl": "^2.0.3"
   },
   "peerDependencies": {
-    "pinia": "^2.0.12"
+    "pinia": "^2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -65,7 +65,7 @@
     "change-case": "^4.1.2",
     "husky": "^7.0.2",
     "jest": "^27",
-    "pinia": "^2.0.13",
+    "pinia": "^2.0.18",
     "pinst": "^2.1.6",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
