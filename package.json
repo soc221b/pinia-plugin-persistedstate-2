@@ -41,7 +41,7 @@
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "release": "git fetch && pnpm run build && pnpm exec standard-version",
+    "release": "git fetch && pnpm exec standard-version",
     "test": "jest --watch",
     "test:run": "jest"
   },
