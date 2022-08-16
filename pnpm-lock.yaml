@@ -26,7 +26,7 @@ specifiers:
   size-limit: ^7.0.8
   standard-version: ^9.3.2
   ts-jest: ^27.1.1
-  typescript: ^4.5.3
+  typescript: ^4.7.4
   vue: ^3.2.37
 
 dependencies:
@@ -46,18 +46,18 @@ devDependencies:
   change-case: 4.1.2
   husky: 7.0.4
   jest: 27.4.4
-  pinia: 2.0.18_l2yvkpcs2s7vgvakaydseguvpq
+  pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
   pinst: 2.1.6
   prettier: 2.5.1
   rimraf: 3.0.2
   rollup: 2.61.1
   rollup-plugin-replace: 2.2.0
   rollup-plugin-terser: 7.0.2_rollup@2.61.1
-  rollup-plugin-typescript2: 0.30.0_63wyxtlg2gadxyumeqygwj3nd4
+  rollup-plugin-typescript2: 0.30.0_s33hlkpqt6qwx2bletoyw5xgmy
   size-limit: 7.0.8
   standard-version: 9.3.2
-  ts-jest: 27.1.1_whtc2twjcraiqvk5v5q6e44734
-  typescript: 4.5.3
+  ts-jest: 27.1.1_tynmmyvj6zibcpefbtybtuhfve
+  typescript: 4.7.4
   vue: 3.2.37
 
 packages:
@@ -1303,12 +1303,12 @@ packages:
       '@commitlint/execute-rule': 13.2.0
       '@commitlint/resolve-extends': 13.2.0
       '@commitlint/types': 13.2.0
-      '@endemolshinegroup/cosmiconfig-typescript-loader': 3.0.2_6hrzkaxvirgpjyn3jgtpet5tfm
+      '@endemolshinegroup/cosmiconfig-typescript-loader': 3.0.2_zmjss6mecb4soo3dpdlecld3xa
       chalk: 4.1.2
       cosmiconfig: 7.0.1
       lodash: 4.17.21
       resolve-from: 5.0.0
-      typescript: 4.5.3
+      typescript: 4.7.4
     dev: true
 
   /@commitlint/message/13.2.0:
@@ -1375,7 +1375,7 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@endemolshinegroup/cosmiconfig-typescript-loader/3.0.2_6hrzkaxvirgpjyn3jgtpet5tfm:
+  /@endemolshinegroup/cosmiconfig-typescript-loader/3.0.2_zmjss6mecb4soo3dpdlecld3xa:
     resolution: {integrity: sha512-QRVtqJuS1mcT56oHpVegkKBlgtWjXw/gHNWO3eL9oyB5Sc7HBoc2OLG/nYpVfT/Jejvo3NUrD0Udk7XgoyDKkA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -1384,7 +1384,7 @@ packages:
       cosmiconfig: 7.0.1
       lodash.get: 4.4.2
       make-error: 1.3.6
-      ts-node: 9.1.1_typescript@4.5.3
+      ts-node: 9.1.1_typescript@4.7.4
       tslib: 2.3.1
     transitivePeerDependencies:
       - typescript
@@ -4793,7 +4793,7 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinia/2.0.18_l2yvkpcs2s7vgvakaydseguvpq:
+  /pinia/2.0.18_j6bzmzd4ujpabbp5objtwxyjp4:
     resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
@@ -4806,7 +4806,7 @@ packages:
         optional: true
     dependencies:
       '@vue/devtools-api': 6.2.1
-      typescript: 4.5.3
+      typescript: 4.7.4
       vue: 3.2.37
       vue-demi: 0.12.1_vue@3.2.37
     dev: true
@@ -5090,7 +5090,7 @@ packages:
       terser: 5.10.0
     dev: true
 
-  /rollup-plugin-typescript2/0.30.0_63wyxtlg2gadxyumeqygwj3nd4:
+  /rollup-plugin-typescript2/0.30.0_s33hlkpqt6qwx2bletoyw5xgmy:
     resolution: {integrity: sha512-NUFszIQyhgDdhRS9ya/VEmsnpTe+GERDMmFo0Y+kf8ds51Xy57nPNGglJY+W6x1vcouA7Au7nsTgsLFj2I0PxQ==}
     peerDependencies:
       rollup: '>=1.26.3'
@@ -5102,7 +5102,7 @@ packages:
       resolve: 1.20.0
       rollup: 2.61.1
       tslib: 2.1.0
-      typescript: 4.5.3
+      typescript: 4.7.4
     dev: true
 
   /rollup-pluginutils/2.8.2:
@@ -5511,7 +5511,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/27.1.1_whtc2twjcraiqvk5v5q6e44734:
+  /ts-jest/27.1.1_tynmmyvj6zibcpefbtybtuhfve:
     resolution: {integrity: sha512-Ds0VkB+cB+8g2JUmP/GKWndeZcCKrbe6jzolGrVWdqVUFByY/2KDHqxJ7yBSon7hDB1TA4PXxjfZ+JjzJisvgA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -5542,11 +5542,11 @@ packages:
       lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.3.5
-      typescript: 4.5.3
+      typescript: 4.7.4
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-node/9.1.1_typescript@4.5.3:
+  /ts-node/9.1.1_typescript@4.7.4:
     resolution: {integrity: sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
@@ -5558,7 +5558,7 @@ packages:
       diff: 4.0.2
       make-error: 1.3.6
       source-map-support: 0.5.21
-      typescript: 4.5.3
+      typescript: 4.7.4
       yn: 3.1.1
     dev: true
 
@@ -5612,9 +5612,10 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: true
 
-  /typescript/4.5.3:
-    resolution: {integrity: sha512-eVYaEHALSt+s9LbvgEv4Ef+Tdq7hBiIZgii12xXJnukryt3pMgJf6aKhoCZ3FWQsu6sydEnkg11fYXLzhLBjeQ==}
+  /typescript/4.7.4:
+    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
     engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /uglify-js/3.16.3:
