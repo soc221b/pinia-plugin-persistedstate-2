@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v1.0.1...v2.0.0) (2022-08-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* no longer support node 12
+
+### Bug Fixes
+
+* missing args ([f438203](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/f438203251539936bc1fa6243b37adc917e0735d))
+
+
+### build
+
+* drop support for node 12 ([e764dcf](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/e764dcf9aa514b4968af24d1a8efda1bb7626fa5))
+
 ### [1.0.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v1.0.0...v1.0.1) (2022-07-20)
 
 
