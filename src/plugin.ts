@@ -176,14 +176,15 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
           return shvl.set(
             partialState,
             path,
-            shvl.get(state as Record<string, unknown>, path),
+            shvl.get(state as Record<string, unknown>, path, void 0),
+            void 0,
           )
         }, {} as any)
       }
       if (Array.isArray(options.excludePaths)) {
         state = deserialize(serialize(state))
         options.excludePaths.forEach(function (path) {
-          return shvl.set(state, path, void 0)
+          return shvl.set(state, path, void 0, void 0)
         }, {})
       }
 
