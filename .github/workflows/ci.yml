@@ -21,7 +21,7 @@ jobs:
       - name: Use pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.22.2
+          version: 7
 
       - run: pnpm install
       - run: pnpm run lint
@@ -44,7 +44,7 @@ jobs:
       - name: Use pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.22.2
+          version: 7
 
       - run: pnpm install
 
@@ -70,7 +70,7 @@ jobs:
       - name: Use pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.22.2
+          version: 7
 
       - run: pnpm install
 

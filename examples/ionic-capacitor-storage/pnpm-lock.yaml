@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@capacitor/android': ^3.4.1
@@ -20,13 +20,13 @@ specifiers:
   vue-tsc: ^0.3.0
 
 dependencies:
-  '@capacitor/android': 3.4.1_@capacitor+core@3.4.1
+  '@capacitor/android': 3.4.1
   '@capacitor/core': 3.4.1
-  '@capacitor/ios': 3.4.1_@capacitor+core@3.4.1
-  '@capacitor/storage': 1.2.4_@capacitor+core@3.4.1
+  '@capacitor/ios': 3.4.1
+  '@capacitor/storage': 1.2.4
   '@ionic/vue': 6.0.9
   '@ionic/vue-router': 6.0.9
-  pinia: 2.0.11_typescript@4.5.5+vue@3.2.31
+  pinia: 2.0.11_yiky6a7nq42a76m3cgtakyoff4
   pinia-plugin-persistedstate-2: 1.0.0_pinia@2.0.11
   vue: 3.2.31
   vue-router: 4.0.12_vue@3.2.31
@@ -34,7 +34,7 @@ dependencies:
 devDependencies:
   '@capacitor/cli': 3.4.1
   '@types/node': 16.11.26
-  '@vitejs/plugin-vue': 1.10.2_vite@2.8.4
+  '@vitejs/plugin-vue': 1.10.2
   prettier: 2.5.1
   typescript: 4.5.5
   vite: 2.8.4
@@ -45,12 +45,12 @@ packages:
   /@babel/helper-validator-identifier/7.16.7:
     resolution: {integrity: sha512-hsEnFemeiW4D08A5gUAZxLBTXpZ39P+a+DGDsHw1yxqyQ/jzFEnxf5uTEGp+3bzAbNOxU1paTgYS4ECU/IgfDw==}
     engines: {node: '>=6.9.0'}
-    dev: true
 
   /@babel/parser/7.17.3:
     resolution: {integrity: sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==}
     engines: {node: '>=6.0.0'}
-    hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
 
   /@babel/types/7.17.0:
     resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
@@ -58,12 +58,9 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
-    dev: true
 
-  /@capacitor/android/3.4.1_@capacitor+core@3.4.1:
+  /@capacitor/android/3.4.1:
     resolution: {integrity: sha512-4qQGEdZTW8W01PTOzSScmx9NBDcsi1GRl32tyYnpQrjdH2f7hI9OX2MLbNkirtOwKNCDeinQfEqqn0hVCkgHag==}
-    peerDependencies:
-      '@capacitor/core': ^3.4.0
     dependencies:
       '@capacitor/core': 3.4.1
     dev: false
@@ -71,7 +68,6 @@ packages:
   /@capacitor/cli/3.4.1:
     resolution: {integrity: sha512-48MA50ExfMJgndunsoh9kI3ItNJDwJrl6+DNocdEZfnIw45IUtmmeu+V3JsoDM2LfwxG9tamJV4zXWM0o4MSOw==}
     engines: {node: '>=12.4.0'}
-    hasBin: true
     dependencies:
       '@ionic/cli-framework-output': 2.2.2
       '@ionic/utils-fs': 3.1.5
@@ -99,18 +95,14 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@capacitor/ios/3.4.1_@capacitor+core@3.4.1:
+  /@capacitor/ios/3.4.1:
     resolution: {integrity: sha512-ycFCyKI8DsgedVg7PW5MpCVgqFuD0PMHQGVfC5ichXc2C/jAATX32EVdEMCB0N3guKoH2k6T3Efwg59+Fcdx2w==}
-    peerDependencies:
-      '@capacitor/core': ^3.4.0
     dependencies:
       '@capacitor/core': 3.4.1
     dev: false
 
-  /@capacitor/storage/1.2.4_@capacitor+core@3.4.1:
+  /@capacitor/storage/1.2.4:
     resolution: {integrity: sha512-AqA4KnCQNOmFJ1HuSfmyPf5jz80JY2cX04Uy4j1hpo5ex9bY6W8mUKLsePakTzt4ScDnYuOaXsmusUrpglgPfQ==}
-    peerDependencies:
-      '@capacitor/core': ^3.0.0
     dependencies:
       '@capacitor/core': 3.4.1
     dev: false
@@ -253,26 +245,26 @@ packages:
   /@stencil/core/2.12.1:
     resolution: {integrity: sha512-u24TZ+FEvjnZt5ZgIkLjLpUNsO6Ml3mUZqwmqk81w6RWWz75hgB5p4RFI5rvuErFeh2xvMIGo+pNdG24XUBz1A==}
     engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
     dev: false
 
   /@stencil/core/2.13.0:
     resolution: {integrity: sha512-EEKHOHgYpg3/iFUKMXTZJjUayRul7sXDwNw0OGgkEOe4t7JWiibDkzUHuruvpbqEydX+z1+ez5K2bMMY76c2wA==}
     engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
     dev: false
 
   /@types/node/16.11.26:
     resolution: {integrity: sha512-GZ7bu5A6+4DtG7q9GsoHXy3ALcgeIHP4NnL0Vv2wu0uUB/yQex26v0tf6/na1mm0+bS9Uw+0DFex7aaKr2qawQ==}
     dev: true
 
-  /@vitejs/plugin-vue/1.10.2_vite@2.8.4:
+  /@vitejs/plugin-vue/1.10.2:
     resolution: {integrity: sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==}
     engines: {node: '>=12.0.0'}
-    peerDependencies:
-      vite: ^2.5.10
     dependencies:
       vite: 2.8.4
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
     dev: true
 
   /@volar/code-gen/0.27.24:
@@ -409,7 +401,6 @@ packages:
   /acorn/7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
     engines: {node: '>=0.4.0'}
-    hasBin: true
     dev: true
 
   /ansi-regex/5.0.1:
@@ -767,7 +758,6 @@ packages:
   /esbuild/0.14.23:
     resolution: {integrity: sha512-XjnIcZ9KB6lfonCa+jRguXyRYcldmkyZ99ieDksqW/C8bnyEX299yA4QH2XcgijCgaddEZePPTgvx/2imsq7Ig==}
     engines: {node: '>=12'}
-    hasBin: true
     requiresBuild: true
     optionalDependencies:
       esbuild-android-arm64: 0.14.23
@@ -892,7 +882,6 @@ packages:
   /is-docker/2.2.1:
     resolution: {integrity: sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==}
     engines: {node: '>=8'}
-    hasBin: true
     dev: true
 
   /is-expression/4.0.0:
@@ -998,7 +987,6 @@ packages:
   /mkdirp/1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
-    hasBin: true
     dev: true
 
   /ms/2.1.2:
@@ -1008,12 +996,10 @@ packages:
   /nanoid/3.3.1:
     resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
 
   /native-run/1.5.0:
     resolution: {integrity: sha512-YYsYYAljk70N+FJLeY5KuafsBit7agOBR3ch1KTXOaKkREkM49yCwJIwVz2faoWpJ2MeyLdXltk5PskUuPQqZA==}
     engines: {node: '>=10.3.0'}
-    hasBin: true
     dependencies:
       '@ionic/utils-fs': 3.1.5
       '@ionic/utils-terminal': 2.3.1
@@ -1065,11 +1051,11 @@ packages:
     peerDependencies:
       pinia: ^2.0.6
     dependencies:
-      pinia: 2.0.11_typescript@4.5.5+vue@3.2.31
+      pinia: 2.0.11_yiky6a7nq42a76m3cgtakyoff4
       shvl: 2.0.3
     dev: false
 
-  /pinia/2.0.11_typescript@4.5.5+vue@3.2.31:
+  /pinia/2.0.11_yiky6a7nq42a76m3cgtakyoff4:
     resolution: {integrity: sha512-JzcmnMqu28PNWOjDgEDK6fTrIzX8eQZKPPKvu/fpHdpXARUj1xeVdFi3YFIMOWswqaBd589cpmAMdSSTryI9iw==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
@@ -1084,7 +1070,7 @@ packages:
       '@vue/devtools-api': 6.0.12
       typescript: 4.5.5
       vue: 3.2.31
-      vue-demi: 0.12.1_vue@3.2.31
+      vue-demi: 0.12.1
     dev: false
 
   /plist/3.0.4:
@@ -1106,7 +1092,6 @@ packages:
   /prettier/2.5.1:
     resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
     engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /promise/7.3.1:
@@ -1229,7 +1214,6 @@ packages:
 
   /resolve/1.22.0:
     resolution: {integrity: sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==}
-    hasBin: true
     dependencies:
       is-core-module: 2.8.1
       path-parse: 1.0.7
@@ -1239,7 +1223,6 @@ packages:
   /rollup/2.68.0:
     resolution: {integrity: sha512-XrMKOYK7oQcTio4wyTz466mucnd8LzkiZLozZ4Rz0zQD+HeX4nUK4B8GrTX/2EvN2/vBF/i2WnaXboPxo0JylA==}
     engines: {node: '>=10.0.0'}
-    hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -1259,7 +1242,6 @@ packages:
   /semver/7.3.5:
     resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
     engines: {node: '>=10'}
-    hasBin: true
     dependencies:
       lru-cache: 6.0.0
     dev: true
@@ -1361,9 +1343,8 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
-    dev: true
 
   /token-stream/1.0.0:
     resolution: {integrity: sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=}
@@ -1371,7 +1352,6 @@ packages:
 
   /tree-kill/1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
-    hasBin: true
     dev: true
 
   /tslib/2.3.1:
@@ -1380,8 +1360,6 @@ packages:
   /typescript/4.5.5:
     resolution: {integrity: sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==}
     engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: true
 
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
@@ -1405,7 +1383,6 @@ packages:
   /vite/2.8.4:
     resolution: {integrity: sha512-GwtOkkaT2LDI82uWZKcrpRQxP5tymLnC7hVHHqNkhFNknYr0hJUlDLfhVRgngJvAy3RwypkDCWtTKn1BjO96Dw==}
     engines: {node: '>=12.2.0'}
-    hasBin: true
     peerDependencies:
       less: '*'
       sass: '*'
@@ -1485,7 +1462,6 @@ packages:
 
   /vscode-languageserver/8.0.0-next.8:
     resolution: {integrity: sha512-Gq0uqKbOgw7YNwPxMoNCeh7mHKMhG5j6EuoSh+w5pnKd7Eu9a74cagqf9aZDVFWW6GRpqR/Z+1o6EXqDK+g2Tg==}
-    hasBin: true
     dependencies:
       vscode-languageserver-protocol: 3.17.0-next.14
     dev: true
@@ -1547,14 +1523,12 @@ packages:
       vscode-typescript-languageservice: 0.27.25
     dev: true
 
-  /vue-demi/0.12.1_vue@3.2.31:
+  /vue-demi/0.12.1:
     resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
     engines: {node: '>=12'}
-    hasBin: true
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
@@ -1573,7 +1547,6 @@ packages:
 
   /vue-tsc/0.3.0_typescript@4.5.5:
     resolution: {integrity: sha512-zaDRZBxwRIz1XjhNP92FqugG71st6BUMnA2EwPeXrAyzbEYVRz6TezNFceYl3QYqqN8CtaxbqUhaQEDj/ntoCA==}
-    hasBin: true
     peerDependencies:
       typescript: '*'
     dependencies:
@@ -1594,7 +1567,6 @@ packages:
   /which/2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
-    hasBin: true
     dependencies:
       isexe: 2.0.0
     dev: true
