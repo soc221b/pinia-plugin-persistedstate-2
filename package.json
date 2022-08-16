@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "sideEffects": false,
   "engines": {
-    "node": "^12.13.0 || ^14.15.0 || >=16.5.0"
+    "node": "^14 || ^16 || >=18"
   },
   "description": "Persist and rehydrate your Pinia state between page reloads",
   "main": "dist/index.cjs.prod.js",
