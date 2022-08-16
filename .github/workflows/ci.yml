@@ -79,7 +79,7 @@ jobs:
           CI: true
 
       - uses: JS-DevTools/npm-publish@v1
-        if: ${{matrix.node-version == 18.x}}
+        if: ${{matrix.node-version == '18.x'}}
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./package.json
