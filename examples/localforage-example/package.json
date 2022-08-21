@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "localforage": "^1.10.0",
-    "pinia": "^2.0.11",
-    "pinia-plugin-persistedstate-2": "^1.0.0",
-    "vue": "^3.2.31"
+    "pinia": "^2.0.20",
+    "pinia-plugin-persistedstate-2": "^2.0.1",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.10.2",
-    "typescript": "^4.5.5",
-    "vite": "^2.8.4",
-    "vue-tsc": "^0.28.10"
+    "@vitejs/plugin-vue": "^3.0.3",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.9",
+    "vue-tsc": "^0.40.1"
   }
 }

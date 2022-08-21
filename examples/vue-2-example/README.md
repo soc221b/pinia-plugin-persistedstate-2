@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-yarn add pinia-plugin-persistedstate-2
+pnpm add pinia-plugin-persistedstate-2
 ```
 
 ## Usage
@@ -13,13 +13,10 @@ yarn add pinia-plugin-persistedstate-2
 
 import Vue from 'vue'
 import App from './App.vue'
-import VueCompositionAPI from '@vue/composition-api'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 + import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 Vue.config.productionTip = false
-
-Vue.use(VueCompositionAPI)
 
 Vue.use(PiniaVuePlugin)
 const pinia = createPinia()

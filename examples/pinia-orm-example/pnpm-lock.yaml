@@ -1,8 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/json-stringify-safe': ^5.0.0
   '@vitejs/plugin-vue': ^3.0.3
+  json-stringify-safe: ^5.0.1
   pinia: ^2.0.20
+  pinia-orm: latest
   pinia-plugin-persistedstate-2: ^2.0.1
   typescript: ^4.7.4
   vite: ^3.0.9
@@ -10,11 +13,14 @@ specifiers:
   vue-tsc: ^0.40.1
 
 dependencies:
+  json-stringify-safe: 5.0.1
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
+  pinia-orm: 1.0.0-rc.6_pinia@2.0.20
   pinia-plugin-persistedstate-2: 2.0.1_pinia@2.0.20
   vue: 3.2.37
 
 devDependencies:
+  '@types/json-stringify-safe': 5.0.0
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
   typescript: 4.7.4
   vite: 3.0.9
@@ -48,6 +54,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@pinia-orm/normalizr/1.0.0:
+    resolution: {integrity: sha512-g24GJnwHcqBY/dFlTz37DdA5UVbOr9rEFN8AN18o0EBN5dzbI97frJhc5H9jHk63PiI93rFnSNx4JASRaWtWog==}
+    dev: false
+
+  /@types/json-stringify-safe/5.0.0:
+    resolution: {integrity: sha512-UUA1sH0RSRROdInuDOA1yoRzbi5xVFD1RHCoOvNRPTNwR8zBkJ/84PZ6NhKVDtKp0FTeIccJCdQz1X2aJPr4uw==}
+    dev: true
 
   /@vitejs/plugin-vue/3.0.3_vite@3.0.9+vue@3.2.37:
     resolution: {integrity: sha512-U4zNBlz9mg+TA+i+5QPc3N5lQvdUXENZLO2h0Wdzp56gI1MWhqJOv+6R+d4kOzoaSSq6TnGPBdZAXKOe4lXy6g==}
@@ -413,6 +427,10 @@ packages:
       has: 1.0.3
     dev: true
 
+  /json-stringify-safe/5.0.1:
+    resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
+    dev: false
+
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
@@ -441,6 +459,15 @@ packages:
 
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+
+  /pinia-orm/1.0.0-rc.6_pinia@2.0.20:
+    resolution: {integrity: sha512-wVHWUGyv8sSk22pfNDVxaVYl1JRtQcgVg6BV7pcMH6nsN0HrsVD6xIJ2z1zM37ndH4NEgEO6pV5NT3twSwKflg==}
+    peerDependencies:
+      pinia: ^2.0.20
+    dependencies:
+      '@pinia-orm/normalizr': 1.0.0
+      pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
+    dev: false
 
   /pinia-plugin-persistedstate-2/2.0.1_pinia@2.0.20:
     resolution: {integrity: sha512-xtX2YOahow7MLrKSKuLQKE3VNJ8JQkfRgTCJ+T9rggiRDDhBQMg1usZ+LP3km9iOnJsR8JofA60g6cL63gsg5A==}

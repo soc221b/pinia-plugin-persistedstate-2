@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-yarn add pinia-plugin-persistedstate-2
+pnpm add pinia-plugin-persistedstate-2
 ```
 
 ## Usage

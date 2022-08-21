@@ -6,3 +6,5 @@ __snapshots__
 .nuxt
 .output
 pnpm-lock.yaml
+ios
+.quasar

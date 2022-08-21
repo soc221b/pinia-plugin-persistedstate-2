@@ -1,5 +1,5 @@
 <script>
-import { toRefs } from '@vue/composition-api'
+import { toRefs } from 'vue'
 import { useCounterStore } from './stores/counter'
 
 export default {
