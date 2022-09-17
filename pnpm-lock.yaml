@@ -14,7 +14,7 @@ specifiers:
   change-case: ^4.1.2
   husky: ^7.0.4
   jest: ^27.4.4
-  pinia: ^2.0.18
+  pinia: ^2.0.22
   pinst: ^2.1.6
   prettier: ^2.5.1
   rimraf: ^3.0.2
@@ -46,7 +46,7 @@ devDependencies:
   change-case: 4.1.2
   husky: 7.0.4
   jest: 27.4.4
-  pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
+  pinia: 2.0.22_j6bzmzd4ujpabbp5objtwxyjp4
   pinst: 2.1.6
   prettier: 2.5.1
   rimraf: 3.0.2
@@ -3320,7 +3320,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.16.3
+      uglify-js: 3.17.0
     dev: true
 
   /hard-rejection/2.1.0:
@@ -4692,8 +4692,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinia/2.0.18_j6bzmzd4ujpabbp5objtwxyjp4:
-    resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
+  /pinia/2.0.22_j6bzmzd4ujpabbp5objtwxyjp4:
+    resolution: {integrity: sha512-u+b8/BC+tmvo3ACbYO2w5NfxHWFOjvvw9DQnyT0dW8aUMCPRQT5QnfZ5R5W2MzZBMTeZRMQI7V/QFbafmM9QHw==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -5520,8 +5520,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.16.3:
-    resolution: {integrity: sha512-uVbFqx9vvLhQg0iBaau9Z75AxWJ8tqM9AV890dIZCLApF4rTcyHwmAvLeEdYRs+BzYWu8Iw81F79ah0EfTXbaw==}
+  /uglify-js/3.17.0:
+    resolution: {integrity: sha512-aTeNPVmgIMPpm1cxXr2Q/nEbvkmV8yq66F3om7X3P/cvOXQ0TMQ64Wk63iyT1gPlmdmGzjGpyLh1f3y8MZWXGg==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
