@@ -1,8 +1,13 @@
 {
   "name": "vite-plugin-ssr-example",
   "private": true,
+  "engines": {
+    "node": "^18",
+    "pnpm": "^7"
+  },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^2.3.3",

@@ -57,20 +57,6 @@ const installPersistedStatePlugin = createPersistedStatePlugin()
 pinia.use((context) => installPersistedStatePlugin(context))
 ```
 
-### Examples
-
-[Vue 2](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue-2-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[Vue 3](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/vue-3-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[Nuxt 2 (client-only, with localStorage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt-2-client-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[Nuxt 3 (universal, with cookies)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/nuxt-3-universal-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-[localForage (asynchronous storage)](https://codesandbox.io/s/github/iendeavor/pinia-plugin-persistedstate-2/tree/main/examples/localforage-example?fontsize=14&hidenavigation=1&theme=dark&view=preview)
-
-More examples can be found in [examples](./examples).
-
 #### Storage
 
 The default storage is `localStorage`, but you can also use other storage, e.g., using [localForage](https://www.npmjs.com/package/localforage):

@@ -2,7 +2,7 @@
   "name": "vue-2-example",
   "private": true,
   "engines": {
-    "node": "^14 || ^16",
+    "node": "^16",
     "pnpm": "^7"
   },
   "scripts": {

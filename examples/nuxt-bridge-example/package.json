@@ -1,25 +1,23 @@
 {
   "name": "nuxt-bridge-example",
   "private": true,
+  "engines": {
+    "node": "^16",
+    "npm": "^8"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.3.1",
+    "@nuxt/bridge": "^0.10.1",
+    "@pinia/nuxt": "^0.4.2",
     "cookie": "^0.5.0",
-    "core-js": "^3.24.0",
+    "core-js": "^2.6.12",
     "js-cookie": "^3.0.1",
-    "nuxt-edge": "^2.16.0-27616340.013f051b",
-    "pinia": "^2.0.17",
-    "pinia-plugin-persistedstate-2": "^1.0.0",
-    "vue": "^2.7.8",
-    "vue-server-renderer": "^2.7.8",
-    "vue-template-compiler": "^2.7.8",
-    "webpack": "^4.46.0"
-  },
-  "devDependencies": {
-    "@nuxt/bridge": "^0.10.1"
+    "nuxt-edge": "^2.16.0-27720022.54e852f",
+    "pinia": "^2.0.22",
+    "pinia-plugin-persistedstate-2": "^2.0.1"
   }
 }

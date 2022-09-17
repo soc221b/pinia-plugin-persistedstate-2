@@ -1,16 +1,16 @@
-# Nuxtjs client example
+# Nuxt 2 client example
 
 ## Installation
 
 ```sh
-yarn add @nuxtjs/composition-api pinia @pinia/nuxt
-yarn add pinia-plugin-persistedstate-2
+npm add @nuxtjs/composition-api@~0.32.0 pinia @pinia/nuxt@0.2.1
+npm add pinia-plugin-persistedstate-2
 ```
 
 ## Usage
 
 ```js
-// plugins/persistedstate.client.js
+// plugins/persistedstate.js
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 
 export default function ({ $pinia }) {
@@ -24,16 +24,11 @@ export default function ({ $pinia }) {
 }
 ```
 
-```diff
+```js
 // nuxt.config.js
 export default {
-  buildModules: [
-    '@nuxtjs/composition-api/module',
-    '@pinia/nuxt',
-  ],
+  buildModules: ['@nuxtjs/composition-api/module', '@pinia/nuxt'],
 
-  plugins: [
-+   '@/plugins/persistedstate.client.js',
-  ],
+  plugins: ['@/plugins/persistedstate.js'],
 }
 ```

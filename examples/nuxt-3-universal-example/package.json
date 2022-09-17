@@ -1,19 +1,21 @@
 {
   "name": "nuxt-3-universal-example",
   "private": true,
+  "engines": {
+    "node": "^18",
+    "npm": "^8"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
-  "devDependencies": {
-    "nuxt": "^3.0.0-rc.6"
-  },
   "dependencies": {
-    "@pinia/nuxt": "^0.3.1",
+    "@pinia/nuxt": "^0.4.2",
     "cookie": "^0.5.0",
     "js-cookie": "^3.0.1",
-    "pinia": "^2.0.17",
+    "nuxt": "^3.0.0-rc.10",
+    "pinia": "^2.0.22",
     "pinia-plugin-persistedstate-2": "^1.0.0"
   }
 }

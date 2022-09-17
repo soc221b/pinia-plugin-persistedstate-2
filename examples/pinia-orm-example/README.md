@@ -1,4 +1,4 @@
-# xstate example
+# Pinia ORM Example
 
 ## Installation
 

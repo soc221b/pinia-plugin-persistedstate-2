@@ -1,6 +1,10 @@
 {
   "name": "localforage-example",
   "private": true,
+  "engines": {
+    "node": "^18",
+    "pnpm": "^7"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

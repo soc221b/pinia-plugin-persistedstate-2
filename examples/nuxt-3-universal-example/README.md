@@ -3,14 +3,14 @@
 ## Installation
 
 ```sh
-yarn add pinia @pinia/nuxt cookie js-cookie
-yarn add pinia-plugin-persistedstate-2
+npm add pinia @pinia/nuxt cookie js-cookie
+npm add pinia-plugin-persistedstate-2
 ```
 
 ## Usage
 
 ```ts
-// plugins/persistedstate.universal.ts
+// plugins/persistedstate.ts
 import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
 import Cookies from 'js-cookie'
 import cookie from 'cookie'
@@ -37,4 +37,12 @@ export default function ({ $pinia, ssrContext }) {
     }),
   )
 }
+```
+
+```js
+// nuxt.config.js
+// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+export default defineNuxtConfig({
+  modules: ['@pinia/nuxt'],
+})
 ```
