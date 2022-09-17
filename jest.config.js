@@ -8,4 +8,7 @@ module.exports = {
   testRegex: 'tests/.*.test.(jsx?|tsx?)$',
   moduleFileExtensions: ['ts', 'js'],
   coveragePathIgnorePatterns: ['node_modules', 'dist'],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+  },
 }
