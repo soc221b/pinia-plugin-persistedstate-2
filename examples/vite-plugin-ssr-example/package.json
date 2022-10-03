@@ -6,17 +6,24 @@
     "pnpm": "^7"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "cross-env NODE_ENV=development node server",
+    "build": "vite build",
+    "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/server-renderer": "^3.2.37",
+    "compression": "^1.7.4",
+    "cookie": "^0.5.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
+    "js-cookie": "^3.0.1",
     "pinia": "^2.0.14",
     "pinia-plugin-persistedstate-2": "^1.0.1",
-    "vite": "^2.9.14",
-    "vite-plugin-ssr": "0.4.20",
+    "sirv": "^2.0.2",
+    "vite": "^3.1.4",
+    "vite-plugin-ssr": "^0.4.38",
     "vue": "^3.2.37"
   }
 }
