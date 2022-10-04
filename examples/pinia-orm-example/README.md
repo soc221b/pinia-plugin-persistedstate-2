@@ -17,7 +17,6 @@ import { createORM } from 'pinia-orm'
 
 export const plugin: Plugin = (app) => {
   const pinia = createPinia()
-
   pinia.use(createORM())
 +   pinia.use(createPersistedStatePlugin())
 

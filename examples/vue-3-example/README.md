@@ -17,6 +17,7 @@ import { createPinia } from 'pinia'
 
 export const plugin: Plugin = (app) => {
   const pinia = createPinia()
+
 + const installPersistedStatePlugin = createPersistedStatePlugin()
 + pinia.use((context) => installPersistedStatePlugin(context))
 

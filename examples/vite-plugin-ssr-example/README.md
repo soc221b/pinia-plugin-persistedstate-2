@@ -1,8 +1,9 @@
-# Vue 2 example
+# Vite-plugin-ssr example
 
 ## Installation
 
 ```sh
+pnpm add pinia cookie js-cookie
 pnpm add pinia-plugin-persistedstate-2
 ```
 
