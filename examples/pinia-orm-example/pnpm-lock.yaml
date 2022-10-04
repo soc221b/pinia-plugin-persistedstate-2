@@ -5,7 +5,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.0.3
   json-stringify-safe: ^5.0.1
   pinia: ^2.0.22
-  pinia-orm: ^1.0.0
+  pinia-orm: ^1.0.3
   pinia-plugin-persistedstate-2: ^2.0.1
   typescript: ^4.7.4
   vite: ^3.0.9
@@ -15,7 +15,7 @@ specifiers:
 dependencies:
   json-stringify-safe: 5.0.1
   pinia: 2.0.22_j6bzmzd4ujpabbp5objtwxyjp4
-  pinia-orm: 1.0.0_pinia@2.0.22
+  pinia-orm: 1.0.3_pinia@2.0.22
   pinia-plugin-persistedstate-2: 2.0.1_pinia@2.0.22
   vue: 3.2.37
 
@@ -557,8 +557,8 @@ packages:
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
-  /pinia-orm/1.0.0_pinia@2.0.22:
-    resolution: {integrity: sha512-OHux19p1cM/VV10ZkWBE2TG2vxbrJK/kjf4OuZtlQHo8wwVzqC3pknYbIvTkIcJKqqsgNe3D4C3bjctS5aK/kw==}
+  /pinia-orm/1.0.3_pinia@2.0.22:
+    resolution: {integrity: sha512-b8FaD4K4UPsOTX96+RDFgOZiTvkFRymdsoZ0DcBx0pdewq6wX45CNYRnv3xKYWQfiqf2nYsuFezYlD4WxHlI9Q==}
     peerDependencies:
       pinia: ^2.0.22
     dependencies:
