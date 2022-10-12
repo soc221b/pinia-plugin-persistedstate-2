@@ -13,7 +13,7 @@ jobs:
           - examples/nuxt-bridge-example
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
@@ -30,7 +30,7 @@ jobs:
           - examples/nuxt-3-universal-example
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
@@ -47,7 +47,7 @@ jobs:
           - examples/vue-2-example
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
@@ -73,7 +73,7 @@ jobs:
           - examples/vue-3-example
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
