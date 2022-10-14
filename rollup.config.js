@@ -3,7 +3,7 @@ import rm from 'rimraf'
 import ts from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
-import replace from 'rollup-plugin-replace'
+import replace from '@rollup/plugin-replace'
 import babel from '@rollup/plugin-babel'
 import { pascalCase } from 'change-case'
 
