@@ -13,7 +13,7 @@ specifiers:
   '@types/node': 16.11.65
   '@vue/test-utils': 2.1.0
   change-case: 4.1.2
-  husky: 7.0.4
+  husky: 8.0.1
   jest: 29.1.2
   jest-environment-jsdom: 29.1.2
   pinia: 2.0.23
@@ -46,7 +46,7 @@ devDependencies:
   '@types/node': 16.11.65
   '@vue/test-utils': 2.1.0_vue@3.2.40
   change-case: 4.1.2
-  husky: 7.0.4
+  husky: 8.0.1
   jest: 29.1.2_@types+node@16.11.65
   jest-environment-jsdom: 29.1.2
   pinia: 2.0.23_rg374xhldfcyvjtaj3qktyfz5y
@@ -3566,9 +3566,9 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
