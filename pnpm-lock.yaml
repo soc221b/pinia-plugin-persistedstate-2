@@ -24,7 +24,7 @@ specifiers:
   rollup-plugin-terser: 7.0.2
   rollup-plugin-typescript2: 0.32.1
   shvl: ^3.0.0
-  size-limit: 7.0.8
+  size-limit: 8.1.0
   standard-version: 9.5.0
   ts-jest: 29.0.3
   typescript: 4.7.4
@@ -41,7 +41,7 @@ devDependencies:
   '@rollup/plugin-babel': 6.0.2_vyv4jbhmcriklval33ak5sngky
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
   '@rollup/plugin-replace': 5.0.0_rollup@2.79.1
-  '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
+  '@size-limit/preset-small-lib': 7.0.8_size-limit@8.1.0
   '@types/jest': 29.1.2
   '@types/node': 16.11.65
   '@vue/test-utils': 2.1.0_vue@3.2.41
@@ -56,7 +56,7 @@ devDependencies:
   rollup: 2.79.1
   rollup-plugin-terser: 7.0.2_rollup@2.79.1
   rollup-plugin-typescript2: 0.32.1_5j6xs4al5kvj74qioxrurhiohm
-  size-limit: 7.0.8
+  size-limit: 8.1.0
   standard-version: 9.5.0
   ts-jest: 29.0.3_vdoqeciymgmn24ttevo3kmhdr4
   typescript: 4.7.4
@@ -1810,7 +1810,7 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@size-limit/esbuild/7.0.8_size-limit@7.0.8:
+  /@size-limit/esbuild/7.0.8_size-limit@8.1.0:
     resolution: {integrity: sha512-AzCrxJJThDvHrBNoolebYVgXu46c6HuS3fOxoXr3V0YWNM0qz81z5F3j7RruzboZnls8ZgME4WrH6GM5rB9gtA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     peerDependencies:
@@ -1818,27 +1818,27 @@ packages:
     dependencies:
       esbuild: 0.14.23
       nanoid: 3.3.4
-      size-limit: 7.0.8
+      size-limit: 8.1.0
     dev: true
 
-  /@size-limit/file/7.0.8_size-limit@7.0.8:
+  /@size-limit/file/7.0.8_size-limit@8.1.0:
     resolution: {integrity: sha512-1KeFQuMXIXAH/iELqIX7x+YNYDFvzIvmxcp9PrdwEoSNL0dXdaDIo9WE/yz8xvOmUcKaLfqbWkL75DM0k91WHQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     peerDependencies:
       size-limit: 7.0.8
     dependencies:
       semver: 7.3.5
-      size-limit: 7.0.8
+      size-limit: 8.1.0
     dev: true
 
-  /@size-limit/preset-small-lib/7.0.8_size-limit@7.0.8:
+  /@size-limit/preset-small-lib/7.0.8_size-limit@8.1.0:
     resolution: {integrity: sha512-CT8nIYA/c2CSD+X4rAUgwqYccQMahJ6rBnaZxvi3YKFdkXIbuGNXHNjHsYaFksgwG9P4UjG/unyO5L73f3zQBw==}
     peerDependencies:
       size-limit: 7.0.8
     dependencies:
-      '@size-limit/esbuild': 7.0.8_size-limit@7.0.8
-      '@size-limit/file': 7.0.8_size-limit@7.0.8
-      size-limit: 7.0.8
+      '@size-limit/esbuild': 7.0.8_size-limit@8.1.0
+      '@size-limit/file': 7.0.8_size-limit@8.1.0
+      size-limit: 8.1.0
     dev: true
 
   /@tootallnate/once/2.0.0:
@@ -4360,8 +4360,8 @@ packages:
       type-check: 0.3.2
     dev: true
 
-  /lilconfig/2.0.4:
-    resolution: {integrity: sha512-bfTIN7lEsiooCocSISTWXkiWJkRqtL9wYtYy+8EK3Y41qh3mpwPU0ycTOgjdY9ErwXCc8QyrQp82bdL0Xkm9yA==}
+  /lilconfig/2.0.6:
+    resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
     dev: true
 
@@ -4578,8 +4578,8 @@ packages:
     hasBin: true
     dev: true
 
-  /nanospinner/1.0.0:
-    resolution: {integrity: sha512-14c2r2QQ9xfTmdbqdF51FKCNvww+0ZON9GeEHur+pBdOufoFvxD4CZQRaYWmFrGH3Nuv7PZ/9Q+wsV+hFSp32g==}
+  /nanospinner/1.1.0:
+    resolution: {integrity: sha512-yFvNYMig4AthKYfHFl1sLj7B2nkHL4lzdig4osvl9/LdGbXwrdFRoqBS98gsEsOakr0yH+r5NZ/1Y9gdVB8trA==}
     dependencies:
       picocolors: 1.0.0
     dev: true
@@ -5260,18 +5260,18 @@ packages:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
-  /size-limit/7.0.8:
-    resolution: {integrity: sha512-3h76c9E0e/nNhYLSR7IBI/bSoXICeo7EYkYjlyVqNIsu7KvN/PQmMbIXeyd2QKIF8iZKhaiZQoXLkGWbyPDtvQ==}
-    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+  /size-limit/8.1.0:
+    resolution: {integrity: sha512-bUL+Uyyt/G+a1XzKlI2WKHVDepmXtqMDhF65pdtjccheiQTNjExWW4nFefgbRL2QgNTzRfK6ayFKjO3o4ER4gg==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     dependencies:
       bytes-iec: 3.1.1
       chokidar: 3.5.3
       ci-job-number: 1.2.2
       globby: 11.1.0
-      lilconfig: 2.0.4
+      lilconfig: 2.0.6
       mkdirp: 1.0.4
-      nanospinner: 1.0.0
+      nanospinner: 1.1.0
       picocolors: 1.0.0
     dev: true
 
