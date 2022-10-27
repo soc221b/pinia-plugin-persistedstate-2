@@ -68,7 +68,7 @@
     "jest": "29.1.2",
     "jest-environment-jsdom": "29.1.2",
     "pinia": "2.0.23",
-    "pinst": "2.1.6",
+    "pinst": "3.0.0",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "rollup": "2.79.1",
