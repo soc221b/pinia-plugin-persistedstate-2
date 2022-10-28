@@ -81,9 +81,9 @@ export interface CommonOptions<S extends StateTree = StateTree> {
   ) => boolean
 }
 
-export type PluginOptions<S> = CommonOptions<S>
+export type PluginOptions<S extends StateTree> = CommonOptions<S>
 
-export type StoreOptions<S> = CommonOptions<S> & {
+export type StoreOptions<S extends StateTree> = CommonOptions<S> & {
   /**
    * The key to store the persisted state under.
    *
