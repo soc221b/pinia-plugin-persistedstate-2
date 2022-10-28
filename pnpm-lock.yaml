@@ -11,7 +11,7 @@ specifiers:
   '@size-limit/preset-small-lib': 7.0.8
   '@types/jest': 29.2.0
   '@types/node': 18.11.7
-  '@vue/test-utils': 2.1.0
+  '@vue/test-utils': 2.2.0
   change-case: 4.1.2
   husky: 8.0.1
   jest: 29.2.2
@@ -44,7 +44,7 @@ devDependencies:
   '@size-limit/preset-small-lib': 7.0.8_size-limit@8.1.0
   '@types/jest': 29.2.0
   '@types/node': 18.11.7
-  '@vue/test-utils': 2.1.0_vue@3.2.41
+  '@vue/test-utils': 2.2.0_vue@3.2.41
   change-case: 4.1.2
   husky: 8.0.1
   jest: 29.2.2_@types+node@18.11.7
@@ -2075,8 +2075,8 @@ packages:
     resolution: {integrity: sha512-W9mfWLHmJhkfAmV+7gDjcHeAWALQtgGT3JErxULl0oz6R6+3ug91I7IErs93eCFhPCZPHBs4QJS7YWEV7A3sxw==}
     dev: true
 
-  /@vue/test-utils/2.1.0_vue@3.2.41:
-    resolution: {integrity: sha512-U4AxAD/tKJ3ajxYew1gkfEotpr96DE/gLXpbl+nPbsNRqGBfQZZA7YhwGoQNDPgon56v+IGZDrYq7pe3GDl9aw==}
+  /@vue/test-utils/2.2.0_vue@3.2.41:
+    resolution: {integrity: sha512-EKp5/N7ieNZdoLTkD16j/irUjIEDN63QUIc41vLUMqGvSsTQN0QxbFiQqh5v49RPfS5vZH+DhjNUEkijCMOCSg==}
     peerDependencies:
       vue: ^3.0.1
     dependencies:
