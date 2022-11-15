@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "pinia": "^2.0.20",
-    "pinia-plugin-persistedstate-2": "^2.0.1",
     "vue": "^3.2.37"
   },
   "devDependencies": {

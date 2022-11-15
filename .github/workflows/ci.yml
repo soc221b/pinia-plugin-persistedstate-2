@@ -23,8 +23,11 @@ jobs:
         with:
           version: 7
 
-      - run: pnpm install
-      - run: pnpm run lint
+      - name: Install
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -46,9 +49,11 @@ jobs:
         with:
           version: 7
 
-      - run: pnpm install
+      - name: Install
+        run: pnpm install
 
-      - run: pnpm run test:run --coverage
+      - name: Test
+        run: pnpm run test:run --coverage
         env:
           CI: true
 
@@ -60,7 +65,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    needs: [lint, test]
+    needs:
+      - lint
+      - test
 
     strategy:
       matrix:
@@ -79,13 +86,17 @@ jobs:
         with:
           version: 7
 
-      - run: pnpm install
+      - name: Install
+        run: pnpm install
 
-      - run: pnpm run build
+      - name: Build
+        run: pnpm run build
 
-      - run: pnpm run check-size
+      - name: Check size
+        run: pnpm run check-size
 
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./package.json
@@ -94,3 +105,147 @@ jobs:
           dry-run: false
           check-version: true
           greater-version-only: true
+
+      - name: Pack
+        run: pnpm pack
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: |
+            *.tgz
+
+  test-npm-8-node-16:
+    runs-on: ubuntu-latest
+
+    needs:
+      - build
+
+    name: 'Test example - ${{ matrix.example-directory }}'
+
+    strategy:
+      matrix:
+        example-directory:
+          - nuxt-2-client-example
+          - nuxt-bridge-example
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: |
+          cd examples/${{matrix.example-directory}}
+          npm ci
+          npm add ../../*.tgz
+          npm run build
+
+  test-npm-8-node-18:
+    runs-on: ubuntu-latest
+
+    needs:
+      - build
+
+    name: 'Test example - ${{ matrix.example-directory }}'
+
+    strategy:
+      matrix:
+        example-directory:
+          - nuxt-3-universal-example
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: |
+          cd examples/${{matrix.example-directory}}
+          npm ci
+          npm add ../../*.tgz
+          npm run build
+
+  test-pnpm-7-node-16:
+    runs-on: ubuntu-latest
+
+    needs:
+      - build
+
+    name: 'Test example - ${{ matrix.example-directory }}'
+
+    strategy:
+      matrix:
+        example-directory:
+          - vue-2-example
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+
+      - run: |
+          cd examples/${{matrix.example-directory}}
+          pnpm i
+          pnpm add ../../*.tgz
+          pnpm run build
+
+  test-pnpm-7-node-18:
+    runs-on: ubuntu-latest
+
+    needs:
+      - build
+
+    name: 'Test example - ${{ matrix.example-directory }}'
+
+    strategy:
+      matrix:
+        example-directory:
+          - ionic-capacitor-preferences
+          - localforage-example
+          # - pinia-orm-example
+          - quasar-example
+          - vite-plugin-ssr-example
+          - vue-3-example
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+
+      - run: |
+          cd examples/${{matrix.example-directory}}
+          pnpm i
+          pnpm add ../../*.tgz
+          pnpm run build

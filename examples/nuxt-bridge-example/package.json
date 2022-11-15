@@ -17,7 +17,6 @@
     "core-js": "^2.6.12",
     "js-cookie": "^3.0.1",
     "nuxt-edge": "^2.16.0-27720022.54e852f",
-    "pinia": "^2.0.22",
-    "pinia-plugin-persistedstate-2": "^2.0.1"
+    "pinia": "^2.0.22"
   }
 }

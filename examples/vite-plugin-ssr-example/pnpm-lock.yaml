@@ -10,7 +10,6 @@ specifiers:
   express: ^4.18.1
   js-cookie: ^3.0.1
   pinia: ^2.0.14
-  pinia-plugin-persistedstate-2: ^1.0.1
   sirv: ^2.0.2
   vite: ^3.1.4
   vite-plugin-ssr: ^0.4.38
@@ -26,7 +25,6 @@ dependencies:
   express: 4.18.1
   js-cookie: 3.0.1
   pinia: 2.0.18_vue@3.2.37
-  pinia-plugin-persistedstate-2: 1.0.1_pinia@2.0.18
   sirv: 2.0.2
   vite: 3.1.4
   vite-plugin-ssr: 0.4.38_vite@3.1.4
@@ -1185,16 +1183,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
-  /pinia-plugin-persistedstate-2/1.0.1_pinia@2.0.18:
-    resolution: {integrity: sha512-w8QE9quVYhjfImMP7BMD60fDx2Qx4hZyVgyukRjoc7vOzxMnEh7M93r9+5gNSmMZgpWN0MVGmJLrTkENEsP4uw==}
-    engines: {node: ^12.13.0 || ^14.15.0 || >=16.5.0}
-    peerDependencies:
-      pinia: ^2.0.12
-    dependencies:
-      pinia: 2.0.18_vue@3.2.37
-      shvl: 2.0.3
-    dev: false
-
   /pinia/2.0.18_vue@3.2.37:
     resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
     peerDependencies:
@@ -1362,10 +1350,6 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-    dev: false
-
-  /shvl/2.0.3:
-    resolution: {integrity: sha512-V7C6S9Hlol6SzOJPnQ7qzOVEWUQImt3BNmmzh40wObhla3XOYMe4gGiYzLrJd5TFa+cI2f9LKIRJTTKZSTbWgw==}
     dev: false
 
   /side-channel/1.0.4:
