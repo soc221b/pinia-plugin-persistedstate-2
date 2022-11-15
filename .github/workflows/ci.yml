@@ -96,6 +96,7 @@ jobs:
         run: pnpm run check-size
 
       - name: Publish
+        if: github.ref_name == 'main'
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
