@@ -98,6 +98,7 @@ jobs:
       - name: Publish
         if: github.ref_name == 'main'
         uses: JS-DevTools/npm-publish@v1
+        id: publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./package.json
@@ -106,6 +107,20 @@ jobs:
           dry-run: false
           check-version: true
           greater-version-only: true
+
+      - name: Tag
+        if: github.ref_name == 'main' && steps.publish.outputs.type != 'none'
+        uses: anothrNick/github-tag-action@v1
+        env:
+          CUSTOM_TAG: ${{ matrix.package }}${{ steps.publish.outputs.version }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release
+        if: github.ref_name == 'main' && steps.publish.outputs.type != 'none'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ matrix.package }}${{ steps.publish.outputs.version }}
+          body: 'Changelog: https://github.com/iendeavor/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
 
       - name: Pack
         run: pnpm pack
