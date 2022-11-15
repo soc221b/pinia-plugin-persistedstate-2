@@ -5,7 +5,6 @@ specifiers:
   '@vue/cli-service': ^4.5.19
   core-js: ^3.24.1
   pinia: ^2.0.20
-  pinia-plugin-persistedstate-2: ^2.0.1
   serve: ^14.0.1
   vue: ^2.7.9
   vue-template-compiler: ^2.7.9
@@ -13,11 +12,10 @@ specifiers:
 dependencies:
   core-js: 3.24.1
   pinia: 2.0.20_vue@2.7.9
-  pinia-plugin-persistedstate-2: 2.0.1_pinia@2.0.20
   vue: 2.7.9
 
 devDependencies:
-  '@vue/cli-plugin-babel': 4.5.19_z567ngitizfij7velrsipwdate
+  '@vue/cli-plugin-babel': 4.5.19_btmr3p3suq6hbwlfhbde5riaiu
   '@vue/cli-service': 4.5.19_w3z7yovxb2kaiktq3qixseei7e
   serve: 14.0.1
   vue-template-compiler: 2.7.9
@@ -1524,9 +1522,10 @@ packages:
       svg-tags: 1.0.0
     dev: true
 
-  /@vue/babel-preset-app/4.5.19_vue@2.7.9:
+  /@vue/babel-preset-app/4.5.19_core-js@3.24.1+vue@2.7.9:
     resolution: {integrity: sha512-VCNRiAt2P/bLo09rYt3DLe6xXUMlhJwrvU18Ddd/lYJgC7s8+wvhgYs+MTx4OiAXdu58drGwSBO9SPx7C6J82Q==}
     peerDependencies:
+      core-js: ^3
       vue: ^2 || ^3.0.0-0
     peerDependenciesMeta:
       core-js:
@@ -1641,13 +1640,13 @@ packages:
     resolution: {integrity: sha512-GdxvNSmOw7NHIazCO8gTK+xZbaOmScTtxj6eHVeMbYpDYVPJ+th3VMLWNpw/b6uOjwzzcyKlA5dRQ1DAb+gF/g==}
     dev: true
 
-  /@vue/cli-plugin-babel/4.5.19_z567ngitizfij7velrsipwdate:
+  /@vue/cli-plugin-babel/4.5.19_btmr3p3suq6hbwlfhbde5riaiu:
     resolution: {integrity: sha512-8ebXzaMW9KNTMAN6+DzkhFsjty1ieqT7hIW5Lbk4v30Qhfjkms7lBWyXPGkoq+wAikXFa1Gnam2xmWOBqDDvWg==}
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     dependencies:
       '@babel/core': 7.18.10
-      '@vue/babel-preset-app': 4.5.19_vue@2.7.9
+      '@vue/babel-preset-app': 4.5.19_core-js@3.24.1+vue@2.7.9
       '@vue/cli-service': 4.5.19_w3z7yovxb2kaiktq3qixseei7e
       '@vue/cli-shared-utils': 4.5.19
       babel-loader: 8.2.5_5ouqwanl7jnotevpn4w6qovjqm
@@ -1655,6 +1654,7 @@ packages:
       thread-loader: 2.1.3_webpack@4.46.0
       webpack: 4.46.0
     transitivePeerDependencies:
+      - core-js
       - supports-color
       - vue
       - webpack-cli
@@ -6805,16 +6805,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /pinia-plugin-persistedstate-2/2.0.1_pinia@2.0.20:
-    resolution: {integrity: sha512-xtX2YOahow7MLrKSKuLQKE3VNJ8JQkfRgTCJ+T9rggiRDDhBQMg1usZ+LP3km9iOnJsR8JofA60g6cL63gsg5A==}
-    engines: {node: ^14 || ^16 || >=18}
-    peerDependencies:
-      pinia: ^2
-    dependencies:
-      pinia: 2.0.20_vue@2.7.9
-      shvl: 3.0.0
-    dev: false
-
   /pinia/2.0.20_vue@2.7.9:
     resolution: {integrity: sha512-fdHHumXW/0U5HhxmY1emo3I4z85p8NJPdbtFQSlmJXFe3ktuF0pYNVgVtk2q+j2zCtTufY763xzaEMx0t6T59g==}
     peerDependencies:
@@ -7948,10 +7938,6 @@ packages:
   /shell-quote/1.7.3:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
     dev: true
-
-  /shvl/3.0.0:
-    resolution: {integrity: sha512-5IomAM3ykE/g9K9L6lhODc+TpCuN03rrhlboegeKyyfh66DDdpRD5JN37DYhNHH+RaYjiIDx64K/Ms/xQYOR5w==}
-    dev: false
 
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}

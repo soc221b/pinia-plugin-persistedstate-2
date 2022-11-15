@@ -11,7 +11,6 @@ specifiers:
   '@types/node': ^18.7.8
   '@vitejs/plugin-vue': ^3.0.3
   pinia: ^2.0.20
-  pinia-plugin-persistedstate-2: ^2.0.1
   typescript: ^4.5.5
   vite: ^3.0.9
   vue: ^3.2.37
@@ -26,7 +25,6 @@ dependencies:
   '@ionic/vue': 6.2.3
   '@ionic/vue-router': 6.2.3
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
-  pinia-plugin-persistedstate-2: 2.0.1_pinia@2.0.20
   vue: 3.2.37
   vue-router: 4.1.3_vue@3.2.37
 
@@ -966,16 +964,6 @@ packages:
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
-  /pinia-plugin-persistedstate-2/2.0.1_pinia@2.0.20:
-    resolution: {integrity: sha512-xtX2YOahow7MLrKSKuLQKE3VNJ8JQkfRgTCJ+T9rggiRDDhBQMg1usZ+LP3km9iOnJsR8JofA60g6cL63gsg5A==}
-    engines: {node: ^14 || ^16 || >=18}
-    peerDependencies:
-      pinia: ^2
-    dependencies:
-      pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
-      shvl: 3.0.0
-    dev: false
-
   /pinia/2.0.20_j6bzmzd4ujpabbp5objtwxyjp4:
     resolution: {integrity: sha512-fdHHumXW/0U5HhxmY1emo3I4z85p8NJPdbtFQSlmJXFe3ktuF0pYNVgVtk2q+j2zCtTufY763xzaEMx0t6T59g==}
     peerDependencies:
@@ -1082,10 +1070,6 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
     dev: true
-
-  /shvl/3.0.0:
-    resolution: {integrity: sha512-5IomAM3ykE/g9K9L6lhODc+TpCuN03rrhlboegeKyyfh66DDdpRD5JN37DYhNHH+RaYjiIDx64K/Ms/xQYOR5w==}
-    dev: false
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}

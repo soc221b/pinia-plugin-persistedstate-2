@@ -14,7 +14,6 @@
     "@quasar/extras": "^1.15.1",
     "core-js": "^3.24.1",
     "pinia": "^2.0.20",
-    "pinia-plugin-persistedstate-2": "^2.0.1",
     "quasar": "^2.7.7",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"

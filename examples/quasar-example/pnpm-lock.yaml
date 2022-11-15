@@ -9,7 +9,6 @@ specifiers:
   core-js: ^3.24.1
   css-loader: ^5.2.6
   pinia: ^2.0.20
-  pinia-plugin-persistedstate-2: ^2.0.1
   postcss: ^8.4.16
   postcss-loader: ^6.2.1
   quasar: ^2.7.7
@@ -26,7 +25,6 @@ dependencies:
   '@quasar/extras': 1.15.1
   core-js: 3.24.1
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
-  pinia-plugin-persistedstate-2: 2.0.1_pinia@2.0.20
   quasar: 2.7.7
   vue: 3.2.37
   vue-router: 4.1.3_vue@3.2.37
@@ -4411,16 +4409,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pinia-plugin-persistedstate-2/2.0.1_pinia@2.0.20:
-    resolution: {integrity: sha512-xtX2YOahow7MLrKSKuLQKE3VNJ8JQkfRgTCJ+T9rggiRDDhBQMg1usZ+LP3km9iOnJsR8JofA60g6cL63gsg5A==}
-    engines: {node: ^14 || ^16 || >=18}
-    peerDependencies:
-      pinia: ^2
-    dependencies:
-      pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
-      shvl: 3.0.0
-    dev: false
-
   /pinia/2.0.20_j6bzmzd4ujpabbp5objtwxyjp4:
     resolution: {integrity: sha512-fdHHumXW/0U5HhxmY1emo3I4z85p8NJPdbtFQSlmJXFe3ktuF0pYNVgVtk2q+j2zCtTufY763xzaEMx0t6T59g==}
     peerDependencies:
@@ -5258,10 +5246,6 @@ packages:
   /shell-quote/1.7.3:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
     dev: true
-
-  /shvl/3.0.0:
-    resolution: {integrity: sha512-5IomAM3ykE/g9K9L6lhODc+TpCuN03rrhlboegeKyyfh66DDdpRD5JN37DYhNHH+RaYjiIDx64K/Ms/xQYOR5w==}
-    dev: false
 
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}

@@ -16,7 +16,6 @@
     "core-js": "^2.6.12",
     "nuxt": "^2.15.8",
     "pinia": "^2.0.22",
-    "pinia-plugin-persistedstate-2": "^2.0.1",
     "vue": "~2.6",
     "vue-server-renderer": "~2.6",
     "vue-template-compiler": "~2.6"
