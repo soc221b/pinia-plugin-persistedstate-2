@@ -2,7 +2,7 @@ name: Release
 
 on:
   schedule:
-    - cron '* * * * 3'
+    - cron: '0 0 * * 3'
 
 jobs:
   release:
@@ -48,5 +48,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           pnpm run release
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          delete-branch: true
