@@ -5,7 +5,7 @@ specifiers:
   '@babel/preset-env': 7.20.2
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@rollup/plugin-babel': 6.0.2
+  '@rollup/plugin-babel': 6.0.3
   '@rollup/plugin-node-resolve': 15.0.1
   '@rollup/plugin-replace': 5.0.1
   '@size-limit/preset-small-lib': 8.1.0
@@ -38,7 +38,7 @@ devDependencies:
   '@babel/preset-env': 7.20.2_@babel+core@7.20.2
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@rollup/plugin-babel': 6.0.2_ecxuj7zm5zl7qcys7nvyfh7ewm
+  '@rollup/plugin-babel': 6.0.3_ecxuj7zm5zl7qcys7nvyfh7ewm
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.4.0
   '@rollup/plugin-replace': 5.0.1_rollup@3.4.0
   '@size-limit/preset-small-lib': 8.1.0_size-limit@8.1.0
@@ -227,7 +227,7 @@ packages:
     resolution: {integrity: sha512-0NFvs3VkuSYbFi1x2Vd6tKrywq+z/cLeYC/RJNFrIX/30Bf5aiGYbtvGXolEktzJH8o5E5KJ3tT+nkxuuZFVlA==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.19.4
+      '@babel/types': 7.20.2
     dev: true
 
   /@babel/helper-module-transforms/7.20.2:
@@ -1238,15 +1238,6 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/types/7.19.4:
-    resolution: {integrity: sha512-M5LK7nAeS6+9j7hAq+b3fQs+pNfUtTGq+yFFfHnauFA8zQtLRfmuipmsKDKKLuyG+wC8ABW43A153YNawNTEtw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
-    dev: true
-
   /@babel/types/7.20.2:
     resolution: {integrity: sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==}
     engines: {node: '>=6.9.0'}
@@ -1753,8 +1744,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@rollup/plugin-babel/6.0.2_ecxuj7zm5zl7qcys7nvyfh7ewm:
-    resolution: {integrity: sha512-Vnt8XIWYwCf3MD7qhBWYlP9pjSZvcE++nlPXhQYw6YNehl5742AzFbrV6h4BHb20VAOVUlIksVLymQCTwVCGDg==}
+  /@rollup/plugin-babel/6.0.3_ecxuj7zm5zl7qcys7nvyfh7ewm:
+    resolution: {integrity: sha512-fKImZKppa1A/gX73eg4JGo+8kQr/q1HBQaCGKECZ0v4YBBv3lFqi14+7xyApECzvkLTHCifx+7ntcrvtBIRcpg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
