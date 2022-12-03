@@ -2,9 +2,6 @@
   "name": "pinia-plugin-persistedstate-2",
   "version": "2.0.4",
   "sideEffects": false,
-  "engines": {
-    "node": "^14 || ^16 || >=18"
-  },
   "description": "Persist and rehydrate your Pinia state between page reloads",
   "main": "dist/index.cjs.prod.js",
   "module": "dist/index.es.prod.mjs",
