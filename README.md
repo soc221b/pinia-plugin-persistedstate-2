@@ -13,6 +13,9 @@ This project use [SemVer](https://semver.org/) for versioning. For the versions 
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+[![donate](https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-orange)](https://www.buymeacoffee.com/iendeavor)
+[![donate](https://img.shields.io/badge/sponsor-paypal-orange)](https://www.paypal.com/paypalme/iendeavor/5)
+
 ## ✨ Features
 
 - 🎨 Configurable globally and in every store.
