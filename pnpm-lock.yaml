@@ -18,7 +18,7 @@ specifiers:
   jest-environment-jsdom: 29.3.1
   pinia: 2.0.28
   pinst: 3.0.0
-  prettier: 2.8.1
+  prettier: 2.8.2
   rimraf: 3.0.2
   rollup: 3.9.1
   rollup-plugin-terser: 7.0.2
@@ -51,7 +51,7 @@ devDependencies:
   jest-environment-jsdom: 29.3.1
   pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
   pinst: 3.0.0
-  prettier: 2.8.1
+  prettier: 2.8.2
   rimraf: 3.0.2
   rollup: 3.9.1
   rollup-plugin-terser: 7.0.2_rollup@3.9.1
@@ -4991,8 +4991,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+  /prettier/2.8.2:
+    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
