@@ -67,7 +67,7 @@
     "pinia": "2.0.28",
     "pinst": "3.0.0",
     "prettier": "2.8.2",
-    "rimraf": "3.0.2",
+    "rimraf": "4.0.4",
     "rollup": "3.10.0",
     "rollup-plugin-terser": "7.0.2",
     "rollup-plugin-typescript2": "0.34.1",
