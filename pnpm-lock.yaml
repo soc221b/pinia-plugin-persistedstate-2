@@ -26,7 +26,7 @@ specifiers:
   shvl: ^3.0.0
   size-limit: 8.1.1
   standard-version: 9.5.0
-  ts-jest: 29.0.4
+  ts-jest: 29.0.5
   typescript: 4.9.4
   vue: 3.2.45
 
@@ -58,7 +58,7 @@ devDependencies:
   rollup-plugin-typescript2: 0.34.1_eymahajmafh3u7vrzmo7ylp2pa
   size-limit: 8.1.1
   standard-version: 9.5.0
-  ts-jest: 29.0.4_b6ud3wjfzxmze5tmlpgpdpo43e
+  ts-jest: 29.0.5_b6ud3wjfzxmze5tmlpgpdpo43e
   typescript: 4.9.4
   vue: 3.2.45
 
@@ -5645,8 +5645,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/29.0.4_b6ud3wjfzxmze5tmlpgpdpo43e:
-    resolution: {integrity: sha512-YdNofkoyzeinwjIqLSYQeAM+GTmFQ7xFNtWcR5OyitY5VLzzNINrNmfhP5H3daA/V+RGQR7O3g1K6ysRgu5xIQ==}
+  /ts-jest/29.0.5_b6ud3wjfzxmze5tmlpgpdpo43e:
+    resolution: {integrity: sha512-PL3UciSgIpQ7f6XjVOmbi96vmDHUqAyqDr8YxzopDqX3kfgYtX1cuNeBjP+L9sFXi6nzsGGA6R3fP3DDDJyrxA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
     peerDependencies:
