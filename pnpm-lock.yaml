@@ -19,7 +19,7 @@ specifiers:
   pinia: 2.0.29
   pinst: 3.0.0
   prettier: 2.8.3
-  rimraf: 4.0.7
+  rimraf: 4.1.0
   rollup: 3.10.0
   rollup-plugin-terser: 7.0.2
   rollup-plugin-typescript2: 0.34.1
@@ -52,7 +52,7 @@ devDependencies:
   pinia: 2.0.29_prq2uz4lho2pwp6irk4cfkrxwu
   pinst: 3.0.0
   prettier: 2.8.3
-  rimraf: 4.0.7
+  rimraf: 4.1.0
   rollup: 3.10.0
   rollup-plugin-terser: 7.0.2_rollup@3.10.0
   rollup-plugin-typescript2: 0.34.1_eymahajmafh3u7vrzmo7ylp2pa
@@ -5209,8 +5209,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rimraf/4.0.7:
-    resolution: {integrity: sha512-CUEDDrZvc0swDgVdXGiv3FcYYQMpJxjvSGt85Amj6yU+MCVWurrLCeLiJDdJPHCzNJnwuebBEdcO//eP11Xa7w==}
+  /rimraf/4.1.0:
+    resolution: {integrity: sha512-ZJdkUR5/dRrRJHdcSKJLrpRn6tVjl9ALxd4yrTCxFsMpjQNzwHF6GLqMsuEzEYIXxHlFPDSk21Vr8VPuFBEz0g==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
