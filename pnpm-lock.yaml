@@ -17,7 +17,6 @@ specifiers:
   jest: 29.3.1
   jest-environment-jsdom: 29.3.1
   pinia: 2.0.29
-  pinst: 3.0.0
   prettier: 2.8.3
   rimraf: 4.1.2
   rollup: 3.10.1
@@ -50,7 +49,6 @@ devDependencies:
   jest: 29.3.1_@types+node@18.11.18
   jest-environment-jsdom: 29.3.1
   pinia: 2.0.29_prq2uz4lho2pwp6irk4cfkrxwu
-  pinst: 3.0.0
   prettier: 2.8.3
   rimraf: 4.1.2
   rollup: 3.10.1
@@ -4928,12 +4926,6 @@ packages:
       typescript: 4.9.4
       vue: 3.2.45
       vue-demi: 0.12.1_vue@3.2.45
-    dev: true
-
-  /pinst/3.0.0:
-    resolution: {integrity: sha512-cengSmBxtCyaJqtRSvJorIIZXMXg+lJ3sIljGmtBGUVonMnMsVJbnzl6jGN1HkOWwxNuJynCJ2hXxxqCQrFDdw==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
     dev: true
 
   /pirates/4.0.4:
