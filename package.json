@@ -56,7 +56,7 @@
     "@rollup/plugin-replace": "5.0.2",
     "@size-limit/preset-small-lib": "8.1.2",
     "@types/jest": "29.4.0",
-    "@types/node": "18.11.18",
+    "@types/node": "18.11.19",
     "@vue/test-utils": "2.2.10",
     "change-case": "4.1.2",
     "husky": "8.0.3",
