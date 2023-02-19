@@ -50,6 +50,7 @@ formats.forEach((format) => {
       ...(isIifeOrCjs
         ? [
             replace({
+              preventAssignment: true,
               'process.env.NODE_ENV': "'development'",
             }),
           ]
@@ -68,6 +69,7 @@ formats.forEach((format) => {
       ...(isIifeOrCjs
         ? [
             replace({
+              preventAssignment: true,
               'process.env.NODE_ENV': "'production'",
             }),
           ]
