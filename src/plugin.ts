@@ -112,24 +112,6 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       pluginOptions,
     )
 
-    if (process.env.NODE_ENV !== 'production') {
-      assertStorage(storage)
-    }
-
-    // hydrate
-    // initialize custom properties
-    let resolveIsReady: Function
-    const isReadyPromise = new Promise<void>(function (resolve) {
-      resolveIsReady = resolve
-    })
-    let pendingCount = 0
-    context.store.$persistedState = {
-      isReady: function () {
-        return isReadyPromise
-      },
-      pending: false,
-    }
-
     function patchOrOverwrite(state: any) {
       ;(options.beforeHydrate || function () {})(context.store.$state)
       const merged = merge(context.store.$state, state)
@@ -156,6 +138,24 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       }
     }
 
+    if (process.env.NODE_ENV !== 'production') {
+      assertStorage(storage)
+    }
+
+    // initialize custom properties
+    let resolveIsReady: Function
+    const isReadyPromise = new Promise<void>(function (resolve) {
+      resolveIsReady = resolve
+    })
+    let pendingCount = 0
+    context.store.$persistedState = {
+      isReady: function () {
+        return isReadyPromise
+      },
+      pending: false,
+    }
+
+    // hydrate
     try {
       const value = storage.getItem(key)
       if (value instanceof Promise) {
