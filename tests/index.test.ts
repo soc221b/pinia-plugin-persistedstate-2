@@ -59,6 +59,38 @@ it('assert storage when initializing', () => {
   assertStorage.mockClear()
 })
 
+it('assert storage when initializing (async)', async () => {
+  let resolve: () => void
+  const promise = new Promise<void>((r) => {
+    resolve = r
+  })
+  const assertStorage = jest.fn(() => promise)
+  const spyGetItem = jest
+    .spyOn(storage, 'getItem')
+    .mockImplementation(() => JSON.stringify({ count: 1 }))
+  const useStore = defineStore(
+    'store',
+    () => {
+      return {
+        foo: ref(0),
+      }
+    },
+    { persistedState: { assertStorage } },
+  )
+
+  useStore()
+
+  expect(assertStorage).toBeCalled()
+  expect(spyGetItem).not.toBeCalled()
+
+  resolve!()
+  await Promise.resolve()
+  expect(spyGetItem).toBeCalled()
+
+  spyGetItem.mockRestore()
+  assertStorage.mockClear()
+})
+
 describe('hydrate', () => {
   it("does not replaces store's state when initializing", () => {
     const spyWarn = jest.spyOn(console, 'warn').mockImplementation()

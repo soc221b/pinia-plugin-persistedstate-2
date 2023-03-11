@@ -138,10 +138,6 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       }
     }
 
-    if (process.env.NODE_ENV !== 'production') {
-      assertStorage(storage)
-    }
-
     // initialize custom properties
     let resolveIsReady: Function
     const isReadyPromise = new Promise<void>(function (resolve) {
@@ -157,15 +153,29 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
 
     // hydrate
     try {
+      if (process.env.NODE_ENV !== 'production') {
+        const assertStorageValue = assertStorage(storage)
+        if (assertStorageValue instanceof Promise) {
+          assertStorageValue
+            .then(() => hydrate())
+            .catch((error) => console.warn(error))
+        } else {
+          hydrate()
+        }
+      } else {
+        hydrate()
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production') console.warn(error)
+      resolveIsReady!()
+    }
+    function hydrate() {
       const value = storage.getItem(key)
       if (value instanceof Promise) {
         value.then(parse)
       } else {
         parse(value)
       }
-    } catch (error) {
-      if (process.env.NODE_ENV !== 'production') console.warn(error)
-      resolveIsReady!()
     }
 
     // persist

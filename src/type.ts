@@ -40,7 +40,7 @@ export interface CommonOptions<S extends StateTree = StateTree> {
   /**
    * To ensure storage is available.
    */
-  assertStorage?: (storage: IStorage) => void | never
+  assertStorage?: (storage: IStorage) => void | Promise<void> | never
 
   /**
    * A function for merging state when rehydrating state.
