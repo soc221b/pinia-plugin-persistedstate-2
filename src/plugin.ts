@@ -94,25 +94,26 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       options,
       {},
     )
+    const assertStorage = getOption(
+      function (storage: Required<CommonOptions<S>>['storage']) {
+        const uniqueKey = '@@'
+        const result = storage.setItem(uniqueKey, '1')
+        const removeItem = function () {
+          storage.removeItem(uniqueKey)
+        }
+        if (result instanceof Promise) {
+          result.then(removeItem)
+        } else {
+          removeItem()
+        }
+      },
+      'assertStorage',
+      options,
+      pluginOptions,
+    )
 
     if (process.env.NODE_ENV !== 'production') {
-      if (options.assertStorage === void 0) {
-        options.assertStorage = function (
-          storage: Required<CommonOptions<S>>['storage'],
-        ) {
-          const uniqueKey = '@@'
-          const result = storage.setItem(uniqueKey, '1')
-          const removeItem = function () {
-            storage.removeItem(uniqueKey)
-          }
-          if (result instanceof Promise) {
-            result.then(removeItem)
-          } else {
-            removeItem()
-          }
-        }
-      }
-      options.assertStorage(storage)
+      assertStorage(storage)
     }
 
     // hydrate
