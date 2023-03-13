@@ -11,10 +11,14 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.2",
+    "@pinia/nuxt": "^0.4.7",
     "cookie": "^0.5.0",
     "js-cookie": "^3.0.1",
-    "nuxt": "^3.0.0-rc.10",
-    "pinia": "^2.0.22"
+    "nuxt": "^3.2.3",
+    "pinia": "^2.0.33"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.5.1",
+    "@types/js-cookie": "^3.0.3"
   }
 }

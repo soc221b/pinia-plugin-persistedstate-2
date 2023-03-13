@@ -5,7 +5,9 @@ const counterStore = useCounterStore()
 </script>
 
 <template>
-  <button type="button" @click="counterStore.currentValue++">
-    count is: {{ counterStore.currentValue }}
-  </button>
+  <ClientOnly>
+    <button type="button" @click="counterStore.currentValue++">
+      count is: {{ counterStore.currentValue }}
+    </button>
+  </ClientOnly>
 </template>
