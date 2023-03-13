@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.14](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.3...v2.0.14) (2023-03-13)
+
+
+### Bug Fixes
+
+* assert storage should support async ([3083620](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061)), closes [#218](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/218)
+
 ### 2.0.13 (2023-02-22)
 
 ### 2.0.12 (2023-02-08)
