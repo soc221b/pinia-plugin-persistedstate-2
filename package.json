@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "15.0.1",
     "@rollup/plugin-replace": "5.0.2",
     "@size-limit/preset-small-lib": "8.2.4",
-    "@types/jest": "29.4.0",
+    "@types/jest": "29.4.1",
     "@types/node": "18.15.1",
     "@vue/test-utils": "2.3.1",
     "change-case": "4.1.2",
