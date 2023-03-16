@@ -9,7 +9,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 15.0.1
   '@rollup/plugin-replace': 5.0.2
   '@size-limit/preset-small-lib': 8.2.4
-  '@types/jest': 29.4.4
+  '@types/jest': 29.5.0
   '@types/node': 18.15.3
   '@vue/test-utils': 2.3.1
   change-case: 4.1.2
@@ -41,7 +41,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.19.1
   '@rollup/plugin-replace': 5.0.2_rollup@3.19.1
   '@size-limit/preset-small-lib': 8.2.4_size-limit@8.2.4
-  '@types/jest': 29.4.4
+  '@types/jest': 29.5.0
   '@types/node': 18.15.3
   '@vue/test-utils': 2.3.1_vue@3.2.47
   change-case: 4.1.2
@@ -2156,8 +2156,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.4.4:
-    resolution: {integrity: sha512-qezb65VIH7X1wobSnd6Lvdve7PXSyQRa3dljTkhTtDhi603RvHQCshSlJcuyMLHJpeHgY3NKwvDJWxMOOHxGDQ==}
+  /@types/jest/29.5.0:
+    resolution: {integrity: sha512-3Emr5VOl/aoBwnWcH/EFQvlSAmjV+XtV9GGu5mwdYew5vhQh0IUZx/60x0TzHDu09Bi7HMx10t/namdJw5QIcg==}
     dependencies:
       expect: 29.5.0
       pretty-format: 29.5.0
