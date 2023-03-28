@@ -230,7 +230,7 @@ For more details, see [type.ts](./src/type.ts).
 
 - `deserialize?: (value: any): any`: Defaults to `JSON.parse`. This method will be called right after `storage.getItem`.
 
-- `filter: (mutation, state): boolean`: A function that will be called to filter any mutations which will trigger setState on storage eventually.
+- `filter?: (mutation, state): boolean`: A function that will be called to filter any mutations which will trigger setState on storage eventually.
 
 #### IStorage
 
