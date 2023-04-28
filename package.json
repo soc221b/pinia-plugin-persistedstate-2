@@ -71,7 +71,7 @@
     "size-limit": "8.2.4",
     "standard-version": "9.5.0",
     "ts-jest": "29.0.5",
-    "typescript": "5.0.2",
+    "typescript": "5.0.4",
     "vue": "3.2.47"
   }
 }
