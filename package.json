@@ -52,7 +52,7 @@
     "@commitlint/cli": "17.5.0",
     "@commitlint/config-conventional": "17.4.4",
     "@rollup/plugin-babel": "6.0.3",
-    "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-node-resolve": "15.0.2",
     "@rollup/plugin-replace": "5.0.2",
     "@size-limit/preset-small-lib": "8.2.4",
     "@types/jest": "29.5.0",
