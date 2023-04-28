@@ -97,7 +97,7 @@ jobs:
 
       - name: Publish
         if: github.ref_name == 'main'
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v2
         id: publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
