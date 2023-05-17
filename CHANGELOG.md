@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.15 (2023-05-17)
+
 ### [2.0.14](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.3...v2.0.14) (2023-03-13)
 
 
