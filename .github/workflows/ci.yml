@@ -105,8 +105,7 @@ jobs:
           tag: latest
           access: public
           dry-run: false
-          check-version: true
-          greater-version-only: true
+          strategy: upgrade
 
       - name: Tag
         if: github.ref_name == 'main' && steps.publish.outputs.type != 'none'
