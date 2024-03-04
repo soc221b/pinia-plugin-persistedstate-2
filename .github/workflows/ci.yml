@@ -108,14 +108,14 @@ jobs:
           strategy: upgrade
 
       - name: Tag
-        if: github.ref_name == 'main' && steps.publish.outputs.type != 'none'
+        if: github.ref_name == 'main' && steps.publish.outputs.type
         uses: anothrNick/github-tag-action@v1
         env:
           CUSTOM_TAG: ${{ matrix.package }}${{ steps.publish.outputs.version }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release
-        if: github.ref_name == 'main' && steps.publish.outputs.type != 'none'
+        if: github.ref_name == 'main' && steps.publish.outputs.type
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ matrix.package }}${{ steps.publish.outputs.version }}
