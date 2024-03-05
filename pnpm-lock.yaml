@@ -25,7 +25,7 @@ specifiers:
   shvl: ^3.0.0
   size-limit: 8.2.6
   standard-version: 9.5.0
-  ts-jest: 29.1.0
+  ts-jest: 29.1.2
   typescript: 5.0.4
   vue: 3.3.4
 
@@ -56,7 +56,7 @@ devDependencies:
   rollup-plugin-typescript2: 0.34.1_td7na2ke7rgjbmlu5ash6l7mam
   size-limit: 8.2.6
   standard-version: 9.5.0
-  ts-jest: 29.1.0_dywjbwoysgpe5pkqw6owlxitka
+  ts-jest: 29.1.2_dywjbwoysgpe5pkqw6owlxitka
   typescript: 5.0.4
   vue: 3.3.4
 
@@ -4282,7 +4282,7 @@ packages:
       jest-util: 29.5.0
       natural-compare: 1.4.0
       pretty-format: 29.5.0
-      semver: 7.5.0
+      semver: 7.5.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4849,7 +4849,7 @@ packages:
     dependencies:
       hosted-git-info: 4.0.2
       is-core-module: 2.11.0
-      semver: 7.5.0
+      semver: 7.5.3
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5830,9 +5830,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/29.1.0_dywjbwoysgpe5pkqw6owlxitka:
-    resolution: {integrity: sha512-ZhNr7Z4PcYa+JjMl62ir+zPiNJfXJN6E8hSLnaUKhOgqcn8vb3e537cpkd0FuAfRK3sR1LSqM1MOhliXNgOFPA==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+  /ts-jest/29.1.2_dywjbwoysgpe5pkqw6owlxitka:
+    resolution: {integrity: sha512-br6GJoH/WUX4pu7FbZXuWGKGNDuU7b8Uj77g/Sp7puZV6EXzuByl6JrECvm0MzVzSTkSHWTihsXt+5XYER5b+g==}
+    engines: {node: ^16.10.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@babel/core': '>=7.0.0-beta.0 <8'
@@ -5859,7 +5859,7 @@ packages:
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      semver: 7.3.8
+      semver: 7.5.3
       typescript: 5.0.4
       yargs-parser: 21.1.1
     dev: true
