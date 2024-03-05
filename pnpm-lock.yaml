@@ -6,7 +6,7 @@ specifiers:
   '@commitlint/cli': 17.8.1
   '@commitlint/config-conventional': 17.8.1
   '@rollup/plugin-babel': 6.0.4
-  '@rollup/plugin-node-resolve': 15.0.2
+  '@rollup/plugin-node-resolve': 15.2.3
   '@rollup/plugin-replace': 5.0.5
   '@size-limit/preset-small-lib': 8.2.6
   '@types/jest': 29.5.12
@@ -38,7 +38,7 @@ devDependencies:
   '@commitlint/cli': 17.8.1
   '@commitlint/config-conventional': 17.8.1
   '@rollup/plugin-babel': 6.0.4_ulb6x5lr7xtz2tuicbo7lbulji
-  '@rollup/plugin-node-resolve': 15.0.2_rollup@3.22.0
+  '@rollup/plugin-node-resolve': 15.2.3_rollup@3.22.0
   '@rollup/plugin-replace': 5.0.5_rollup@3.22.0
   '@size-limit/preset-small-lib': 8.2.6_size-limit@8.2.6
   '@types/jest': 29.5.12
@@ -2043,11 +2043,11 @@ packages:
       rollup: 3.22.0
     dev: true
 
-  /@rollup/plugin-node-resolve/15.0.2_rollup@3.22.0:
-    resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
+  /@rollup/plugin-node-resolve/15.2.3_rollup@3.22.0:
+    resolution: {integrity: sha512-j/lym8nf5E21LwBT4Df1VD6hRO2L2iwUeUmP7litikRsVp1H6NWx20NEp0Y7su+7XGc476GnXXc4kFeZNGmaSQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.78.0||^3.0.0
+      rollup: ^2.78.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
