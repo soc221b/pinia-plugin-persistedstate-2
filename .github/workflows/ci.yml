@@ -58,7 +58,7 @@ jobs:
           CI: true
 
       - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v2.1.2
+        uses: coverallsapp/github-action@v2.2.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
