@@ -116,7 +116,7 @@ jobs:
 
       - name: Release
         if: github.ref_name == 'main' && steps.publish.outputs.type
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ matrix.package }}${{ steps.publish.outputs.version }}
           body: 'Changelog: https://github.com/iendeavor/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
