@@ -53,3 +53,4 @@ jobs:
         with:
           delete-branch: true
           reviewers: 'iendeavor'
+          title: release
