@@ -54,7 +54,7 @@
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-replace": "5.0.5",
-    "@size-limit/preset-small-lib": "8.2.6",
+    "@size-limit/preset-small-lib": "11.0.2",
     "@types/jest": "29.5.12",
     "@types/node": "20.11.25",
     "@vue/test-utils": "2.4.4",
