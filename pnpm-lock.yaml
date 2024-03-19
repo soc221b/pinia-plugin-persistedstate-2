@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': 7.24.0
   '@babel/preset-env': 7.24.0
-  '@commitlint/cli': 19.2.0
+  '@commitlint/cli': 19.2.1
   '@commitlint/config-conventional': 19.1.0
   '@rollup/plugin-babel': 6.0.4
   '@rollup/plugin-node-resolve': 15.2.3
@@ -35,7 +35,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.24.0
   '@babel/preset-env': 7.24.0_@babel+core@7.24.0
-  '@commitlint/cli': 19.2.0_dh3sqy7ezyjigkdye62rmrskly
+  '@commitlint/cli': 19.2.1_dh3sqy7ezyjigkdye62rmrskly
   '@commitlint/config-conventional': 19.1.0
   '@rollup/plugin-babel': 6.0.4_eit2ezvsmwd2rhnugowbtjz4gm
   '@rollup/plugin-node-resolve': 15.2.3_rollup@4.13.0
@@ -1305,15 +1305,15 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@commitlint/cli/19.2.0_dh3sqy7ezyjigkdye62rmrskly:
-    resolution: {integrity: sha512-8XnQDMyQR+1/ldbmIyhonvnDS2enEw48Wompo/967fsEvy9Vj5/JbDutzmSBKxANWDVeEbR9QQm0yHpw6ArrFw==}
+  /@commitlint/cli/19.2.1_dh3sqy7ezyjigkdye62rmrskly:
+    resolution: {integrity: sha512-cbkYUJsLqRomccNxvoJTyv5yn0bSy05BBizVyIcLACkRbVUqYorC351Diw/XFSWC/GtpwiwT2eOvQgFZa374bg==}
     engines: {node: '>=v18'}
     hasBin: true
     dependencies:
       '@commitlint/format': 19.0.3
       '@commitlint/lint': 19.1.0
       '@commitlint/load': 19.2.0_dh3sqy7ezyjigkdye62rmrskly
-      '@commitlint/read': 19.2.0
+      '@commitlint/read': 19.2.1
       '@commitlint/types': 19.0.3
       execa: 8.0.1
       yargs: 17.5.1
@@ -1414,8 +1414,8 @@ packages:
       conventional-commits-parser: 5.0.0
     dev: true
 
-  /@commitlint/read/19.2.0:
-    resolution: {integrity: sha512-HlGeEd/jyp2a5Fb9mvtsaDm5hFCmj80dJYjLQkpG3DzWneWBc37YU3kM8Za1D1HUazZaTkdsWq73M3XDE4CvCA==}
+  /@commitlint/read/19.2.1:
+    resolution: {integrity: sha512-qETc4+PL0EUv7Q36lJbPG+NJiBOGg7SSC7B5BsPWOmei+Dyif80ErfWQ0qXoW9oCh7GTpTNRoaVhiI8RbhuaNw==}
     engines: {node: '>=v18'}
     dependencies:
       '@commitlint/top-level': 19.0.0
