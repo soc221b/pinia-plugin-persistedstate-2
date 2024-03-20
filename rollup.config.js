@@ -1,7 +1,7 @@
 const path = require('path')
 const rm = require('rimraf')
 const ts = require('rollup-plugin-typescript2')
-const { terser } = require('rollup-plugin-terser')
+const terser = require('@rollup/plugin-terser')
 const resolve = require('@rollup/plugin-node-resolve')
 const replace = require('@rollup/plugin-replace')
 const babel = require('@rollup/plugin-babel')
