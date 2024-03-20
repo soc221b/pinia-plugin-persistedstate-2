@@ -8,7 +8,7 @@ specifiers:
   '@rollup/plugin-babel': 6.0.4
   '@rollup/plugin-node-resolve': 15.2.3
   '@rollup/plugin-replace': 5.0.5
-  '@rollup/plugin-terser': 0.1.0
+  '@rollup/plugin-terser': 0.4.4
   '@size-limit/preset-small-lib': 8.2.6
   '@types/jest': 29.5.12
   '@types/node': 20.11.30
@@ -40,7 +40,7 @@ devDependencies:
   '@rollup/plugin-babel': 6.0.4_56zr3zr4xg5eskdjbxf7hlmdci
   '@rollup/plugin-node-resolve': 15.2.3_rollup@4.13.0
   '@rollup/plugin-replace': 5.0.5_rollup@4.13.0
-  '@rollup/plugin-terser': 0.1.0_rollup@4.13.0
+  '@rollup/plugin-terser': 0.4.4_rollup@4.13.0
   '@size-limit/preset-small-lib': 8.2.6_size-limit@8.2.6
   '@types/jest': 29.5.12
   '@types/node': 20.11.30
@@ -2084,16 +2084,18 @@ packages:
       rollup: 4.13.0
     dev: true
 
-  /@rollup/plugin-terser/0.1.0_rollup@4.13.0:
-    resolution: {integrity: sha512-N2KK+qUfHX2hBzVzM41UWGLrEmcjVC37spC8R3c9mt3oEDFKh3N2e12/lLp9aVSt86veR0TQiCNQXrm8C6aiUQ==}
+  /@rollup/plugin-terser/0.4.4_rollup@4.13.0:
+    resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.x || ^3.x
+      rollup: ^2.0.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
     dependencies:
       rollup: 4.13.0
+      serialize-javascript: 6.0.2
+      smob: 1.4.1
       terser: 5.29.2
     dev: true
 
@@ -2514,12 +2516,6 @@ packages:
 
   /acorn/8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-    dev: true
-
-  /acorn/8.8.0:
-    resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -4760,7 +4756,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.8.0
+      acorn: 8.11.3
       acorn-globals: 6.0.0
       cssom: 0.5.0
       cssstyle: 2.3.0
@@ -5570,6 +5566,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /randombytes/2.1.0:
+    resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: true
+
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
@@ -5849,6 +5851,12 @@ packages:
       upper-case-first: 2.0.2
     dev: true
 
+  /serialize-javascript/6.0.2:
+    resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
+    dependencies:
+      randombytes: 2.1.0
+    dev: true
+
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -5894,6 +5902,10 @@ packages:
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
+    dev: true
+
+  /smob/1.4.1:
+    resolution: {integrity: sha512-9LK+E7Hv5R9u4g4C3p+jjLstaLe11MDsL21UpYaCNmapvMkYhqCV4A/f/3gyH8QjMyh6l68q9xC85vihY9ahMQ==}
     dev: true
 
   /snake-case/3.0.4:
