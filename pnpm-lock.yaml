@@ -19,7 +19,7 @@ specifiers:
   jest-environment-jsdom: 29.7.0
   pinia: 2.1.7
   prettier: 2.8.8
-  rimraf: 5.0.5
+  rimraf: 5.0.7
   rollup: 4.17.2
   rollup-plugin-typescript2: 0.36.0
   shvl: ^3.0.0
@@ -51,7 +51,7 @@ devDependencies:
   jest-environment-jsdom: 29.7.0
   pinia: 2.1.7_uv7tk32adxuy5xhmv6577qjhem
   prettier: 2.8.8
-  rimraf: 5.0.5
+  rimraf: 5.0.7
   rollup: 4.17.2
   rollup-plugin-typescript2: 0.36.0_ykkgg3hmvuahulnyokrvkrm5v4
   size-limit: 8.2.6
@@ -5822,9 +5822,9 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rimraf/5.0.5:
-    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
-    engines: {node: '>=14'}
+  /rimraf/5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
     hasBin: true
     dependencies:
       glob: 10.3.10
