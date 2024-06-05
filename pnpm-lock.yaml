@@ -7,7 +7,7 @@ specifiers:
   '@commitlint/config-conventional': 19.2.2
   '@rollup/plugin-babel': 6.0.4
   '@rollup/plugin-node-resolve': 15.2.3
-  '@rollup/plugin-replace': 5.0.5
+  '@rollup/plugin-replace': 5.0.6
   '@rollup/plugin-terser': 0.4.4
   '@size-limit/preset-small-lib': 8.2.6
   '@types/jest': 29.5.12
@@ -39,7 +39,7 @@ devDependencies:
   '@commitlint/config-conventional': 19.2.2
   '@rollup/plugin-babel': 6.0.4_xdjdwcoy7cvciibtelgcpmsnim
   '@rollup/plugin-node-resolve': 15.2.3_rollup@4.18.0
-  '@rollup/plugin-replace': 5.0.5_rollup@4.18.0
+  '@rollup/plugin-replace': 5.0.6_rollup@4.18.0
   '@rollup/plugin-terser': 0.4.4_rollup@4.18.0
   '@size-limit/preset-small-lib': 8.2.6_size-limit@8.2.6
   '@types/jest': 29.5.12
@@ -2108,8 +2108,8 @@ packages:
       rollup: 4.18.0
     dev: true
 
-  /@rollup/plugin-replace/5.0.5_rollup@4.18.0:
-    resolution: {integrity: sha512-rYO4fOi8lMaTg/z5Jb+hKnrHHVn8j2lwkqwyS4kTRhKyWOLf2wST2sWXr4WzWiTcoHTp2sTjqUbqIj2E39slKQ==}
+  /@rollup/plugin-replace/5.0.6_rollup@4.18.0:
+    resolution: {integrity: sha512-n/Eea4MuS38M5iT+0nz7UzSbI4H4hVTKV5hOTAQzNVKT3nYxj8iaG4t9IW86Ugv/jApGY+O+SANAFqWPzZ9xkw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -2118,7 +2118,7 @@ packages:
         optional: true
     dependencies:
       '@rollup/pluginutils': 5.0.2_rollup@4.18.0
-      magic-string: 0.30.8
+      magic-string: 0.30.10
       rollup: 4.18.0
     dev: true
 
@@ -5036,13 +5036,6 @@ packages:
 
   /magic-string/0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
-
-  /magic-string/0.30.8:
-    resolution: {integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==}
-    engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
