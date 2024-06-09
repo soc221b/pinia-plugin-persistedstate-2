@@ -8,45 +8,35 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Use pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
+          node-version-file: .nvmrc
 
       - name: Install
-        run: pnpm install
+        run: npm ci
 
       - name: Lint
-        run: pnpm run lint
+        run: npm run lint
 
       - name: Test
-        run: pnpm run test:run
+        run: npm run test:run
         env:
           CI: true
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Check size
-        run: pnpm run check-size
+        run: npm run check-size
 
       - name: Release
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          pnpm run release
+          npm run release
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

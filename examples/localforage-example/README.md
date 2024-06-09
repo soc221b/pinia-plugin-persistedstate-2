@@ -5,8 +5,8 @@
 ## Installation
 
 ```sh
-pnpm add localforage
-pnpm add pinia-plugin-persistedstate-2
+npm i localforage
+npm i pinia-plugin-persistedstate-2
 ```
 
 ## Usage

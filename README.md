@@ -27,7 +27,7 @@ npm i pinia-plugin-persistedstate-2
 yarn add pinia-plugin-persistedstate-2
 
 # pnpm
-pnpm add pinia-plugin-persistedstate-2
+npm i pinia-plugin-persistedstate-2
 ```
 
 #### CDN

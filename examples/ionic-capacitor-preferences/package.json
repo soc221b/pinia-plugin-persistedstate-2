@@ -1,32 +1,29 @@
 {
   "name": "ionic-capacitor",
   "private": true,
-  "engines": {
-    "node": "^18",
-    "pnpm": "^7"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "^4.0.0",
-    "@capacitor/core": "^4.0.0",
-    "@capacitor/ios": "^4.0.0",
-    "@capacitor/preferences": "^4.0.1",
-    "@ionic/vue": "^6.2.3",
-    "@ionic/vue-router": "^6.2.3",
-    "pinia": "^2.0.20",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.3"
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/preferences": "^6.0.0",
+    "@ionic/vue": "^8.2.1",
+    "@ionic/vue-router": "^8.2.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@capacitor/cli": "^4.0.0",
-    "@types/node": "^18.7.8",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "typescript": "^4.5.5",
-    "vite": "^3.0.9",
-    "vue-tsc": "^0.40.1"
+    "@babel/types": "^7.24.7",
+    "@capacitor/cli": "^6.0.0",
+    "@types/node": "^20.14.2",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "~5.3",
+    "vite": "^5.2.13",
+    "vue-tsc": "^2.0.21"
   }
 }

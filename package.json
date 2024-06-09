@@ -36,7 +36,7 @@
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
     "prepare": "husky install",
-    "release": "git fetch && pnpm exec standard-version",
+    "release": "git fetch && npx standard-version",
     "test": "jest --watch",
     "test:run": "jest"
   },
