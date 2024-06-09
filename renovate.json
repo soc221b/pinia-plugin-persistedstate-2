@@ -2,6 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "automerge": true,
   "automergeStrategy": "rebase",
-  "ignorePaths": ["examples/**"],
+  "ignorePaths": [
+    "examples/nuxt-2-client-example/**",
+    "examples/nuxt-bridge-example",
+    "examples/vue-2-example"
+  ],
   "extends": ["config:base"]
 }

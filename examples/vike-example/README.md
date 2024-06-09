@@ -1,28 +1,35 @@
-# Vite-plugin-ssr example
+# Vike example
 
 ## Installation
 
 ```sh
-pnpm add pinia cookie js-cookie
-pnpm add pinia-plugin-persistedstate-2
+npm i pinia cookie js-cookie
+npm i pinia-plugin-persistedstate-2
 ```
 
 ## Usage
 
 ```diff
-// server.js
+// server/index.js
 
 // ...
   app.get('*', async (req, res, next) => {
     const pageContextInit = {
-      urlOriginal: req.originalUrl,
 +     cookie: req.headers.cookie,
+      urlOriginal: req.originalUrl
     }
     const pageContext = await renderPage(pageContextInit)
     const { httpResponse } = pageContext
-    if (!httpResponse) return next()
-    const { body, statusCode, contentType } = httpResponse
-    res.status(statusCode).type(contentType).send(body)
+    if (!httpResponse) {
+      return next()
+    } else {
+      const { body, statusCode, headers, earlyHints } = httpResponse
+      if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) })
+      headers.forEach(([name, value]) => res.setHeader(name, value))
+      res.status(statusCode)
+      // For HTTP streams use httpResponse.pipe() instead, see https://vike.dev/stream
+      res.send(body)
+    }
   })
 // ...
 ```
@@ -32,10 +39,10 @@ pnpm add pinia-plugin-persistedstate-2
 
 import { createPinia } from 'pinia'
 + import { createPersistedStatePlugin } from 'pinia-plugin-persistedstate-2'
-import { createSSRApp } from 'vue'
-import { setPageContext } from './usePageContext'
 + import jsCookie from 'js-cookie'
 + import cookie from 'cookie'
+import { createSSRApp } from 'vue'
+import { setPageContext } from './usePageContext'
 
 export { createApp }
 

@@ -6,61 +6,32 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .nvmrc
 
-      - name: Use pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
+      - run: npm ci
 
-      - name: Install
-        run: pnpm install
-
-      - name: Lint
-        run: pnpm run lint
+      - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .nvmrc
 
-      - name: Use pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
+      - run: npm ci
 
-      - name: Install
-        run: pnpm install
-
-      - name: Test
-        run: pnpm run test:run --coverage
+      - run: npm run test:run
         env:
           CI: true
-
-      - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v2.3.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
@@ -69,35 +40,21 @@ jobs:
       - lint
       - test
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .nvmrc
 
-      - name: Use pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
+      - run: npm ci
 
-      - name: Install
-        run: pnpm install
+      - run: npm run build
 
-      - name: Build
-        run: pnpm run build
+      - run: npm run check-size
 
-      - name: Check size
-        run: pnpm run check-size
-
-      - name: Publish
+      - uses: JS-DevTools/npm-publish@v3
         if: github.ref_name == 'main'
-        uses: JS-DevTools/npm-publish@v3
         id: publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
@@ -107,73 +64,46 @@ jobs:
           dry-run: false
           strategy: upgrade
 
-      - name: Tag
+      - uses: anothrNick/github-tag-action@v1
         if: github.ref_name == 'main' && steps.publish.outputs.type
-        uses: anothrNick/github-tag-action@v1
         env:
-          CUSTOM_TAG: ${{ matrix.package }}${{ steps.publish.outputs.version }}
+          CUSTOM_TAG: ${{ steps.publish.outputs.version }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Release
+      - uses: softprops/action-gh-release@v2
         if: github.ref_name == 'main' && steps.publish.outputs.type
-        uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ matrix.package }}${{ steps.publish.outputs.version }}
+          tag_name: ${{ steps.publish.outputs.version }}
           body: 'Changelog: https://github.com/iendeavor/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
 
-      - name: Pack
-        run: pnpm pack
+      - run: npm pack
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: artifact
           path: |
             *.tgz
 
-  test-npm-8-node-16:
+  node-lts:
     runs-on: ubuntu-latest
 
     needs:
       - build
 
-    name: 'Test example - ${{ matrix.example-directory }}'
+    name: 'Build example - ${{ matrix.example-directory }}'
 
     strategy:
       matrix:
         example-directory:
+          - ionic-capacitor-preferences
+          - localforage-example
           - nuxt-2-client-example
-          - nuxt-bridge-example
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: artifact
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16
-
-      - run: |
-          cd examples/${{matrix.example-directory}}
-          npm ci
-          npm add ../../*.tgz
-          npm run build
-
-  test-npm-10-node-18:
-    runs-on: ubuntu-latest
-
-    needs:
-      - build
-
-    name: 'Test example - ${{ matrix.example-directory }}'
-
-    strategy:
-      matrix:
-        example-directory:
           - nuxt-3-universal-example
+          - nuxt-bridge-example
+          - pinia-orm-example
+          - quasar-example
+          - vike-example
+          - vue-3-example
 
     steps:
       - uses: actions/checkout@v4
@@ -184,7 +114,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version-file: .nvmrc
 
       - run: |
           cd examples/${{matrix.example-directory}}
@@ -192,13 +122,13 @@ jobs:
           npm add ../../*.tgz
           npm run build
 
-  test-pnpm-7-node-16:
+  node-16:
     runs-on: ubuntu-latest
 
     needs:
       - build
 
-    name: 'Test example - ${{ matrix.example-directory }}'
+    name: 'Build example - ${{ matrix.example-directory }}'
 
     strategy:
       matrix:
@@ -216,51 +146,8 @@ jobs:
         with:
           node-version: 16
 
-      - uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
-
       - run: |
           cd examples/${{matrix.example-directory}}
-          pnpm i
-          pnpm add ../../*.tgz
-          pnpm run build
-
-  test-pnpm-7-node-18:
-    runs-on: ubuntu-latest
-
-    needs:
-      - build
-
-    name: 'Test example - ${{ matrix.example-directory }}'
-
-    strategy:
-      matrix:
-        example-directory:
-          - ionic-capacitor-preferences
-          - localforage-example
-          # - pinia-orm-example
-          - quasar-example
-          - vite-plugin-ssr-example
-          - vue-3-example
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: artifact
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 7
-
-      - run: |
-          cd examples/${{matrix.example-directory}}
-          pnpm i
-          pnpm add ../../*.tgz
-          pnpm run build
+          npm ci
+          npm add ../../*.tgz
+          npm run build

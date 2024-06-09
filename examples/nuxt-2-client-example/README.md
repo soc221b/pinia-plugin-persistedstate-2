@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-npm add @nuxtjs/composition-api@~0.32.0 pinia @pinia/nuxt@0.2.1
+npm add @nuxtjs/composition-api pinia @pinia/nuxt@0.2.1
 npm add pinia-plugin-persistedstate-2
 ```
 

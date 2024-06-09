@@ -1,24 +1,20 @@
 {
   "name": "nuxt-3-universal-example",
   "private": true,
-  "engines": {
-    "node": "^18",
-    "npm": "^10"
-  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
-  "dependencies": {
-    "@pinia/nuxt": "^0.4.7",
-    "cookie": "^0.5.0",
-    "js-cookie": "^3.0.1",
-    "nuxt": "^3.2.3",
-    "pinia": "^2.0.33"
-  },
   "devDependencies": {
-    "@types/cookie": "^0.5.1",
-    "@types/js-cookie": "^3.0.3"
+    "@types/cookie": "^0.6.0",
+    "@types/js-cookie": "^3.0.6"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "cookie": "^0.6.0",
+    "js-cookie": "^3.0.5",
+    "nuxt": "^3.11.2",
+    "pinia": "^2.1.7"
   }
 }

@@ -5,14 +5,14 @@
 ## Installation
 
 ```sh
-pnpm add pinia pinia-plugin-persistedstate-2 @capacitor/core @capacitor/preferences
-pnpm add @capacitor/cli -D
+npm i pinia pinia-plugin-persistedstate-2 @capacitor/core @capacitor/preferences
+npm i @capacitor/cli -D
 ```
 
 ## Build and open iOS simulator
 
 ```sh
-pnpm build && npx cap sync && npx cap open ios
+npm run build && npx cap sync && npx cap open ios
 ```
 
 ## How it worked

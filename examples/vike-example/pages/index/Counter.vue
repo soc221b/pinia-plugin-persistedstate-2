@@ -4,9 +4,9 @@
   </button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { storeToRefs } from 'pinia'
-import { useCounter } from '../stores/useCounter'
+import { useCounter } from '../../stores/useCounter'
 
 const counterStore = useCounter()
 const { count } = storeToRefs(counterStore)
