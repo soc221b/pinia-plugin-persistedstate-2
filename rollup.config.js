@@ -1,16 +1,15 @@
-const path = require('path')
-const rm = require('rimraf')
-const ts = require('rollup-plugin-typescript2')
-const terser = require('@rollup/plugin-terser')
-const resolve = require('@rollup/plugin-node-resolve')
-const replace = require('@rollup/plugin-replace')
-const babel = require('@rollup/plugin-babel')
-const { pascalCase } = require('change-case')
+import path from 'path'
+import * as rm from 'rimraf'
+import ts from 'rollup-plugin-typescript2'
+import terser from '@rollup/plugin-terser'
+import resolve from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
+import babel from '@rollup/plugin-babel'
+import { pascalCase } from 'change-case'
 
-rm.sync(resolvePackage('dist/**/*'))
+rm.sync(resolvePackage('dist'))
 
-const packageJson = require(resolvePackage('package.json'))
-const packageName = packageJson.name
+const packageName = 'pinia-plugin-persistedstate-2'
 const mainFilePath = 'src/index.ts'
 const pascalCasePackageName = pascalCase(packageName)
 const input = resolvePackage(mainFilePath)
@@ -85,8 +84,10 @@ formats.forEach((format) => {
   })
 })
 
-module.exports = configs
+export default configs
 
 function resolvePackage(...paths) {
-  return path.resolve(__dirname, process.cwd(), ...paths)
+  return import.meta
+    .resolve(['.', ...paths].join(path.sep), import.meta.url)
+    .replace('file://', '')
 }

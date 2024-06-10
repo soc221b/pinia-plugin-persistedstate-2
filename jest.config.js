@@ -1,5 +1,5 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
-module.exports = {
+/** @type {import('ts-jest/dist/types').JestConfigWithTsJest} */
+export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   transform: {
