@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
   "ignorePaths": [
     "examples/nuxt-2-client-example/**",
     "examples/nuxt-bridge-example",
