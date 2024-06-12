@@ -2,7 +2,7 @@ name: Release
 
 on:
   schedule:
-    - cron: '0 0 * * 3'
+    - cron: '0 30 * * 3'
 
 jobs:
   release:
@@ -39,8 +39,12 @@ jobs:
           npm run release
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           delete-branch: true
           reviewers: 'iendeavor'
           title: release
+
+      - name: Enable Pull Request Automerge
+        run: gh pr merge --squash --auto "${{ steps.cpr.outputs.pull-request-number }}"
