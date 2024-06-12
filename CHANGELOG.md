@@ -10,12 +10,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 2.0.15 (2024-03-06)
 
-### [2.0.14](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.3...v2.0.14) (2023-03-13)
+### [2.0.14](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.3...v2.0.14) (2023-03-13)
 
 
 ### Bug Fixes
 
-* assert storage should support async ([3083620](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061)), closes [#218](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/218)
+* assert storage should support async ([3083620](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061)), closes [#218](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/218)
 
 ### 2.0.13 (2023-02-22)
 
@@ -37,23 +37,23 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 2.0.4 (2022-11-30)
 
-### [2.0.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.2...v2.0.3) (2022-11-15)
+### [2.0.3](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.2...v2.0.3) (2022-11-15)
 
 
 ### Bug Fixes
 
-* unable to `require` package ([3f1d273](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/3f1d2738338a651b53e5cc14ee0f35e01a7912bd)), closes [#72](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/72)
+* unable to `require` package ([3f1d273](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3f1d2738338a651b53e5cc14ee0f35e01a7912bd)), closes [#72](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/72)
 
-### [2.0.2](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.1...v2.0.2) (2022-10-28)
+### [2.0.2](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.1...v2.0.2) (2022-10-28)
 
 
 ### Bug Fixes
 
-* constriant generic types ([6d6c7bf](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/6d6c7bf5ea624c64c37938589890ed14e6c781ac))
+* constriant generic types ([6d6c7bf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6d6c7bf5ea624c64c37938589890ed14e6c781ac))
 
-### [2.0.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v2.0.0...v2.0.1) (2022-08-16)
+### [2.0.1](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.0...v2.0.1) (2022-08-16)
 
-## [2.0.0](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v1.0.1...v2.0.0) (2022-08-16)
+## [2.0.0](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v1.0.1...v2.0.0) (2022-08-16)
 
 
 ### ⚠ BREAKING CHANGES
@@ -62,80 +62,80 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* missing args ([f438203](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/f438203251539936bc1fa6243b37adc917e0735d))
+* missing args ([f438203](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f438203251539936bc1fa6243b37adc917e0735d))
 
 
 ### build
 
-* drop support for node 12 ([e764dcf](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/e764dcf9aa514b4968af24d1a8efda1bb7626fa5))
+* drop support for node 12 ([e764dcf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/e764dcf9aa514b4968af24d1a8efda1bb7626fa5))
 
-### [1.0.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v1.0.0...v1.0.1) (2022-07-20)
-
-
-### Bug Fixes
-
-* support custom NODE_ENV ([28b811b](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/28b811b75c51d071db8b4450b3c3557fc0c028f3)), closes [#26](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/26)
-
-## [1.0.0](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.8...v1.0.0) (2022-02-14)
-
-### [0.2.8](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.8) (2022-01-05)
+### [1.0.1](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v1.0.0...v1.0.1) (2022-07-20)
 
 
 ### Bug Fixes
 
-* failed to load esm module ([1e51b3a](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/1e51b3a7f0c4e1a643a16f691e2a9c2740baa00b))
-* object keys may contain `.`(dot) ([385be7a](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
+* support custom NODE_ENV ([28b811b](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/28b811b75c51d071db8b4450b3c3557fc0c028f3)), closes [#26](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/26)
 
-### [0.2.7](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.7) (2022-01-02)
+## [1.0.0](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.8...v1.0.0) (2022-02-14)
 
-
-### Bug Fixes
-
-* object keys may contain `.`(dot) ([385be7a](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
-
-### [0.2.6](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.5...v0.2.6) (2021-12-28)
+### [0.2.8](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.8) (2022-01-05)
 
 
 ### Bug Fixes
 
-* should not replace process envs ([83e58ac](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/83e58ace8159486ed3f46c4318e0bb1f557aca31))
+* failed to load esm module ([1e51b3a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/1e51b3a7f0c4e1a643a16f691e2a9c2740baa00b))
+* object keys may contain `.`(dot) ([385be7a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
 
-### [0.2.5](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.4...v0.2.5) (2021-12-23)
+### [0.2.7](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.6...v0.2.7) (2022-01-02)
+
+
+### Bug Fixes
+
+* object keys may contain `.`(dot) ([385be7a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
+
+### [0.2.6](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.5...v0.2.6) (2021-12-28)
+
+
+### Bug Fixes
+
+* should not replace process envs ([83e58ac](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/83e58ace8159486ed3f46c4318e0bb1f557aca31))
+
+### [0.2.5](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.4...v0.2.5) (2021-12-23)
 
 
 ### Features
 
-* add merge option ([fb3c3bd](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/fb3c3bde3da868e82e52f726cebb3121f39cc723))
+* add merge option ([fb3c3bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/fb3c3bde3da868e82e52f726cebb3121f39cc723))
 
-### [0.2.4](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.3...v0.2.4) (2021-12-21)
-
-
-### Features
-
-* add beforeHydrate hook ([c1bc1ae](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/c1bc1ae3118d6c5040a608bb35853807e3fbd7ad))
-
-
-### Bug Fixes
-
-* losing type information ([9b2326e](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/9b2326ec25ef6a5c774baedb42d44b7d7d651bbb))
-
-### [0.2.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.2...v0.2.3) (2021-12-19)
-
-
-### Bug Fixes
-
-* forgot to resolve when there is no persisted state ([1ac0f7c](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/1ac0f7c55cc25fea6c03b07dcbb68f778c95f0bc))
-
-### [0.2.2](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.1...v0.2.2) (2021-12-18)
+### [0.2.4](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.3...v0.2.4) (2021-12-21)
 
 
 ### Features
 
-* support migration ([ef3a1fc](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/ef3a1fc77f9ca42a1a983c309f9bf95e02f96506))
+* add beforeHydrate hook ([c1bc1ae](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/c1bc1ae3118d6c5040a608bb35853807e3fbd7ad))
 
-### [0.2.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.2.0...v0.2.1) (2021-12-15)
 
-## [0.2.0](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.4...v0.2.0) (2021-12-14)
+### Bug Fixes
+
+* losing type information ([9b2326e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/9b2326ec25ef6a5c774baedb42d44b7d7d651bbb))
+
+### [0.2.3](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.2...v0.2.3) (2021-12-19)
+
+
+### Bug Fixes
+
+* forgot to resolve when there is no persisted state ([1ac0f7c](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/1ac0f7c55cc25fea6c03b07dcbb68f778c95f0bc))
+
+### [0.2.2](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.1...v0.2.2) (2021-12-18)
+
+
+### Features
+
+* support migration ([ef3a1fc](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/ef3a1fc77f9ca42a1a983c309f9bf95e02f96506))
+
+### [0.2.1](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.2.0...v0.2.1) (2021-12-15)
+
+## [0.2.0](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.1.4...v0.2.0) (2021-12-14)
 
 
 ### ⚠ BREAKING CHANGES
@@ -144,46 +144,46 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* allow to disable plugin by default and enable for specific stores ([347d51c](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/347d51c6c37d50ad2afd9a0e0f9c24dbcf58ef32))
-* allow to persist blob or other types supported by storage ([f23ace7](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/f23ace787f48d90e83f8c845aebe0e4022c25ce8))
-* use verb ([106ba31](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/106ba31e01ece9a80484d6f50d6049eedf18436c))
+* allow to disable plugin by default and enable for specific stores ([347d51c](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/347d51c6c37d50ad2afd9a0e0f9c24dbcf58ef32))
+* allow to persist blob or other types supported by storage ([f23ace7](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f23ace787f48d90e83f8c845aebe0e4022c25ce8))
+* use verb ([106ba31](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/106ba31e01ece9a80484d6f50d6049eedf18436c))
 
 
 ### Bug Fixes
 
-* exclude path may be in include path ([4e6c04f](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/4e6c04f713a5ce08c11d6da5c2560f706d5a716b))
+* exclude path may be in include path ([4e6c04f](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/4e6c04f713a5ce08c11d6da5c2560f706d5a716b))
 
-### [0.1.4](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.3...v0.1.4) (2021-12-11)
-
-
-### Features
-
-* asynchronous storage ([a5f6097](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/a5f6097bb067a4f74ecded52265bbe38f5a74a4d)), closes [#3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues/3)
-
-### [0.1.3](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.2...v0.1.3) (2021-12-10)
+### [0.1.4](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.1.3...v0.1.4) (2021-12-11)
 
 
 ### Features
 
-* allow to disable persisting stores ([34a0a06](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/34a0a06dfc41c3eeced675ba8f495d07d422c824))
+* asynchronous storage ([a5f6097](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/a5f6097bb067a4f74ecded52265bbe38f5a74a4d)), closes [#3](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/3)
 
-### [0.1.2](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.1...v0.1.2) (2021-12-05)
+### [0.1.3](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.1.2...v0.1.3) (2021-12-10)
+
+
+### Features
+
+* allow to disable persisting stores ([34a0a06](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/34a0a06dfc41c3eeced675ba8f495d07d422c824))
+
+### [0.1.2](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.1.1...v0.1.2) (2021-12-05)
 
 
 ### Bug Fixes
 
-* window is undefined in SSR ([3d8cd62](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/3d8cd6293bc504ae3aa853a91a57767c26f289dc))
+* window is undefined in SSR ([3d8cd62](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3d8cd6293bc504ae3aa853a91a57767c26f289dc))
 
-### [0.1.1](https://github.com/iendeavor/pinia-plugin-persistedstate-2/compare/v0.1.0...v0.1.1) (2021-12-05)
+### [0.1.1](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v0.1.0...v0.1.1) (2021-12-05)
 
 
 ### Features
 
-* rename ([0c911c4](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/0c911c40a5faa64a0a9110c9dda73f413b8b6b69))
+* rename ([0c911c4](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/0c911c40a5faa64a0a9110c9dda73f413b8b6b69))
 
 
 ### Bug Fixes
 
-* wrong types path ([fa2ac15](https://github.com/iendeavor/pinia-plugin-persistedstate-2/commit/fa2ac1555195c1fe430f1182ed8ca94e87bd64ae))
+* wrong types path ([fa2ac15](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/fa2ac1555195c1fe430f1182ed8ca94e87bd64ae))
 
 ## 0.1.0 (2021-12-05)

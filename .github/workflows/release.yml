@@ -43,7 +43,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           delete-branch: true
-          reviewers: 'iendeavor'
+          reviewers: 'soc221b'
           title: release
 
       - name: Enable Pull Request Automerge
