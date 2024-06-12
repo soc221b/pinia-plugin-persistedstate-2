@@ -76,7 +76,7 @@ jobs:
         if: github.ref_name == 'main' && steps.publish.outputs.type
         with:
           tag_name: ${{ steps.publish.outputs.version }}
-          body: 'Changelog: https://github.com/iendeavor/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
+          body: 'Changelog: https://github.com/soc221b/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
 
       - run: npm pack
 

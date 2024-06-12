@@ -4,7 +4,7 @@ Persist and rehydrate your Pinia state between page reloads.
 
 This project use [SemVer](https://semver.org/) for versioning. For the versions available, see the tags on this repository.
 
-[![CI](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/iendeavor/pinia-plugin-persistedstate-2/actions/workflows/ci.yml)
+[![CI](https://github.com/soc221b/pinia-plugin-persistedstate-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/soc221b/pinia-plugin-persistedstate-2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/pinia-plugin-persistedstate-2.svg)](https://www.npmjs.com/package/pinia-plugin-persistedstate-2)
 
 ## ✨ Features

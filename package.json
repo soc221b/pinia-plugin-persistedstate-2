@@ -11,13 +11,13 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iendeavor/pinia-plugin-persistedstate-2.git"
+    "url": "git+https://github.com/soc221b/pinia-plugin-persistedstate-2.git"
   },
   "bugs": {
-    "url": "https://github.com/iendeavor/pinia-plugin-persistedstate-2/issues"
+    "url": "https://github.com/soc221b/pinia-plugin-persistedstate-2/issues"
   },
-  "homepage": "https://github.com/iendeavor/pinia-plugin-persistedstate-2#readme",
-  "author": "Ernest <iendeavor.github.io@gmail.com>",
+  "homepage": "https://github.com/soc221b/pinia-plugin-persistedstate-2#readme",
+  "author": "Ernest <>",
   "license": "MIT",
   "files": [
     "dist"
