@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.20](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.19...v2.0.20) (2024-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.14.3 ([#450](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/450)) ([f5d5b38](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f5d5b389b11a38ae198a5e1f8bed842471926710))
+* **deps:** update dependency @types/node to v20.14.4 ([#452](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/452)) ([5591b5e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/5591b5eecbfecf4c523c4eaac62ada218f06319d))
+* **deps:** update dependency @types/node to v20.14.5 ([#455](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/455)) ([bc0ab23](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/bc0ab230874075e8170241b9f61cc5b3311e13b0))
+* **deps:** update dependency @types/node to v20.14.6 ([#458](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/458)) ([a5bdb89](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/a5bdb8959f172714dd27466043c25adf6b3dc229))
+* **deps:** update dependency @types/node to v20.14.7 ([#462](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/462)) ([57b5ec1](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/57b5ec18cf4c26a17bce43163192444e42882ab3))
+* **deps:** update dependency @types/node to v20.14.8 ([#465](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/465)) ([5073fb6](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/5073fb6b0c40d26f9ff6284a64418eebd1eda01b))
+* **deps:** update dependency nuxt to v3.12.2 ([#446](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/446)) ([9de3149](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/9de31490fb6ac02d680c3114a4596538f9a52314))
+* **deps:** update dependency typescript to v5.5.2 ([#459](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/459)) ([f9185cd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f9185cd6e52b03780a882a71b11c222a5276abe0))
+* **deps:** update dependency vike to v0.4.177 ([#453](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/453)) ([d19280e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/d19280e401dd20296caee812c99b6ba20d9372de))
+* **deps:** update dependency vue-router to v4.4.0 ([#463](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/463)) ([d1081c2](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/d1081c2ff96f5edf93caebc329204fcf767ce867))
+* **deps:** update vue monorepo to v3.4.30 ([#466](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/466)) ([27bb0c9](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/27bb0c98db4d4afc09e88f44e50b8dea4a0a2ee4))
+
 ## [2.0.19](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.18...v2.0.19) (2024-06-16)
 
 
