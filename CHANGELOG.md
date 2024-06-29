@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/pinia-plugin-persistedstate-2-v2.0.20...pinia-plugin-persistedstate-2-v3.0.0) (2024-06-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* no longer support node 12
+
+### Features
+
+* add merge option ([fb3c3bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/fb3c3bde3da868e82e52f726cebb3121f39cc723))
+
+
+### Bug Fixes
+
+* [#218](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/218) ([3083620](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061))
+* [#26](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/26) ([28b811b](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/28b811b75c51d071db8b4450b3c3557fc0c028f3))
+* [#72](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/72) ([b6e88bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b6e88bd2804297a0c971c6de6ffa9b8be25f40b7))
+* assert storage should support async ([3083620](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061)), closes [#218](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/218)
+* constriant generic types ([6d6c7bf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6d6c7bf5ea624c64c37938589890ed14e6c781ac))
+* **deps:** update vue monorepo to v3.4.28 ([#442](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/442)) ([60b18d1](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/60b18d1c19231fc9287bfb83681db141b5b42268))
+* **deps:** update vue monorepo to v3.4.29 ([#443](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/443)) ([29892e5](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/29892e50785a84c4213e662cd3e3c4fd34ffd23e))
+* **deps:** update vue monorepo to v3.4.30 ([#466](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/466)) ([27bb0c9](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/27bb0c98db4d4afc09e88f44e50b8dea4a0a2ee4))
+* **deps:** update vue monorepo to v3.4.31 ([#474](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/474)) ([9102f01](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/9102f01cb1b58c2ba2349a5f9c65187cc13c5303))
+* failed to load esm module ([1e51b3a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/1e51b3a7f0c4e1a643a16f691e2a9c2740baa00b))
+* missing args ([f438203](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f438203251539936bc1fa6243b37adc917e0735d))
+* object keys may contain `.`(dot) ([385be7a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/385be7a24596130fee960ad58bb1b71e57772cfd))
+* should not replace process envs ([83e58ac](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/83e58ace8159486ed3f46c4318e0bb1f557aca31))
+* support custom NODE_ENV ([28b811b](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/28b811b75c51d071db8b4450b3c3557fc0c028f3)), closes [#26](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/26)
+* unable to `require` package ([b6e88bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b6e88bd2804297a0c971c6de6ffa9b8be25f40b7)), closes [#72](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/72)
+
+
+### Build System
+
+* drop support for node 12 ([e764dcf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/e764dcf9aa514b4968af24d1a8efda1bb7626fa5))
+
 ## [2.0.20](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.19...v2.0.20) (2024-06-25)
 
 
