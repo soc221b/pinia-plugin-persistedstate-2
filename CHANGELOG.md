@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.21](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.20...v2.0.21) (2024-06-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @ionic/vue-router to v8.2.3 ([#472](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/472)) ([6d79d7a](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6d79d7a679533c88c392a0a051a4c0add06b95d0))
+* **deps:** update dependency @ionic/vue-router to v8.2.4 ([#475](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/475)) ([f14588c](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f14588ce1cc5b3edd49dd5831873eb733e7b20d9))
+* **deps:** update dependency @types/node to v20.14.9 ([#469](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/469)) ([35a5268](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/35a5268b4c2b4aebae2218d123b21015a6f2c767))
+* **deps:** update vue monorepo to v3.4.31 ([#474](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/474)) ([9102f01](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/9102f01cb1b58c2ba2349a5f9c65187cc13c5303))
+
 ## [2.0.20](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.19...v2.0.20) (2024-06-25)
 
 
