@@ -17,3 +17,5 @@ jobs:
         with:
           token: ${{ secrets.RELEASE_PLEASE }}
           release-type: node
+          exclude-paths:
+            - examples
