@@ -58,7 +58,7 @@
     "@rollup/plugin-terser": "0.4.4",
     "@size-limit/preset-small-lib": "^11.1.4",
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.10",
     "@vue/test-utils": "2.4.6",
     "change-case": "5.4.4",
     "husky": "9.0.11",
