@@ -1,6 +1,6 @@
 [
   {
-    "path": "dist/index.es.prod.mjs",
+    "path": "dist/index.umd.cjs",
     "limit": "1 KB"
   }
 ]

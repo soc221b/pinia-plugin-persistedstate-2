@@ -9,7 +9,9 @@ import type {
 import type { PluginOptions, CommonOptions } from './type'
 
 function defaultTo<T>(a: T | null | undefined, b: T) {
-  return a != null ? a : b
+  if (a === undefined) return b
+  else if (a === null) return b
+  else return a
 }
 
 function getOption<T, K extends keyof T>(
@@ -87,7 +89,7 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       {},
     )
     const merge = getOption(
-      function (state, savedState) {
+      function (_, savedState) {
         return savedState
       },
       'merge',
