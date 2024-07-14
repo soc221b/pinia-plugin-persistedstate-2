@@ -87,7 +87,7 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       {},
     )
     const merge = getOption(
-      function (state, savedState) {
+      function (_, savedState) {
         return savedState
       },
       'merge',
