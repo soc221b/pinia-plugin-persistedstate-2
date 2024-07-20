@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/v2.0.22...v3.0.0) (2024-07-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* no longer support node 12
+
+### Bug Fixes
+
+* [#218](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/218) ([3083620](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061))
+* [#72](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/72) ([b6e88bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b6e88bd2804297a0c971c6de6ffa9b8be25f40b7))
+* assert storage should support async ([3083620](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3083620f4f49b4c512d22eea322ad59831257061)), closes [#218](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/218)
+* constriant generic types ([6d6c7bf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6d6c7bf5ea624c64c37938589890ed14e6c781ac))
+* **deps:** update vue monorepo to v3.4.28 ([#442](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/442)) ([60b18d1](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/60b18d1c19231fc9287bfb83681db141b5b42268))
+* **deps:** update vue monorepo to v3.4.29 ([#443](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/443)) ([29892e5](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/29892e50785a84c4213e662cd3e3c4fd34ffd23e))
+* **deps:** update vue monorepo to v3.4.30 ([#466](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/466)) ([27bb0c9](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/27bb0c98db4d4afc09e88f44e50b8dea4a0a2ee4))
+* **deps:** update vue monorepo to v3.4.31 ([#474](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/474)) ([9102f01](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/9102f01cb1b58c2ba2349a5f9c65187cc13c5303))
+* **deps:** update vue monorepo to v3.4.32 ([#525](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/525)) ([7d4f811](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/7d4f8113399a3904dcdc230680ddd5bd912f32a0))
+* **deps:** update vue monorepo to v3.4.33 ([#531](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/531)) ([88ad7ce](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/88ad7cebe316b32df62cc0af98ef14412686af0a))
+* missing args ([f438203](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f438203251539936bc1fa6243b37adc917e0735d))
+* unable to `require` package ([b6e88bd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b6e88bd2804297a0c971c6de6ffa9b8be25f40b7)), closes [#72](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/72)
+
+
+### Build System
+
+* drop support for node 12 ([e764dcf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/e764dcf9aa514b4968af24d1a8efda1bb7626fa5))
+
 ## [2.0.22](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.21...v2.0.22) (2024-07-20)
 
 
