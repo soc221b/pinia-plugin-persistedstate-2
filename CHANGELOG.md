@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.23](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.22...v2.0.23) (2024-07-30)
+
+
+### Bug Fixes
+
+* **deps:** update vue monorepo to v3.4.34 ([#544](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/544)) ([754fc0e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/754fc0ef009bcf45ae477c5d4369e9abb63240a7))
+
 ## [2.0.22](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.21...v2.0.22) (2024-07-20)
 
 
