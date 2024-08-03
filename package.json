@@ -71,7 +71,7 @@
     "rollup-plugin-typescript2": "0.36.0",
     "size-limit": "11.1.4",
     "standard-version": "9.5.0",
-    "ts-jest": "29.2.3",
+    "ts-jest": "29.2.4",
     "typescript": "5.3.3",
     "vue": "3.4.35"
   }
