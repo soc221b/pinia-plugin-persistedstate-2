@@ -71,7 +71,7 @@
     "ts-jest": "29.2.4",
     "typescript": "5.3.3",
     "vite": "^5.1.0",
-    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-dts": "^4.0.0",
     "vue": "3.4.37"
   }
 }
