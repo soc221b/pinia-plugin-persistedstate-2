@@ -3,12 +3,19 @@
   "version": "2.0.23",
   "sideEffects": false,
   "description": "Persist and rehydrate your Pinia state between page reloads",
-  "main": "dist/index.cjs.prod.js",
-  "module": "dist/index.es.prod.mjs",
-  "unpkg": "dist/index.iife.prod.js",
-  "jsdelivr": "dist/index.iife.prod.js",
-  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soc221b/pinia-plugin-persistedstate-2.git"
@@ -19,9 +26,6 @@
   "homepage": "https://github.com/soc221b/pinia-plugin-persistedstate-2#readme",
   "author": "Ernest <>",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "vue",
     "pinia",
@@ -32,12 +36,11 @@
     "localforage"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsc && vite build",
     "check-size": "size-limit",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
     "prepare": "husky install",
-    "release": "git fetch && npx standard-version",
     "test": "jest --watch",
     "test:run": "jest"
   },
@@ -52,10 +55,6 @@
     "@babel/preset-env": "7.25.3",
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-replace": "5.0.7",
-    "@rollup/plugin-terser": "0.4.4",
     "@size-limit/preset-small-lib": "^11.1.4",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.15",
@@ -67,12 +66,12 @@
     "pinia": "2.2.1",
     "prettier": "3.3.3",
     "rimraf": "6.0.1",
-    "rollup": "4.20.0",
-    "rollup-plugin-typescript2": "0.36.0",
     "size-limit": "11.1.4",
     "standard-version": "9.5.0",
     "ts-jest": "29.2.4",
     "typescript": "5.3.3",
+    "vite": "^5.1.0",
+    "vite-plugin-dts": "^3.9.1",
     "vue": "3.4.37"
   }
 }
