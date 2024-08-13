@@ -54,7 +54,7 @@ it('assert storage when initializing', () => {
 
   useStore()
 
-  expect(assertStorage).toBeCalled()
+  expect(assertStorage).toHaveBeenCalled()
 
   assertStorage.mockClear()
 })
@@ -80,12 +80,12 @@ it('assert storage when initializing (async)', async () => {
 
   useStore()
 
-  expect(assertStorage).toBeCalled()
-  expect(spyGetItem).not.toBeCalled()
+  expect(assertStorage).toHaveBeenCalled()
+  expect(spyGetItem).not.toHaveBeenCalled()
 
   resolve!()
   await Promise.resolve()
-  expect(spyGetItem).toBeCalled()
+  expect(spyGetItem).toHaveBeenCalled()
 
   spyGetItem.mockRestore()
   assertStorage.mockClear()
@@ -97,8 +97,8 @@ describe('hydrate', () => {
 
     const counterStore = useCounterStore()
 
-    expect(storage.getItem).toBeCalled()
-    expect(spyWarn).not.toBeCalled()
+    expect(storage.getItem).toHaveBeenCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
     expect(counterStore.count).toBe(0)
 
     spyWarn.mockRestore()
@@ -112,8 +112,8 @@ describe('hydrate', () => {
 
     const counterStore = useCounterStore()
 
-    expect(spyGetItem).toBeCalled()
-    expect(spyWarn).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
+    expect(spyWarn).toHaveBeenCalled()
     expect(counterStore.count).toBe(0)
 
     spyGetItem.mockRestore()
@@ -128,8 +128,8 @@ describe('hydrate', () => {
 
     const counterStore = useCounterStore()
 
-    expect(spyGetItem).toBeCalled()
-    expect(spyWarn).not.toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
     expect(counterStore.count).toBe(1)
 
     spyGetItem.mockRestore()
@@ -155,10 +155,10 @@ describe('hydrate', () => {
       { persistedState: { deserialize: spyDeserialization } },
     )()
 
-    expect(spyGetItem).toBeCalled()
-    expect(spyDeserialization).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
+    expect(spyDeserialization).toHaveBeenCalled()
     expect(counterStore.count).toBe(2)
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyGetItem.mockRestore()
     spyDeserialization.mockRestore()
@@ -180,10 +180,10 @@ describe('hydrate', () => {
       }
     })()
 
-    expect(spyGetItem).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
     expect(store.nested.foo).toBe(0)
     expect(store.nested.bar).toBe(1)
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyGetItem.mockRestore()
     spyWarn.mockRestore()
@@ -208,10 +208,10 @@ describe('hydrate', () => {
       { persistedState: { overwrite: true } },
     )()
 
-    expect(spyGetItem).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
     expect(store.nested.foo).toBe(undefined)
     expect(store.nested.bar).toBe(1)
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyGetItem.mockRestore()
     spyWarn.mockRestore()
@@ -247,7 +247,7 @@ describe('hydrate', () => {
     )()
     await store.$persistedState.isReady()
 
-    expect(spyGetItem).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
     expect((store as any).oldKey).toBe(undefined)
     expect(store.newKey).toBe(1)
 
@@ -274,8 +274,8 @@ describe('hydrate', () => {
       },
     )()
 
-    expect(cleanUp).toBeCalledTimes(1)
-    expect(cleanUp).toBeCalledWith(JSON.stringify({ count: 0 }))
+    expect(cleanUp).toHaveBeenCalledTimes(1)
+    expect(cleanUp).toHaveBeenCalledWith(JSON.stringify({ count: 0 }))
 
     await store.$persistedState.isReady()
     expect(store.count).toBe(42)
@@ -305,7 +305,7 @@ describe('hydrate', () => {
     )()
     await store.$persistedState.isReady()
 
-    expect(spyGetItem).toBeCalled()
+    expect(spyGetItem).toHaveBeenCalled()
     expect(store.values).toEqual(['foo', 'bar'])
 
     spyGetItem.mockRestore()
@@ -321,11 +321,11 @@ describe('persist', () => {
     counterStore.count = 1
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'counter-store',
       JSON.stringify({ count: 1 }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -358,11 +358,11 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ foo: 1, nested: { baz: 1 } }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -391,11 +391,11 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ foo: 1, 'nested.baz': 1 }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -428,11 +428,11 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ foo: 1, nested: { baz: 1 } }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -461,11 +461,11 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ foo: 1, 'nested.baz': 1 }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -503,11 +503,11 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ foo: 1, nested: { baz: 1 } }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -540,8 +540,8 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith('store', JSON.stringify({}))
-    expect(spyWarn).not.toBeCalled()
+    expect(setItem).toHaveBeenLastCalledWith('store', JSON.stringify({}))
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -574,7 +574,7 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({
         foo: 1,
@@ -585,7 +585,7 @@ describe('persist', () => {
         },
       }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -614,8 +614,8 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith('store', JSON.stringify({}))
-    expect(spyWarn).not.toBeCalled()
+    expect(setItem).toHaveBeenLastCalledWith('store', JSON.stringify({}))
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -642,12 +642,12 @@ describe('persist', () => {
     counterStore.count = 1
     await nextTick()
 
-    expect(spySerialization).toBeCalledWith({ count: 1 })
+    expect(spySerialization).toHaveBeenCalledWith({ count: 1 })
     expect(setItem).toHaveBeenLastCalledWith(
       'store',
       JSON.stringify({ count: 2 }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spySerialization.mockRestore()
     spyWarn.mockRestore()
@@ -676,14 +676,14 @@ describe('persist', () => {
     store.count = 1
     await nextTick()
 
-    expect(setItem).not.toBeCalled()
-    expect(spyWarn).not.toBeCalled()
+    expect(setItem).not.toHaveBeenCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     store.$patch({ count: 2 })
     await nextTick()
 
-    expect(setItem).toBeCalledWith('store', JSON.stringify({ count: 2 }))
-    expect(spyWarn).not.toBeCalled()
+    expect(setItem).toHaveBeenCalledWith('store', JSON.stringify({ count: 2 }))
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -705,7 +705,10 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).lastCalledWith(customKey, JSON.stringify({ foo: 1 }))
+    expect(setItem).toHaveBeenLastCalledWith(
+      customKey,
+      JSON.stringify({ foo: 1 }),
+    )
   })
 
   it('should not persist when set persist to false', async () => {
@@ -725,7 +728,7 @@ describe('persist', () => {
     }
     await nextTick()
 
-    expect(setItem).not.toBeCalled()
+    expect(setItem).not.toHaveBeenCalled()
   })
 
   it('should not rehydrate when set persist to false', async () => {
@@ -739,7 +742,7 @@ describe('persist', () => {
       { persistedState: { persist: false } },
     )()
 
-    expect(getItem).not.toBeCalled()
+    expect(getItem).not.toHaveBeenCalled()
   })
 
   it('should reset persisted state when calling $reset', async () => {
@@ -755,18 +758,18 @@ describe('persist', () => {
     const counterStore = useCounterStore()
     counterStore.count = 1
     await nextTick()
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'counter-store',
       JSON.stringify({ count: 1 }),
     )
 
     counterStore.$reset()
 
-    expect(setItem).lastCalledWith(
+    expect(setItem).toHaveBeenLastCalledWith(
       'counter-store',
       JSON.stringify({ count: 0 }),
     )
-    expect(spyWarn).not.toBeCalled()
+    expect(spyWarn).not.toHaveBeenCalled()
 
     spyWarn.mockRestore()
   })
@@ -834,7 +837,7 @@ describe('asynchronous storage', () => {
     expect(counterStore.$persistedState.pending).toBe(true)
 
     await new Promise((resolve) => setTimeout(resolve))
-    expect(setItem).toBeCalledWith(
+    expect(setItem).toHaveBeenCalledWith(
       'counter-store',
       JSON.stringify({ count: 43 }),
     )
