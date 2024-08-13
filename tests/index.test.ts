@@ -732,7 +732,7 @@ describe('persist', () => {
   })
 
   it('should not rehydrate when set persist to false', async () => {
-    const store = defineStore(
+    defineStore(
       'store',
       () => {
         return {
