@@ -22,12 +22,6 @@ This project use [SemVer](https://semver.org/) for versioning. For the versions 
 ```sh
 # npm
 npm i pinia-plugin-persistedstate-2
-
-# yarn
-yarn add pinia-plugin-persistedstate-2
-
-# pnpm
-npm i pinia-plugin-persistedstate-2
 ```
 
 #### CDN
