@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.25](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.24...v2.0.25) (2024-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update vue monorepo to v3.4.38 ([#599](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/599)) ([53f3519](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/53f3519010208645cb1203192d755982a22a54cd))
+* **deps:** update vue monorepo to v3.5.0 ([#636](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/636)) ([f9fbc0b](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/f9fbc0bf130c2ed7dd880f31fb8ce69b0027a0f1))
+* **deps:** update vue monorepo to v3.5.1 ([#642](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/642)) ([bf64681](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/bf646811565617ad39c226c653d2e5862291ec4f))
+* **deps:** update vue monorepo to v3.5.10 ([#697](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/697)) ([0d06dc8](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/0d06dc8276a29e347113c1a37d48c4d1ae84f2ca))
+* **deps:** update vue monorepo to v3.5.11 ([#713](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/713)) ([53e7250](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/53e72508af945e589759af0a97a5c8a4332e79e4))
+* **deps:** update vue monorepo to v3.5.12 ([#723](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/723)) ([0e8c363](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/0e8c3634101c300c670e7c09caa16b49f9d2150c))
+* **deps:** update vue monorepo to v3.5.2 ([#647](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/647)) ([24622b5](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/24622b56b9adba8a0c586fa573d9387dbccaf4be))
+* **deps:** update vue monorepo to v3.5.3 ([#650](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/650)) ([113c2b2](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/113c2b24f62633abaa3f0cfcb83aa19a510777c4))
+* **deps:** update vue monorepo to v3.5.4 ([#659](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/659)) ([b9664b9](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b9664b9a0b9fb9bbd9b03f4f84994d87b941843f))
+* **deps:** update vue monorepo to v3.5.5 ([#669](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/669)) ([6ae2571](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6ae2571cd9db9d2f58ce477e895a30435ddbe651))
+* **deps:** update vue monorepo to v3.5.6 ([#671](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/671)) ([3aa01bf](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/3aa01bf39e9c573427213f3201d25c9fe41f9876))
+* **deps:** update vue monorepo to v3.5.7 ([#682](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/682)) ([1832139](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/1832139f85d397fe7df1e13676ae0b2b76c35f30))
+* **deps:** update vue monorepo to v3.5.8 ([#683](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/683)) ([a43176d](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/a43176d308829631465788b15c3be231d84c2ad3))
+* **deps:** update vue monorepo to v3.5.9 ([#696](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/696)) ([8b2db36](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/8b2db365d348a4a188e7858bd4b5a8be5dfb0d89))
+
 ## [2.0.24](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.23...v2.0.24) (2024-08-13)
 
 ## [2.0.23](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.22...v2.0.23) (2024-07-30)
