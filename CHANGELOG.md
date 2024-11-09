@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.26](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.25...v2.0.26) (2024-11-09)
+
+
+### Bug Fixes
+
+* should use stateMutator to overwrite state ([#778](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/778)) ([04d0306](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/04d03067761bf6790c4c577b0deda6f49ff52456))
+
 ## [2.0.25](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.24...v2.0.25) (2024-11-04)
 
 
