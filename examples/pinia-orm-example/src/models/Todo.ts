@@ -22,4 +22,9 @@ export class Todo extends Model {
       },
     },
   }
+
+  // For typescript support of the field include also the next lines
+  declare id: string
+  declare title: string
+  declare done: boolean
 }
