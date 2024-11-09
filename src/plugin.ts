@@ -113,7 +113,11 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
       ;(options.beforeHydrate || function () {})(context.store.$state)
       const merged = merge(context.store.$state, state)
       if (overwrite) {
-        context.store.$state = merged
+        context.store.$patch((state) => {
+          Object.keys(state).forEach((key) => {
+            state[key] = merged[key]
+          })
+        })
       } else {
         context.store.$patch(merged)
       }
