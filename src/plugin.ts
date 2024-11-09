@@ -1,11 +1,6 @@
 import * as shvl from 'shvl'
 
-import type {
-  PiniaPlugin,
-  PiniaPluginContext,
-  StateTree,
-  SubscriptionCallback,
-} from 'pinia'
+import type { PiniaPlugin, PiniaPluginContext, StateTree } from 'pinia'
 import type { PluginOptions, CommonOptions } from './type'
 
 function defaultTo<T>(a: T | null | undefined, b: T) {
@@ -181,8 +176,8 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
     }
 
     // persist
-    const callback: SubscriptionCallback<S> = function (mutation, state) {
-      if (filter(mutation, state) === false) return
+    context.store.$subscribe(function (mutation, state) {
+      if (filter(mutation, state as any) === false) return
 
       if (Array.isArray(options.includePaths)) {
         state = options.includePaths.reduce(function (partialState, path) {
@@ -213,8 +208,7 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
             context.store.$persistedState.pending = pendingCount !== 0
           })
       }
-    }
-    context.store.$subscribe(callback)
+    })
   }
 
   return plugin
