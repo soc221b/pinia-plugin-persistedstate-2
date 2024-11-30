@@ -66,18 +66,6 @@ jobs:
           dry-run: false
           strategy: upgrade
 
-      - uses: anothrNick/github-tag-action@v1
-        if: github.ref_name == 'main' && steps.publish.outputs.type
-        env:
-          CUSTOM_TAG: ${{ steps.publish.outputs.version }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: softprops/action-gh-release@v2
-        if: github.ref_name == 'main' && steps.publish.outputs.type
-        with:
-          tag_name: ${{ steps.publish.outputs.version }}
-          body: 'Changelog: https://github.com/soc221b/pinia-plugin-persistedstate-2/blob/${{ steps.publish.outputs.version }}/CHANGELOG.md'
-
       - run: npm pack
 
       - uses: actions/upload-artifact@v4
