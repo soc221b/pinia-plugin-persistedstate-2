@@ -194,13 +194,13 @@ export function createPersistedStatePlugin<S extends StateTree = StateTree>(
         }, {} as any)
       }
       if (Array.isArray(options.excludePaths)) {
-        state = deserialize(serialize(state))
+        state = deserialize(serialize(state as any))
         options.excludePaths.forEach(function (path) {
           return shvl.set(state, path, void 0, void 0)
         }, {})
       }
 
-      const value = serialize(state)
+      const value = serialize(state as any)
       const result = storage.setItem(key, value)
       if (result instanceof Promise) {
         ++pendingCount
