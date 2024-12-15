@@ -1,4 +1,5 @@
 import { StateTree, SubscriptionCallback } from 'pinia'
+import { UnwrapRef } from 'vue'
 
 export interface IStorage {
   getItem: (key: string) => any | Promise<any>
@@ -47,7 +48,7 @@ export interface CommonOptions<S extends StateTree = StateTree> {
    *
    * @default (state, savedState) => savedState
    */
-  merge?: (state: S, savedState: S) => S
+  merge?: (state: UnwrapRef<S>, savedState: UnwrapRef<S>) => UnwrapRef<S>
 
   /**
    * When rehydrating, overwrite initial state (patch otherwise).
@@ -61,7 +62,7 @@ export interface CommonOptions<S extends StateTree = StateTree> {
    *
    * @default JSON.stringify
    */
-  serialize?: (state: S) => any
+  serialize?: (state: UnwrapRef<S>) => any
 
   /**
    * This method will be called right after `storage.getItem`.
@@ -123,7 +124,7 @@ export type StoreOptions<S extends StateTree> = CommonOptions<S> & {
    *
    * @default {value => value}
    */
-  beforeHydrate?: (oldState: S) => void
+  beforeHydrate?: (oldState: UnwrapRef<S>) => void
 }
 
 declare module 'pinia' {
