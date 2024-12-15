@@ -85,9 +85,7 @@ jobs:
         example-directory:
           - ionic-capacitor-preferences
           - localforage-example
-          - nuxt-2-client-example
           - nuxt-3-universal-example
-          - nuxt-bridge-example
           - pinia-orm-example
           - quasar-example
           - vike-example
@@ -103,34 +101,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-
-      - run: |
-          cd examples/${{matrix.example-directory}}
-          npm ci
-          npm add ../../*.tgz
-          npm run build
-
-  node-16:
-    runs-on: ubuntu-latest
-
-    needs:
-      - build
-
-    strategy:
-      matrix:
-        example-directory:
-          - vue-2-example
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: artifact
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16
 
       - run: |
           cd examples/${{matrix.example-directory}}
