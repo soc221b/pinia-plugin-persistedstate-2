@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.28](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.27...2.0.28) (2024-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v6.0.3 ([#835](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/835)) ([4d68a77](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/4d68a77b1e28a89b44cea40cfdab7b8e57c00954))
+* merge, serialize, beforeHydrate types are wrong ([#701](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/701)) ([4953f62](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/4953f6272e4e60d4ff3b1c7987b5f8821acb6f73))
+
 ## [2.0.27](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.26...v2.0.27) (2024-11-15)
 
 
