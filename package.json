@@ -45,7 +45,7 @@
     "test:run": "jest"
   },
   "dependencies": {
-    "shvl": "^3.0.0"
+    "shvl": "3.0.0"
   },
   "peerDependencies": {
     "pinia": "^2.3.0 || ^3.0.0"
