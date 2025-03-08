@@ -17,7 +17,7 @@
     "compression": "1.7.5",
     "cookie": "1.0.2",
     "cross-env": "7.0.3",
-    "express": "4.21.1",
+    "express": "4.21.2",
     "js-cookie": "3.0.5",
     "pinia": "2.3.1",
     "sirv": "3.0.0",
