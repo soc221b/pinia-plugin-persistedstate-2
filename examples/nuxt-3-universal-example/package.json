@@ -1,20 +1,24 @@
 {
-  "name": "nuxt-3-universal-example",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
-  },
-  "devDependencies": {
-    "@types/cookie": "1.0.0",
-    "@types/js-cookie": "3.0.6"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@pinia/nuxt": "0.9.0",
-    "cookie": "1.0.2",
-    "js-cookie": "3.0.5",
-    "nuxt": "3.12.2",
-    "pinia": "2.3.0"
+    "@pinia/nuxt": "^0.10.1",
+    "cookie": "^1.0.2",
+    "js-cookie": "^3.0.5",
+    "nuxt": "^3.16.0",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6"
   }
 }
