@@ -1,6 +1,6 @@
 {
   "name": "pinia-plugin-persistedstate-2",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "sideEffects": false,
   "description": "Persist and rehydrate your Pinia state between page reloads",
   "type": "module",
