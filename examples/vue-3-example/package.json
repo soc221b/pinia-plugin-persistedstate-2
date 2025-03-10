@@ -13,7 +13,7 @@
   "devDependencies": {
     "@babel/types": "7.26.9",
     "@vitejs/plugin-vue": "5.2.1",
-    "typescript": "5.6.3",
+    "typescript": "5.8.2",
     "vite": "6.0.9",
     "vue-tsc": "2.2.8"
   }
