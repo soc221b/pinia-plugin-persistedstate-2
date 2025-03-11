@@ -15,7 +15,7 @@
     "vue-router": "4.5.0"
   },
   "devDependencies": {
-    "@babel/core": "7.26.9",
+    "@babel/core": "7.26.10",
     "@quasar/app-webpack": "3.15.1",
     "@types/node": "22.13.10",
     "babel-loader": "10.0.0",
