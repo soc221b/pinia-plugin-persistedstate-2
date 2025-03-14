@@ -10,7 +10,7 @@
     "@capacitor/android": "6.2.0",
     "@capacitor/core": "6.2.0",
     "@capacitor/ios": "6.2.0",
-    "@capacitor/preferences": "6.0.3",
+    "@capacitor/preferences": "7.0.0",
     "@ionic/vue": "8.5.0",
     "@ionic/vue-router": "8.5.0",
     "pinia": "2.3.1",
