@@ -19,7 +19,7 @@
     "cross-env": "7.0.3",
     "express": "5.1.0",
     "js-cookie": "3.0.5",
-    "pinia": "2.3.1",
+    "pinia": "3.0.2",
     "sirv": "3.0.1",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
