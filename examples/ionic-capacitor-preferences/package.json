@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/types": "7.27.0",
     "@capacitor/cli": "6.2.1",
-    "@types/node": "22.14.1",
+    "@types/node": "22.15.0",
     "@vitejs/plugin-vue": "5.2.3",
     "typescript": "5.8.3",
     "vite": "6.3.3",
