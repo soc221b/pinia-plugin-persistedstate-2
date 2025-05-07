@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/compression": "1.7.5",
     "@types/express": "5.0.1",
-    "@types/node": "22.15.14",
+    "@types/node": "22.15.15",
     "@vitejs/plugin-vue": "5.2.3",
     "@vue/compiler-sfc": "3.5.13",
     "@vue/server-renderer": "3.5.13",
