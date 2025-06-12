@@ -63,7 +63,7 @@
     "husky": "9.1.7",
     "jest": "30.0.0",
     "jest-environment-jsdom": "30.0.0",
-    "pinia": "3.0.2",
+    "pinia": "3.0.3",
     "prettier": "3.5.3",
     "rimraf": "6.0.1",
     "size-limit": "11.2.0",
