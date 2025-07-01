@@ -57,7 +57,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "@size-limit/preset-small-lib": "11.2.0",
     "@types/jest": "30.0.0",
-    "@types/node": "22.15.34",
+    "@types/node": "22.15.35",
     "@vue/test-utils": "2.4.6",
     "change-case": "5.4.4",
     "husky": "9.1.7",
