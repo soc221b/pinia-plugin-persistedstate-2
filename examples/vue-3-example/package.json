@@ -14,7 +14,7 @@
     "@babel/types": "7.28.0",
     "@vitejs/plugin-vue": "6.0.0",
     "typescript": "5.8.3",
-    "vite": "7.0.3",
+    "vite": "7.0.4",
     "vue-tsc": "3.0.1"
   }
 }
