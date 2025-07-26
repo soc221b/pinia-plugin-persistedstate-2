@@ -16,7 +16,7 @@
     "@vue/server-renderer": "3.5.18",
     "compression": "1.8.1",
     "cookie": "1.0.2",
-    "cross-env": "7.0.3",
+    "cross-env": "10.0.0",
     "express": "5.1.0",
     "js-cookie": "3.0.5",
     "pinia": "3.0.2",
