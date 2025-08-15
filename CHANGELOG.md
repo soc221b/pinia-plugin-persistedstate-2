@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.32](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.31...2.0.32) (2025-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v22.17.2 ([#1143](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1143)) ([0ae650e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/0ae650e6afe493f71b4ddd1b7ba3050e39e4377f))
+
 ## [2.0.31](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.30...2.0.31) (2025-08-12)
 
 
