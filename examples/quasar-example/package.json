@@ -21,7 +21,7 @@
     "babel-loader": "10.0.0",
     "css-loader": "7.1.2",
     "postcss": "8.5.6",
-    "postcss-loader": "8.1.1",
+    "postcss-loader": "8.2.0",
     "ts-loader": "9.5.4",
     "typescript": "5.8.3",
     "url-loader": "4.1.1",
