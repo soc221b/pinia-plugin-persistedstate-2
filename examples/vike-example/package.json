@@ -20,7 +20,7 @@
     "express": "5.1.0",
     "js-cookie": "3.0.5",
     "pinia": "3.0.2",
-    "sirv": "3.0.1",
+    "sirv": "3.0.2",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
     "vike": "0.4.239",
