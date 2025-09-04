@@ -17,7 +17,7 @@
   "devDependencies": {
     "@babel/core": "7.28.3",
     "@quasar/app-webpack": "3.15.1",
-    "@types/node": "22.18.0",
+    "@types/node": "22.18.1",
     "babel-loader": "10.0.0",
     "css-loader": "7.1.2",
     "postcss": "8.5.6",
