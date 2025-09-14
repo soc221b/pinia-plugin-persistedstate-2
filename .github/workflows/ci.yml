@@ -55,7 +55,7 @@ jobs:
 
       - run: npm run check-size
 
-      - uses: JS-DevTools/npm-publish@v3
+      - uses: JS-DevTools/npm-publish@v4
         if: github.ref_name == 'main'
         id: publish
         with:
