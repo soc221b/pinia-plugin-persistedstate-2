@@ -24,7 +24,7 @@
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
     "vike": "0.4.241",
-    "vite": "7.1.7",
+    "vite": "7.1.8",
     "vue": "3.5.22"
   },
   "type": "module"
