@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.32](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.31...2.0.32) (2025-10-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v22.17.2 ([#1143](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1143)) ([0ae650e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/0ae650e6afe493f71b4ddd1b7ba3050e39e4377f))
+* **deps:** update dependency @types/node to v22.18.0 ([#1155](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1155)) ([d35a268](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/d35a26810939d5d03aff07be9245f62d46db9134))
+* **deps:** update dependency @types/node to v22.18.1 ([#1167](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1167)) ([00db900](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/00db900b83223bf7d2042003d09a6097136665d8))
+* **deps:** update dependency @types/node to v22.18.10 ([#1208](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1208)) ([20f8796](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/20f87963c7b5dbed241c71fbfa3ca1a37f9913f3))
+* **deps:** update dependency @types/node to v22.18.11 ([#1214](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1214)) ([7928758](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/7928758846f3a1d940474c2d958e386ac4599220))
+* **deps:** update dependency @types/node to v22.18.3 ([#1173](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1173)) ([6d0872c](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6d0872c2d536c4d8fb90dbd24b033e9b5cfe8c54))
+* **deps:** update dependency @types/node to v22.18.4 ([#1177](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1177)) ([e8c954e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/e8c954e3740f3c83a9351f9a707d91e685889821))
+* **deps:** update dependency @types/node to v22.18.5 ([#1179](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1179)) ([a0b34c0](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/a0b34c0d68805bb4a813bac2c37281a49a0dac77))
+* **deps:** update dependency @types/node to v22.18.6 ([#1181](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1181)) ([5100b76](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/5100b763cdb7d70b2677d1faef808f88905082fa))
+* **deps:** update dependency @types/node to v22.18.7 ([#1192](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1192)) ([2e49be7](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/2e49be7d21bf831937835de6d2b806e044d0188c))
+* **deps:** update dependency @types/node to v22.18.8 ([#1197](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1197)) ([a0794d8](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/a0794d841629da20cd1b637f8a55979d2621a789))
+* **deps:** update dependency @types/node to v22.18.9 ([#1205](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1205)) ([b6fbf3d](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/b6fbf3d776ed5cc23222e919d77772cb1e00247d))
+* **deps:** update dependency vite to v7.1.10 ([#1211](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1211)) ([6edf1ee](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6edf1ee5336c790394c6cae0b4e6887f4ba3beea))
+* **deps:** update dependency vite to v7.1.3 ([#1148](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1148)) ([2b13bcb](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/2b13bcb12e98da66e23df11b53aaba9fbbddfc46))
+* **deps:** update dependency vite to v7.1.4 ([#1160](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1160)) ([8f5493e](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/8f5493e1564931d9763523a14b627cb1cfe9256f))
+* **deps:** update dependency vite to v7.1.5 ([#1170](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1170)) ([8a10b41](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/8a10b41ddf3253f2635cf37b929fbda11e60db0b))
+* **deps:** update dependency vite to v7.1.6 ([#1182](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1182)) ([e7daf3c](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/e7daf3ca10f5f30f4d213e8817a9d94f295bcf56))
+* **deps:** update dependency vite to v7.1.7 ([#1186](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1186)) ([ca5cc71](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/ca5cc71b2166b9e1c3f42051b9ee7a827b8d3854))
+* **deps:** update dependency vite to v7.1.8 ([#1198](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1198)) ([939b4dd](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/939b4ddbd197773a181fe4a349a3060c9339441d))
+* **deps:** update dependency vite to v7.1.9 ([#1199](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1199)) ([6504ec3](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/6504ec35229e3f073011cdec413673934906c8a7))
+* **deps:** update vue monorepo to v3.5.19 ([#1152](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1152)) ([44c52f5](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/44c52f571f4d17e8ecd21dffda19989dea3615d7))
+* **deps:** update vue monorepo to v3.5.20 ([#1154](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1154)) ([d8d4440](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/d8d4440c2f6eae9f175172d70fa6968810ab7749))
+* **deps:** update vue monorepo to v3.5.21 ([#1161](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1161)) ([8c850b0](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/8c850b0857b1f820570666706aa9adfe73df696f))
+* **deps:** update vue monorepo to v3.5.22 ([#1188](https://github.com/soc221b/pinia-plugin-persistedstate-2/issues/1188)) ([d85cfb7](https://github.com/soc221b/pinia-plugin-persistedstate-2/commit/d85cfb75b8e6d4cc2cc240b452b03b4bc7491ef9))
+
 ## [2.0.31](https://github.com/soc221b/pinia-plugin-persistedstate-2/compare/2.0.30...2.0.31) (2025-08-12)
 
 
