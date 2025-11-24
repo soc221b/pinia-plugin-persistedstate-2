@@ -12,8 +12,8 @@
     "@types/express": "5.0.5",
     "@types/node": "24.10.1",
     "@vitejs/plugin-vue": "6.0.2",
-    "@vue/compiler-sfc": "3.5.24",
-    "@vue/server-renderer": "3.5.24",
+    "@vue/compiler-sfc": "3.5.25",
+    "@vue/server-renderer": "3.5.25",
     "compression": "1.8.1",
     "cookie": "1.0.2",
     "cross-env": "10.1.0",
@@ -25,7 +25,7 @@
     "typescript": "5.8.3",
     "vike": "0.4.247",
     "vite": "7.2.4",
-    "vue": "3.5.24"
+    "vue": "3.5.25"
   },
   "type": "module"
 }
