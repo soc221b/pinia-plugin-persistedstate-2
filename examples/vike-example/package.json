@@ -15,7 +15,7 @@
     "@vue/compiler-sfc": "3.5.25",
     "@vue/server-renderer": "3.5.25",
     "compression": "1.8.1",
-    "cookie": "1.1.0",
+    "cookie": "1.1.1",
     "cross-env": "10.1.0",
     "express": "5.1.0",
     "js-cookie": "3.0.5",
