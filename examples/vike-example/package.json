@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/compression": "1.8.1",
-    "@types/express": "5.0.5",
+    "@types/express": "5.0.6",
     "@types/node": "24.10.1",
     "@vitejs/plugin-vue": "6.0.2",
     "@vue/compiler-sfc": "3.5.25",
@@ -17,7 +17,7 @@
     "compression": "1.8.1",
     "cookie": "1.1.1",
     "cross-env": "10.1.0",
-    "express": "5.2.0",
+    "express": "5.2.1",
     "js-cookie": "3.0.5",
     "pinia": "3.0.2",
     "sirv": "3.0.2",
