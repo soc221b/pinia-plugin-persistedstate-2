@@ -15,7 +15,7 @@
     "@ionic/vue-router": "8.6.5",
     "pinia": "3.0.2",
     "vue": "3.5.25",
-    "vue-router": "4.6.3"
+    "vue-router": "4.6.4"
   },
   "devDependencies": {
     "@babel/types": "7.28.5",
