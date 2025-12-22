@@ -7,9 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "6.2.1",
-    "@capacitor/core": "6.2.1",
-    "@capacitor/ios": "6.2.1",
+    "@capacitor/android": "8.0.0",
+    "@capacitor/core": "8.0.0",
+    "@capacitor/ios": "8.0.0",
     "@capacitor/preferences": "6.0.4",
     "@ionic/vue": "8.6.5",
     "@ionic/vue-router": "8.6.5",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/types": "7.28.5",
-    "@capacitor/cli": "6.2.1",
+    "@capacitor/cli": "8.0.0",
     "@types/node": "24.10.4",
     "@vitejs/plugin-vue": "6.0.3",
     "typescript": "5.8.3",
