@@ -18,7 +18,7 @@
     "vue-router": "4.6.4"
   },
   "devDependencies": {
-    "@babel/types": "7.28.5",
+    "@babel/types": "7.28.6",
     "@capacitor/cli": "6.2.1",
     "@types/node": "24.10.7",
     "@vitejs/plugin-vue": "6.0.3",
