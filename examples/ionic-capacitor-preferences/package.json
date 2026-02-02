@@ -13,7 +13,7 @@
     "@capacitor/preferences": "6.0.4",
     "@ionic/vue": "8.6.5",
     "@ionic/vue-router": "8.6.5",
-    "pinia": "3.0.2",
+    "pinia": "3.0.4",
     "vue": "3.5.27",
     "vue-router": "4.6.4"
   },
