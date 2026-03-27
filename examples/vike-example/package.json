@@ -11,7 +11,7 @@
     "@types/compression": "1.8.1",
     "@types/express": "5.0.6",
     "@types/node": "24.12.0",
-    "@vitejs/plugin-vue": "6.0.4",
+    "@vitejs/plugin-vue": "6.0.5",
     "@vue/compiler-sfc": "3.5.30",
     "@vue/server-renderer": "3.5.30",
     "compression": "1.8.1",
