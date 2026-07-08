@@ -58,7 +58,7 @@
     "@size-limit/preset-small-lib": "12.0.1",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
-    "@vue/test-utils": "2.4.6",
+    "@vue/test-utils": "2.4.11",
     "change-case": "5.4.4",
     "husky": "9.1.7",
     "jest": "30.3.0",
