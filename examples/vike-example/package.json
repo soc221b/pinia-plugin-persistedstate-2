@@ -18,7 +18,7 @@
     "cookie": "1.1.1",
     "cross-env": "10.1.0",
     "express": "5.2.1",
-    "js-cookie": "3.0.5",
+    "js-cookie": "3.0.8",
     "pinia": "3.0.2",
     "sirv": "3.0.2",
     "ts-node": "10.9.2",
