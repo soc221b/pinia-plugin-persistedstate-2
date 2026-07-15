@@ -22,7 +22,7 @@
     "css-loader": "7.1.4",
     "postcss": "8.5.19",
     "postcss-loader": "8.2.1",
-    "ts-loader": "9.5.4",
+    "ts-loader": "9.6.2",
     "typescript": "5.8.3",
     "url-loader": "4.1.1",
     "vue-loader": "17.4.2",
