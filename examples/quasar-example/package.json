@@ -10,7 +10,7 @@
     "@quasar/extras": "1.18.0",
     "core-js": "3.49.0",
     "pinia": "2.3.1",
-    "quasar": "2.19.2",
+    "quasar": "2.21.4",
     "vue": "3.5.31",
     "vue-router": "4.6.4"
   },
