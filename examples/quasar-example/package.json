@@ -20,7 +20,7 @@
     "@types/node": "24.13.3",
     "babel-loader": "10.1.1",
     "css-loader": "7.1.4",
-    "postcss": "8.5.19",
+    "postcss": "8.5.23",
     "postcss-loader": "8.2.1",
     "ts-loader": "9.6.2",
     "typescript": "5.8.3",
