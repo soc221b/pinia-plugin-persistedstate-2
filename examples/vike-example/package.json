@@ -14,7 +14,7 @@
     "@vitejs/plugin-vue": "6.0.8",
     "@vue/compiler-sfc": "3.5.42",
     "@vue/server-renderer": "3.5.42",
-    "compression": "1.8.1",
+    "compression": "1.8.2",
     "cookie": "1.1.1",
     "cross-env": "10.1.0",
     "express": "5.2.1",
